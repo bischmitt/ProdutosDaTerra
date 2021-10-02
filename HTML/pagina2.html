@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos da Terra - Nossos Produtos</title>
+    <link rel="shortcut icon" href="../Imagens/vegetablebox.png">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/style.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/idstyle.css">
+</head>
+
+<body>
+    <header>
+
+        <!--tags <h> para o nome da empresa e frase de efeito-->
+        <h1 id="p2">Produtos da Terra</h1>
+        <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
+        <nav>
+            <!--lista não ordenada com links que compõem a <nav>-->
+            <ul>
+                <!--pagina inicial do site-->
+                <li><a href="index.html">Início</a></li>
+                <!--A pagina1.html será desenvolvida somente mais tarde-->
+                <li><a href="pagina1.html">Quem somos nós?</a></li>
+                <!--pagina com produtos a serem vendidos-->
+                <li><a href="pagina2.html">Nossos produtos</a></li>
+                <!--A pagina3.html será desenvolvida somente mais tarde-->
+                <li><a href="pagina3.html">Receitinhas</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <form>
+        <table border="1">
+
+            <h2>Produtos disponíveis</h2>
+            <tr>
+                <th colspan="2">Produtos</th>
+                <th>Preço (Kg)</th>
+                <th>Selecione o que deseja comprar</th>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/banana.png" alt="Banana"></th>
+                <td><b>Banana</b></td>
+                <td>R$ 4,00</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/chuchu.jpg" alt="Chuchu"></th>
+                <td><b>Chuchu</b></td>
+                <td>R$ 2,00</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/maracuja.jpg" alt="Maracujá"></th>
+                <td><b>Maracujá</b></td>
+                <td>R$ 5,00</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/pimentaoverde.jpg" alt="Pimentão verde"></th>
+                <td><b>Pimentão verde</b></td>
+                <td>R$ 3,00</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/pimentaovermelho.jpeg" alt="Pimentão vermelho"></th>
+                <td><b>Pimentão vermelho</b></td>
+                <td>R$ 6,00</td>
+                <td><input type="checkbox" name="opcoes"><br><label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/pimentaoamarelo.jpg" alt="Pimentão amarelo"></th>
+                <td><b>Pimentão amarelo</b></td>
+                <td>R$ 6,50</td>
+                <td><input type="checkbox" name="opcoes"><br><label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/pitayabranca.jpg" alt="Pitaya branca"></th>
+                <td><b>Pitaya branca</b></td>
+                <td>R$ 10,00</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/pitayarosa.jpg" alt="Pitaya rosa"></th>
+                <td><b>Pitaya rosa</b></td>
+                <td>R$ 15,00</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+
+            <tr>
+                <th><img src="../Imagens/quiabo.jpg" alt="Quiabo"></th>
+                <td><b>Quiabo</b></td>
+                <td>RS 3,50</td>
+                <td><input type="checkbox" name="opcoes"><br>
+                    <label for="pesokg">Quantidade (Kg):</label>
+                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
+                </td>
+            </tr>
+        </table>
+
+
+        <!--Botão para limpar o formulário e recomeçar a preencher-->
+        <p>
+            <button type="reset">Limpar</button>
+            <!--Botão para enviar o formulário e ir para a seção de pagamento. Esse botão tem que levar para o formulário de pagamento, mas não sei se a construção do botão está correta. Seria necessário usar o "submit"?-->
+            <a href="formulario1.html">
+                <input type="button" value="Próxima etapa">
+            </a>
+        </p>
+    </form>
+
+    <p>
+        <!--imagem linkada para subir ao inicio da pagina-->
+        <a href="#p2"><img src="../Imagens/subir.png"></a>
+    </p>
+
+</body>
+<footer>
+    <!--informações importantes que constam no rodapé de todas as páginas-->
+    Todos os direitos reservados<br>
+    Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000<br>
+    <a href="faleconosco.html">Fale conosco</a>
+</footer>
+
+</html>
