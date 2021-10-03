@@ -1,100 +1,138 @@
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../Imagens/mint1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
 }
 
 header {
     display: flex;
-    justify-content: inherit;
+    justify-content: left;
     width: 100%;
     height: 170px;
 }
 
 nav {
     width: 100%;
-    height: 80px;
+    height: 60px;
+    background-color: #630050;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
-
 }
 
-main{
+main {
     width: 75%;
-    height: 800px;
-    background-color: darkgoldenrod;
-    float: left;
+    height: 500px;
+    background-color: rgba(99, 0, 80, 20%);
+    box-shadow: 10px 10px 100px rgba(99, 0, 80, 60%);
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+
 }
 
 article{
-
+    width: 100%;
+    height: 700px;   
 }
 
-aside{
+aside {
     width: 25%;
-    height: 800px;
-    background-color: salmon;
-    float: left;
+    height: 100px;
 }
 
 footer{
     width: 100%;
-    height: 150px;
+    height: 200px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 10px 10px;
-    background-color: #630050;
-    clear: both;
+    background-color: #E8DCA7;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-  }
 }
 
-.footer-classitem{
+.footer-classitem {
     text-align: justify;
     justify-content: center;
 }
 
-h1{
-line-height: 1.4;
-}
-
-h2{
-    line-height: 1;
-}
-
-
-li{
-    display: inline;
-    padding: 0.3em;
-    font-size: 150%;    
-    align-items:center;
-    border: 4px solid #234744;
-    background-color: #630050;
-    border-radius: 16px;
-}
-
-a{
-    color: #E8DCA7;
-    text-decoration: none;
-}
-
-.greenbanner{
-    width: 300px;
-    height: 200px;
+.greenbanner {
+    width: 250px;
+    height: 170px;
     border-radius: 100%;
 }
 
-.imgfooter{
+.imgfooter {
     width: 200px;
     height: 100px;
     position: static;
 }
 
+p{
+text-align: justify;
+padding: 25px;
+}
 
+h1 {
+    line-height: 1;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: bolder;
+    margin: 20px;
+}
+
+h2 {
+    line-height: 1;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: bold;
+    padding: 20px;
+}
+
+li {
+    display: inline;
+    padding: 0.3em;
+    font-size: 150%;    
+    align-items:center;
+    border: 4px solid #630050;
+    /*background-color: rgba(99, 0, 80, 70%);*/
+    border-radius: 50px;
+}
+
+a {
+    color: #E8DCA7;
+    text-decoration: none;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: bold;
+}
+figure{
+    float:left;
+    padding: 25px;
+}
+
+figcaption{
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: normal;
+    text-align: center;
+    font-size: 12px;
+}
+
+/*#subir{
+    position: relative;
+    bottom: 0; 
+    left: 0;
+    justify-content: left;
+    float: left;
+}*/
 
 
 /* Color Theme Swatches in Hex */
