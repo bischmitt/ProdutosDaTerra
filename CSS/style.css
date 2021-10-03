@@ -15,10 +15,9 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: left;
+    text-align: center;
     width: 100%;
-    height: 170px;
+    height: 150px;
 }
 
 nav {
@@ -32,10 +31,11 @@ nav {
 }
 
 main {
-    width: 75%;
+    width: 60%;
     height: 500px;
-    background-color: rgba(99, 0, 80, 20%);
-    box-shadow: 10px 10px 100px rgba(99, 0, 80, 60%);
+    margin: auto;
+    background-color: rgba(99, 0, 80, 30%);
+    box-shadow: 10px 10px 70px rgba(99, 0, 80, 60%);
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
 
 }
@@ -52,36 +52,22 @@ aside {
 
 footer{
     width: 100%;
-    height: 200px;
+    height: 210px;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 10px 10px;
+    gap: 20px 25px;
     background-color: #E8DCA7;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.footer-classitem {
+p {
     text-align: justify;
-    justify-content: center;
-}
-
-.greenbanner {
-    width: 250px;
-    height: 170px;
-    border-radius: 100%;
-}
-
-.imgfooter {
-    width: 200px;
-    height: 100px;
-    position: static;
-}
-
-p{
-text-align: justify;
-padding: 25px;
+    line-height: 1.4;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: normal;
+    padding: 25px;
 }
 
 h1 {
@@ -114,6 +100,7 @@ a {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: bold;
 }
+
 figure{
     float:left;
     padding: 25px;
@@ -123,8 +110,51 @@ figcaption{
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: normal;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    background-color: rgba(17, 48, 46, 0.3);
+    padding: 25px;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    color:#E8DCA7;
+  }
+  
+  .grid-container div {
+    background-color: rgba(99, 0, 80, 1);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+
+.ahref-footer{
+    color:#194542;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: bold;
+    
+}
+
+.footer-classitem {
+    text-align: justify;
+    justify-content: center;
+}
+
+.greenbanner {
+    width: 250px;
+    height: 190px;
+    border-radius: 100%;
+}
+
+.imgfooter {
+    width: 200px;
+    height: 100px;
+}
+
+
+
 
 /*#subir{
     position: relative;

@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 15px;
+    background-color: rgba(17, 48, 46, 0.3);
+    padding: 25px;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    color:#E8DCA7;
+  }
+  
+  .grid-container div {
+    background-color: rgba(99, 0, 80, 1);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+
+body {
+
+	margin: 0px;
+	padding: 10px;
+}

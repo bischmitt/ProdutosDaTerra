@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="../Imagens/iconleaf.png">
     <link rel="stylesheet" type="text/CSS" href="../CSS/style.css">
     <link rel="stylesheet" type="text/CSS" href="../CSS/idstyle.css">
+    
 </head>
 
 <body>
@@ -27,111 +28,95 @@
     </nav>
 
     <header>
-        <div>
             <!--tags <h> para o nome da empresa e frase de efeito-->
             <h1>Produtos da Terra</h1>
             <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
-        </div>
+        
     </header>
 
     <form>
-        <table border="1">
 
-            <h2>Produtos disponíveis</h2>
-            <tr>
-                <th colspan="2">Produtos</th>
-                <th>Preço (Kg)</th>
-                <th>Selecione o que deseja comprar</th>
-            </tr>
+        <div class="grid-container">
+            <div class="item1">
+                <h2>Banana</h2>
+                <img src="../Imagens/banana.png" alt="Banana">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar banana<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
+            <div class="item2">
+                <h2>Chuchu</h2>
+                <img src="../Imagens/chuchu.jpg" alt="Chuchu">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar chuchu<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
 
-            <tr>
-                <th><img src="../Imagens/banana.png" alt="Banana"></th>
-                <td><b>Banana</b></td>
-                <td>R$ 4,00</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
+            <div class="item3">
+                <h2>Maracujá</h2>
+                <img src="../Imagens/maracuja.jpg" alt="Maracujá">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar maracujá<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
 
-            <tr>
-                <th><img src="../Imagens/chuchu.jpg" alt="Chuchu"></th>
-                <td><b>Chuchu</b></td>
-                <td>R$ 2,00</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-            </tr>
+            <div class="item4">
+                <h2>Pimentão amarelo</h2>
+                <img src="../Imagens/pimentaoamarelo.jpg" alt="Pimentão amarelo">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar pimentão amarelo<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
+            <div class="item5">
+                <h2>Pimentão verde</h2>
+                <img src="../Imagens/pimentaoverde.jpg" alt="Pimentão verde">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar pimentão verde<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
+            <div class="item6">
+                <h2>Pimentão vermelho</h2>
+                <img src="../Imagens/pimentaovermelho.jpeg" alt="Pimentão vermelho">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar pimentão vermelho<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
 
-            <tr>
-                <th><img src="../Imagens/maracuja.jpg" alt="Maracujá"></th>
-                <td><b>Maracujá</b></td>
-                <td>R$ 5,00</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
+            <div class="item7">
+                <h2>Pitaya branca</h2>
+                <img src="../Imagens/pitayabranca.jpg" alt="Pitaya branca">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar pitaya branca<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
 
-            <tr>
-                <th><img src="../Imagens/pimentaoverde.jpg" alt="Pimentão verde"></th>
-                <td><b>Pimentão verde</b></td>
-                <td>R$ 3,00</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
+            <div class="item8">
+                <h2>Pitaya rosa</h2>
+                <img src="../Imagens/pitayarosa.jpg" alt="Pitaya rosa">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar pitaya rosa<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
 
-            <tr>
-                <th><img src="../Imagens/pimentaovermelho.jpeg" alt="Pimentão vermelho"></th>
-                <td><b>Pimentão vermelho</b></td>
-                <td>R$ 6,00</td>
-                <td><input type="checkbox" name="opcoes"><br><label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
+            <div class="item9">
+                <h2>Quiabo</h2>
+                <img src="../Imagens/quiabo.jpg" alt="Quiabo">
+                <h4>R$5,50/kg</h4>
+                <input type="checkbox" name="opcoes"> Comprar quiabo<br />
+                <label for="pesokg"> Quantidade(kg):</label>
+                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+            </div>
 
-            <tr>
-                <th><img src="../Imagens/pimentaoamarelo.jpg" alt="Pimentão amarelo"></th>
-                <td><b>Pimentão amarelo</b></td>
-                <td>R$ 6,50</td>
-                <td><input type="checkbox" name="opcoes"><br><label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
-
-            <tr>
-                <th><img src="../Imagens/pitayabranca.jpg" alt="Pitaya branca"></th>
-                <td><b>Pitaya branca</b></td>
-                <td>R$ 10,00</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
-
-            <tr>
-                <th><img src="../Imagens/pitayarosa.jpg" alt="Pitaya rosa"></th>
-                <td><b>Pitaya rosa</b></td>
-                <td>R$ 15,00</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
-
-            <tr>
-                <th><img src="../Imagens/quiabo.jpg" alt="Quiabo"></th>
-                <td><b>Quiabo</b></td>
-                <td>RS 3,50</td>
-                <td><input type="checkbox" name="opcoes"><br>
-                    <label for="pesokg">Quantidade (Kg):</label>
-                    <input type="number" id="pesokg" placeholder="quantidade em quilos">
-                </td>
-            </tr>
-        </table>
-
+            
+        </div>
 
         <!--Botão para limpar o formulário e recomeçar a preencher-->
         <p>
@@ -148,12 +133,31 @@
         <a href="#p2"><img src="../Imagens/subir.png"></a>
     </p>
 
+    <footer>
+        <footer>
+            <div class: footer-flexitem>
+                <!--banner do header-->
+                <img src="../Imagens/greenbanner.png" class="greenbanner" alt="Produtos da Terra Alimentos Naturais">
+            </div>
 
-<footer>
-    <!--informações importantes que constam no rodapé de todas as páginas-->
-    Todos os direitos reservados<br>
-    Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000<br>
-    <a href="faleconosco.html">Fale conosco</a>
-</footer>
+            <div class: footer-flexitem>
+                <!--informações importantes que constam no rodapé de todas as páginas-->
+                <img src="../Imagens/aquitemagriculturafamiliar.png" class="imgfooter">
+            </div>
+
+            <div class:footer-flexitem>
+                <b>&copy; 2021 Produtos da Terra. Todos os direitos reservados</b><br>
+                Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000<br>
+                <a href="faleconosco.html">Fale conosco</a>
+            </div>
+
+            <div class="footer-flexitem">
+                <img src="../Imagens/whatsapp.png" alt="Entre em contato pelo whatsapp">
+                <img src="../Imagens/facebook.png" alt="Siga-nos no Facebook">
+                <img src="../Imagens/instagram.png" alt="Veja nossas novidades no Instagram">
+            </div>
+        </footer>
+    </footer>
 </body>
+
 </html>
