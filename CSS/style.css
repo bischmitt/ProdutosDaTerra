@@ -34,30 +34,34 @@ nav {
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    position: fixed;
+    top: 0;
 }
 
 
 /*Estilização para o main*/
 main {
     width: 60%;
-    height: 31.25em;
+    height: auto;
     margin: auto;
     background-color: rgba(99, 0, 80, 30%);
     box-shadow: 10px 10px 70px rgba(99, 0, 80, 60%);
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-
 }
 
+/*Estilização para o article*/
 article{
     width: 100%;
     height: 43.75em;   
 }
 
+/*Estilização para o aside*/
 aside {
     width: 25%;
     height: 6.25em;
 }
 
+/*Estilização para o footer*/
 footer{
     width: 100%;
     height: 13.125em;
@@ -70,14 +74,16 @@ footer{
     align-items: center;
 }
 
+/*Estilização para paragrafos*/
 p {
     text-align: justify;
-    line-height: 1.4;
+    line-height: 1.2;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: normal;
     padding: 1.5625em;
 }
 
+/*Estilização para h1*/
 h1 {
     line-height: 1;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
@@ -87,6 +93,7 @@ h1 {
     
 }
 
+/*Estilização para h2*/
 h2 {
     line-height: 1;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
@@ -94,6 +101,7 @@ h2 {
     padding: 0.6em;
 }
 
+/*Estilização para lista ordenada, que compõe a nav*/
 li {
     display: inline;
     padding: 0.3em;
@@ -104,12 +112,14 @@ li {
     border-radius: 3.125em;
 }
 
+/*Estilização para a classe autenicacao, relacionada aos links login e cadastre-se*/
 .autenticacao {
     display: flex;
-    flex-direction: column;
     margin-right: 5px;
 }
-/*.buttons {
+
+/*classe para estilizar botões de toda a pagina*/
+.buttons {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-size: larger;
     font-weight: bold;
@@ -125,10 +135,10 @@ li {
     display: inline-block;
     font-size: 1em;
     cursor: pointer;    
-}*/
+}
 
 a:link {
-    color: #11302E;
+    color: #E8DCA7;
     text-decoration: none;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: bold;
@@ -147,6 +157,7 @@ a:hover, a:focus, a:active{
 	color: #E4C54A;
 }
 
+/*classe para ajustar a imagem do carrinho de compras*/
 .carrinho{
     display: flex;
     align-items: center;
@@ -155,6 +166,7 @@ a:hover, a:focus, a:active{
     top: 0;
 }
 
+/*classe para centralizar botões limpar, proxima etapa (pagina2) e botões enviar e limpar(formulario1)*/
 .centralizarbotoes{
     display: flex;
     justify-content: center;
@@ -196,6 +208,20 @@ a:hover, a:focus, a:active{
     height: 625%;
 }
 
+.nav-footer{
+    display:;
+    padding: 0.3em;   
+    align-items:center;
+}
+
+li .nav-footer .menu-footer .a:link{
+    display: flex;
+    co
+}
+
+
+    
+/*estilização para corrigir defeito no fieldset do formulario1*/
 form fieldset legend{
     margin-left: 15px;
 }
@@ -206,8 +232,7 @@ height: auto;
 }
 
 
-
-@media(max-width: 768px) {
+/*@media(max-width: 768px) {
     nav {
         font-size: 70%;
         width: 100%;
@@ -217,15 +242,7 @@ height: auto;
     header {
         font-size: 70%;
     }
-} 
-
-/*#subir{
-    position: relative;
-    bottom: 0; 
-    left: 0;
-    justify-content: left;
-    float: left;
-}*/
+} */
 
 
 /* Color Theme Swatches in Hex */
@@ -234,4 +251,5 @@ height: auto;
 .My-Color-Theme-3-hex { color: #194542; }
 .My-Color-Theme-4-hex { color: #E4C54A; }
 .My-Color-Theme-5-hex { color: #E8DCA7; }
+
 
