@@ -1,8 +1,12 @@
+/*Nesta folha de estilo estão as estilizações relacionadas com as tags semânticas e classes*/
+
+/*Estilização para o <html></html>*/
 *{
     margin: 0;
     padding: 0;
 }
 
+/*Estilização para o body*/
 body {
     margin: 0;
     padding: 0;
@@ -14,15 +18,17 @@ body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
 }
 
+/*Estilização para o header*/
 header {
     text-align: center;
     width: 100%;
-    height: 150px;
+    height: 9em;
 }
 
+/*Estilização para a nav*/
 nav {
     width: 100%;
-    height: 60px;
+    height: 4.5em;
     background-color: #630050;
     display: flex;
     justify-content: space-around;
@@ -30,9 +36,11 @@ nav {
     margin: auto;
 }
 
+
+/*Estilização para o main*/
 main {
     width: 60%;
-    height: 500px;
+    height: 31.25em;
     margin: auto;
     background-color: rgba(99, 0, 80, 30%);
     box-shadow: 10px 10px 70px rgba(99, 0, 80, 60%);
@@ -42,20 +50,20 @@ main {
 
 article{
     width: 100%;
-    height: 700px;   
+    height: 43.75em;   
 }
 
 aside {
     width: 25%;
-    height: 100px;
+    height: 6.25em;
 }
 
 footer{
     width: 100%;
-    height: 210px;
+    height: 13.125em;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 20px 25px;
+    gap: 1.25em 1.5625em;
     background-color: #E8DCA7;
     flex-direction: row;
     justify-content: center;
@@ -67,21 +75,23 @@ p {
     line-height: 1.4;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: normal;
-    padding: 25px;
+    padding: 1.5625em;
 }
 
 h1 {
     line-height: 1;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: bolder;
-    margin: 20px;
+    font-style: italic;
+    margin: 0.5em;
+    
 }
 
 h2 {
     line-height: 1;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: bold;
-    padding: 20px;
+    padding: 0.6em;
 }
 
 li {
@@ -89,30 +99,67 @@ li {
     padding: 0.3em;
     font-size: 150%;    
     align-items:center;
-    border: 4px solid #630050;
+    border: 0.25em solid #630050;
     /*background-color: rgba(99, 0, 80, 70%);*/
-    border-radius: 50px;
+    border-radius: 3.125em;
 }
 
-a {
+.autenticacao {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+/*.buttons {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid rgb(99, 0, 80);
+    box-shadow: 5px 5px 15px rgba(99, 0, 80, 0.7);
+    background-color: #630050;
     color: #E8DCA7;
+    border-radius: 5em;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;    
+}*/
+
+a:link {
+    color: #11302E;
     text-decoration: none;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     font-weight: bold;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #E8DCA7;
+	}
+a:hover, a:focus, a:active{
+    padding: 10px 20px;
+    margin: 10px 10px;
+    font-size: smaller;
+    font-weight: bold;
+	text-decoration: none; 
+	color: #E4C54A;
 }
 
-figure{
-    float:left;
-    padding: 25px;
+.carrinho{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-figcaption{
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    font-weight: normal;
-    text-align: center;
-    font-size: 14px;
+.centralizarbotoes{
+    display: flex;
+    justify-content: center;
 }
-
+/*estilização usando a classe grid-container para cards de produtos na pagina2*/
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -123,19 +170,15 @@ figcaption{
     color:#E8DCA7;
   }
   
+  /*estilização usando para os itens dentro do container*/
   .grid-container div {
     background-color: rgba(99, 0, 80, 1);
     text-align: center;
     padding: 10px;
-    font-size: 1.4rem;
+    font-size: 1.4em;
+    width: 95%;
+    height: 95%;
   }
-
-.ahref-footer{
-    color:#194542;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    font-weight: bold;
-    
-}
 
 .footer-classitem {
     text-align: justify;
@@ -150,11 +193,31 @@ figcaption{
 
 .imgfooter {
     width: 200px;
-    height: 100px;
+    height: 625%;
+}
+
+form fieldset legend{
+    margin-left: 15px;
+}
+
+img {
+max-width: 100%;
+height: auto;
 }
 
 
 
+@media(max-width: 768px) {
+    nav {
+        font-size: 70%;
+        width: 100%;
+        height: 50px;
+    
+    }
+    header {
+        font-size: 70%;
+    }
+} 
 
 /*#subir{
     position: relative;
