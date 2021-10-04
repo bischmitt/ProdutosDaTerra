@@ -28,7 +28,8 @@
 
 /*Estilização para formulário na formulario.html*/
 #formulario {
-    background-color:;
+    background-color: rgba(232, 220, 167, 0.2);
+    box-shadow: 10px 10px 10px rgba(232, 220, 167, 0.2);
     color: #11302E;
     text-shadow: 1px 1px #027970;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
