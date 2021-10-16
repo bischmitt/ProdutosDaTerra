@@ -7,31 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale Conosco</title>
     <link rel="shortcut icon" href="../Imagens/iconleaf.png">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/style.css">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/idstyle.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/faleconosco.css">
+    <script src="../JavaScript/faleconosco.js"></script>
 </head>
 
 <body>
     <nav id="fale">
         <!--lista não ordenada com links que compõem a <nav>-->
-        <ul>
+        <ul class="nav-bar">
             <!--imagem para decoração-->
-            <li><a href="index.html"><img src="../Imagens/ramoesquerdo.png" alt=""></a></li>
+            <li class="decoracao"><img src="../Imagens/ramoesquerdo.png" alt=""></li>
             <!--pagina inicial do site-->
-            <li><a href="index.html">Início</a></li>
-            <!--A pagina1.html será desenvolvida somente mais tarde-->
-            <li><a href="pagina1.html">Quem somos nós?</a></li>
+            <li class="li-menu"><a href="index.html">Início</a></li>
+            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
+            <li class="li-menu"><a href="quemsomosnos.html">Quem somos nós?</a></li>
             <!--pagina com produtos a serem vendidos-->
-            <li><a href="pagina2.html">Nossos produtos</a></li>
+            <li class="li-menu"><a href="produtos.html">Nossos produtos</a></li>
             <!--A pagina3.html será desenvolvida somente mais tarde-->
-            <li><a href="pagina3.html">Receitinhas</a></li>
+            <li class="li-menu"><a href="receitinhas.html">Receitinhas</a></li>
             <!--imagem para decoração-->
-            <li><a href="index.html"><img src="../Imagens/ramodireito.png" alt=""></a></li>
+            <li class="decoracao"><img src="../Imagens/ramodireito.png" alt=""></li>
         </ul>
 
         <div class="carrinho">
-            <a href="">Login</a>
-            <a href="">Cadastre-se</a>
+            <div class="autenticacao">
+                <a href="">Cadastre-se</a>
+                <a href="">Login</a>
+            </div>
+
             <a href=""><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
         </div>
 
@@ -40,51 +43,103 @@
     <header>
         <div>
             <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1 id="index">Produtos da Terra</h1>
+            <h1>Produtos da Terra</h1>
             <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
         </div>
     </header>
 
-    <form>
-        <fieldset>
-            <legend>Problemas</legend>
-            <label>Você encontrou problemas? Diga-nos quais</label><br />
-            <input type="checkbox" name="não consigo concluir compra">
-            <input type="checkbox" name="botão não funciona">
+    <main>
 
+        <div class="Conosco">
+            <ul align="right">
+                <center>
+                    <fieldset>
+                        <legend>
+                            <h2>Fale Conosco:</h2>
+                        </legend>
+                        <form method="POST" action="" name="fale" onsubmit="return enviardados3();">
+                            </br></br>
+                            <label>Nome: </label>
+                            <input type="text" name="nome" /><span style="color: red;">*</span><br /></br>
+                            <label>E-mail: </label>
+
+                            <label>E-mail: </label>
+                            <input type="email" name="email" /><span style="color: red;">*</span><br /></br>
+                            <label>Assunto: </label>
+                            <input type="text" name="assunto" /><span style="color: red;">*</span><br /></br>
+                            <label>Menssagem: </label></br></br>
+                            <textarea name="mensagem" cols="35" rows="8"></textarea><span
+                                style="color: red;">*</span><br /></br></br></br></br>
+                            <Button type="text" name="enviar" onclick="Alert()" value="Exibir Alert">Enviar</Button>
+                            <Button type="reset" name="limpar">Limpar</button></br></br></br>
+                            <span style="color: red;">*Campos de preenchimento obrigatório</span>
+                            </for>
+                            <span style="color: red;">*Campos de preenchimento obrigatório</span>
+                        </form>
+                </center>
+            </ul>
+        </div>
+        </br></br>
         </fieldset>
-    </form>
 
-    <p>
+
+        <form>
+            <fieldset>
+                <legend>Problemas</legend>
+                <label>Você encontrou problemas? Diga-nos quais</label><br />
+                <input type="checkbox" name="não consigo concluir compra">Não consigo concluir compra<br />
+                <input type="checkbox" name="botão não funciona">Botão não funciona<br />
+                <input type="checkbox" name="produto chegou estragado">Produto chegou estragado<br />
+
+                <textarea class="textarea" name="textarea" id="textarea" cols="30"
+                    rows="10">Relate o seu problema</textarea>
+
+            </fieldset>
+        </form>
+    </main>
+
+    <p id="subir">
         <!--imagem linkada para subir ao inicio da pagina-->
         <a href="#fale"><img src="../Imagens/subir.png"></a>
     </p>
 
-</body>
-<footer>
-    <div class="footer-flexitem">
-        <!--banner do header-->
-        <img src="../Imagens/greenbanner.gif" class="greenbanner" alt="Produtos da Terra Alimentos Naturais">
-    </div>
+    <footer>
+        <!--Img-footer para orientar as duas imagens do footer-->
+        <div class="img-footer">
+            <div class="footer-flexitem">
+                <!--logo da empresa-->
+                <img src="../Imagens/greenbanner1.gif" alt="Produtos da Terra Alimentos Naturais">
+            </div>
 
-    <div class="footer-flexitem">
-        <!--informações importantes que constam no rodapé de todas as páginas-->
-        <img src="../Imagens/aquitemagriculturafamiliar.png" class="imgfooter">
-    </div>
+            <div class="footer-flexitem">
+                <!--logo agricultura familiar-->
+                <img src="../Imagens/aquitemagriculturafamiliar.png">
+            </div>
+        </div>
 
-    <div class="footer-flexitem">
-        <b>&copy; 2021 Produtos da Terra. Todos os direitos reservados</b><br>
-        Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000<br>
-        <a href="faleconosco.html">Fale conosco</a>
-    </div>
+        <div class="info-footer">
 
-    <div class="footer-flexitem">
-        <a href="https://web.whatsapp.com/"><img src="../Imagens/whatsapp.png" alt="Entre em contato pelo whatsapp"></a>
-        <a href="https://www.facebook.com/"><img src="../Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
-        <a href="https://www.instagram.com/bischmitt98/"><img src="../Imagens/instagram.png"
-                alt="Veja nossas novidades no Instagram"></a>
-    </div>
-</footer>
+            <!--DIV para copyright e endereço-->
+            <div class="copyright">
+                <div class="copytight-flexitem">
+                    <a href="faleconosco.html">Fale conosco</a>
+                    ||<a href="politicadeprivacidade.html"> Política de Privacidade</a>
+                </div>
+
+                <div class="copytight-flexitem">Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000 </div>
+
+                <div class="copytight-flexitem"><b>&copy;2021 Produtos da Terra. Todos os direitos reservados</b></div>
+            </div>
+            <!--adição dos ícones de redes sociais-->
+            <div class="footer-redessociais" id="redes-sociais">
+                <a href="https://web.whatsapp.com/"><img src="../Imagens/whatsapp.png"
+                        alt="Entre em contato pelo whatsapp"></a>
+                <a href="https://www.facebook.com/"><img src="../Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
+                <a href="https://www.instagram.com/bischmitt98/"><img src="../Imagens/instagram.png"
+                        alt="Veja nossas novidades no Instagram"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

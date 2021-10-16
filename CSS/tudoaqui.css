@@ -1,0 +1,166 @@
+
+
+/*classe para estilizar botões de toda a pagina*/
+.buttons {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid rgb(99, 0, 80);
+    box-shadow: 5px 5px 15px rgba(99, 0, 80, 0.7);
+    background-color: #630050;
+    color: #E8DCA7;
+    border-radius: 5rem;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;    
+}
+
+
+a:hover, a:focus, a:active{
+    padding: 10px 20px;
+    margin: 10px 10px;
+    font-size: smaller;
+    font-weight: bold;
+	text-decoration: none; 
+	color: #E4C54A;
+}
+
+
+
+/*classe para centralizar botões limpar, proxima etapa (pagina2) e botões enviar e limpar(formulario1)*/
+.centralizarbotoes{
+    display: flex;
+    justify-content: center;
+}
+/*estilização usando a classe grid-container para cards de produtos na pagina2*/
+.grid-container {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    background-color: rgba(17, 48, 46, 0.3);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    padding: 2%;
+    color:#E8DCA7;
+  }
+  
+  /*estilização usando para os itens dentro do container*/
+  .grid-container div {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    background-color: rgba(99, 0, 80, 1);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3rem;
+    width: 95%;
+    height: 95%;
+  }
+
+.footer-classitem {
+    text-align: justify;
+    justify-content: center;
+}
+
+.greenbanner {
+    width: 250px;
+    height: 190px;
+    border-radius: 100%;
+}
+
+.imgfooter {
+    width: 200px;
+    height: 625%;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3em;   
+    align-items:center;
+}
+
+/*estilização para corrigir defeito no fieldset do formulario1*/
+form fieldset legend{
+    margin-left: 15px;
+}
+
+@media(max-width: 768px) {
+    nav {
+        font-size: 80%;
+        width: 100%;
+        height: 60px;
+    }
+
+/*classe criada para facilitar a responsividade do header e da main*/
+    .container{
+        width: 80%;
+        height: 80%;
+    }
+
+    body{
+        width: 80%;
+        height: 80%;
+    }
+
+    header {
+        font-size: 70%;
+    }
+
+    .grid-container {
+        width: 80vw;
+        height: 80vh;
+        font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+        background-color: rgba(17, 48, 46, 0.3);
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1rem;
+        padding: 2%;
+        color:#E8DCA7;
+      }
+}
+
+/*Nesta folha de estilo estão as estilizações relacionadas com as id's*/
+
+/*Estilização do texto no index*/
+#textoindex {
+    text-align: justify;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    color: #11302E;
+    font-size:large;
+    font-weight: 550;
+}
+
+#fieldset {
+    padding-left: 10px;
+}
+/*Estilização da figura no index*/
+#figureindex {
+    float:left;
+    padding: 1.5625em;
+}
+
+/*Estilização da legenda da figura no index*/
+#figcaptionindex {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: normal;
+    text-align: center;
+    font-size: 0.875em;
+}
+
+/*Estilização para formulário na formulario.html*/
+#formulario {
+    background-color: rgba(232, 220, 167, 0.2);
+    box-shadow: 10px 10px 10px rgba(232, 220, 167, 0.2);
+    color: #11302E;
+    text-shadow: 1px 1px #027970;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 10px;
+}
+
+
+
+

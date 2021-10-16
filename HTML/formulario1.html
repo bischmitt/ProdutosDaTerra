@@ -7,31 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos da Terra - Preencha seus dados</title>
     <link rel="shortcut icon" href="../Imagens/iconleaf.png">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/style.css">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/idstyle.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/formulario1.css">
+    <script src="../JavaScript/formulario1.js"></script>
+
 </head>
 
 <body>
     <nav id="form">
         <!--lista não ordenada com links que compõem a <nav>-->
-        <ul>
+        <ul class="nav-bar">
             <!--imagem para decoração-->
-            <li><a href="index.html"><img src="../Imagens/ramoesquerdo.png" alt=""></a></li>
+            <li class="decoracao"><img src="../Imagens/ramoesquerdo.png" alt=""></li>
             <!--pagina inicial do site-->
-            <li><a href="index.html">Início</a></li>
-            <!--A pagina1.html será desenvolvida somente mais tarde-->
-            <li><a href="pagina1.html">Quem somos nós?</a></li>
+            <li class="li-menu"><a href="index.html">Início</a></li>
+            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
+            <li class="li-menu"><a href="quemsomosnos.html">Quem somos nós?</a></li>
             <!--pagina com produtos a serem vendidos-->
-            <li><a href="pagina2.html">Nossos produtos</a></li>
+            <li class="li-menu"><a href="produtos.html">Nossos produtos</a></li>
             <!--A pagina3.html será desenvolvida somente mais tarde-->
-            <li><a href="pagina3.html">Receitinhas</a></li>
+            <li class="li-menu"><a href="receitinhas.html">Receitinhas</a></li>
             <!--imagem para decoração-->
-            <li><a href="index.html"><img src="../Imagens/ramodireito.png" alt=""></a></li>
+            <li class="decoracao"><img src="../Imagens/ramodireito.png" alt=""></li>
         </ul>
 
         <div class="carrinho">
-            <a href="">Login</a>
-            <a href="">Cadastre-se</a>
+            <div class="autenticacao">
+                <a href="">Cadastre-se</a>
+                <a href="">Login</a>
+            </div>
             <a href=""><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
         </div>
     </nav>
@@ -39,117 +42,175 @@
     <header>
         <div>
             <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1 id="index">Produtos da Terra</h1>
+            <h1>Produtos da Terra</h1>
             <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
         </div>
     </header>
 
-    <!--formulário com os dados do cliente-->
-    <form id="formulario">
+    <main>
+        <!--formulário com os dados do cliente-->
+        <form class="formulario" action="" method="POST" name="form1" onsubmit="return enviardados();">
+            <fieldset>
+                <legend>Dados para cadastro e contato</legend>
 
-        <fieldset>
-            <legend>Dados para cadastro e contato</legend>
-            <p>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required="" placeholder="Insira seu nome completo">
-            </p>
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Insira seu nome"></input>
+                    </div>
 
-            <p>
-                <label for="dataNascimento">Selecione sua data de nascimento:</label>
-                <input type="date" id="dataNascimento">
-            </p>
+                    <div class="campo">
+                        <label for="nome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Insira seu sobrenome"></input>
+                    </div>
 
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required="" name="email" placeholder="Insira seu email">
-            </p>
+                </div>
 
-            <p>
-                <!--Seria melhor um input que permite qualquer tipo de número, não somente inteiro-->
-                <label for="number">Celular:</label>
-                <input type="tel" id="numerocontato" required="" name="numerocontato" placeholder="(xx)xxxxxxxxx">
-            </p>
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="dataNascimento">Data de nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento"></input>
+                    </div>
+
+                    <div class="campo">
+                        <!--Seria melhor um input que permite qualquer tipo de número, não somente inteiro-->
+                        <label for="number">Celular:</label>
+                        <input type="tel" id="numeroContato" name="numeroContato" placeholder="(xx)xxxxxxxxx"></input>
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Insira seu email"></input>
+                    </div>
+
+                    <div class="campo">
+                        <label for="CEP">CEP:</label>
+                        <input type="number" id="CEP" name="CEP" placeholder="xxxxx-xxx"></input>
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="endereco">Estado:</label>
+                        <input type="text" id="estado" name="estado" value="Santa Catarina" disabled></input>
+                    </div>
+
+                    <div class="campo">
+                        <label for="municipio">Município:</label>
+                        <select id="municipio" name="municipio">
+                            <option value="AC">Antônio Carlos</option>
+                            <option value="BI">Biguaçu</option>
+                            <option value="FL">Florianópolis</option>
+                            <option value="GCR">Governador Celso Ramos</option>
+                            <option value="PA">Palhoça</option>
+                            <option value="PL">Paulo Lopes</option>
+                            <option value="SAI">Santo Amaro da Imperatriz</option>
+                            <option value="SJ">São José</option>
+                            <option value="SPA">São Pedro de Alcântara</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco"
+                            placeholder="Insira o endereço de entrega"></input>
+                    </div>
+
+                    <div class="campo">
+                        <label for="endereco">Complemento:</label>
+                        <input type="text" id="complemento" name="complemento" placeholder="bloco, ap, nº"></input>
+                    </div>
+                </div>
+
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="nome">CPF:</label>
+                        <input type="text" id="CPF" name="CPF" placeholder="Insira seu CPF"></input>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="crie uma senha aqui">
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Confirme a senha:</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha"
+                            placeholder="confirme sua senha">
+                    </div>
+                </div>
 
 
-            <p>
-                <!--Uso do <select> para selecionar a cidade do cliente. Como os produtos ofertados são não perecíveis, o alcance do site e de sua respectiva entrega se limitam à microrregião de Florianópolis-->
-                <label for="municipio">Em qual município você mora?</label>
-                <select id="municipio" name="estado">
-                    <option value="AC">Antônio Carlos</option>
-                    <option value="BI">Biguaçu</option>
-                    <option value="FL">Florianópolis</option>
-                    <option value="GCR">Governador Celso Ramos</option>
-                    <option value="PA">Palhoça</option>
-                    <option value="PL">Paulo Lopes</option>
-                    <option value="SAI">Santo Amaro da Imperatriz</option>
-                    <option value="SJ">São José</option>
-                    <option value="SPA">São Pedro de Alcântara</option>
-                </select>
-            </p>
+                <fieldset>
+                    <legend id="legenda">Qual forma de pagamento você deseja?</legend>
+                    <div class="campo" id="campo">
+                        <!--type radio para uma única opção de pagamento-->
+                        <label><input type="radio" id="pagamento1" name="pagamento">Cartão de crédito</label>
+                        <label><input type="radio" id="pagamento2" name="pagamento">Boleto Bancário</label>
+                        <label><input type="radio" id="pagamento3" name="pagamento">PayPal</label>
+                    </div>
+                </fieldset>
 
-            <!--endereço do cliente. Futuramente será substituído por outro sistema de endereçamento-->
-            <p>
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" placeholder="Insira o endereço de entrega">
-            </p>
-
-            <p>
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" required="" placeholder="digite sua senha aqui">
-            </p>
-        
-            <p>
-        <fieldset id="fieldset">
-            <!--type radio para uma única opção de pagamento-->
-            <legend>Qual forma de pagamento você deseja?</legend><br />
-
-            <label><input type="radio" id="pagamento1" name="periodo">Cartão de crédito</label>
-            <label><input type="radio" id="pagamento2" name="periodo">Boleto Bancário</label>
-            <label><input type="radio" id="pagamento3" name="periodo">PayPal</label><br>
-            </p>
-
-            <div class="centralizarbotoes">
-            <!--botão com link para voltar à página anterior-->
-            <a href="pagina2.html"><input type="button" value="Voltar às compras" class="buttons"></a>
-
-            <!--Enviar formulário e concluir compra-->
-            <a><input type="submit" value="Concluir compra" class="buttons"></a>
+            </fieldset>
+            <div class="botoes" #id="concluirCompra">
+                <!--botão com link para voltar à página anterior-->
+                <button type="button" name="voltar" class="botao" value="" class="botao"><a href="produtos.html">Voltar
+                        às compras</a></button>
+                <!--botão para limpar campos-->
+                <button type="reset" name="limpar" class="botao">Limpar</button>
+                <!--Enviar formulário e concluir compra-->
+                <button type="submit" name="enviar" class="botao" onclick="Alert()" value="Exibir Alert">Concluir
+                    compra</button>
             </div>
-        </fieldset>
-</fieldset>
+        </form>
+    </main>
 
-    </form>
-
-    <p>
+    <p id="subir">
         <!--imagem linkada para subir ao inicio da pagina-->
         <a href="#form"><img src="../Imagens/subir.png"></a>
     </p>
-</body>
 
-<footer>
-    <div class="footer-flexitem">
-        <!--banner do header-->
-        <img src="../Imagens/greenbanner.gif" class="greenbanner" alt="Produtos da Terra Alimentos Naturais">
-    </div>
+    <footer>
+        <!--Img-footer para orientar as duas imagens do footer-->
+        <div class="img-footer">
+            <div class="footer-flexitem">
+                <!--logo da empresa-->
+                <img src="../Imagens/greenbanner1.gif" alt="Produtos da Terra Alimentos Naturais">
+            </div>
 
-    <div class="footer-flexitem">
-        <!--informações importantes que constam no rodapé de todas as páginas-->
-        <img src="../Imagens/aquitemagriculturafamiliar.png" class="imgfooter">
-    </div>
+            <div class="footer-flexitem">
+                <!--logo agricultura familiar-->
+                <img src="../Imagens/aquitemagriculturafamiliar.png">
+            </div>
+        </div>
 
-    <div class="footer-flexitem">
-        <b>&copy; 2021 Produtos da Terra. Todos os direitos reservados</b><br>
-        Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000<br>
-        <a href="faleconosco.html">Fale conosco</a>
-    </div>
+        <div class="info-footer">
 
-    <div class="footer-flexitem">
-        <a href="https://web.whatsapp.com/"><img src="../Imagens/whatsapp.png" alt="Entre em contato pelo whatsapp"></a>
-        <a href="https://www.facebook.com/"><img src="../Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
-        <a href="https://www.instagram.com/bischmitt98/"><img src="../Imagens/instagram.png"
-                alt="Veja nossas novidades no Instagram"></a>
-    </div>
-</footer>
+            <!--DIV para copyright e endereço-->
+            <div class="copyright">
+                <div class="copytight-flexitem">
+                    <a href="faleconosco.html">Fale conosco</a>
+                    ||<a href="politicadeprivacidade.html"> Política de Privacidade</a>
+                </div>
+
+                <div class="copytight-flexitem">Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000 </div>
+
+                <div class="copytight-flexitem"><b>&copy;2021 Produtos da Terra. Todos os direitos reservados</b></div>
+            </div>
+            <!--adição dos ícones de redes sociais-->
+            <div class="footer-redessociais" id="redes-sociais">
+                <a href="https://web.whatsapp.com/"><img src="../Imagens/whatsapp.png"
+                        alt="Entre em contato pelo whatsapp"></a>
+                <a href="https://www.facebook.com/"><img src="../Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
+                <a href="https://www.instagram.com/bischmitt98/"><img src="../Imagens/instagram.png"
+                        alt="Veja nossas novidades no Instagram"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

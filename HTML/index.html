@@ -7,37 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos da Terra</title>
     <link rel="shortcut icon" href="../Imagens/iconleaf.png">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/style.css">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/idstyle.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/index.css">
+    <script src="../JavaScript/index.js"></script>
 </head>
 
 <body>
-    <nav id="index">
+    <nav id="topo">
+
         <!--lista não ordenada com links que compõem a <nav>-->
-        <ul>
+        <ul class="nav-bar">
             <!--imagem para decoração-->
-            <li><a href="index.html"><img src="../Imagens/ramoesquerdo.png" alt=""></a></li>
+            <li class="decoracao"><img src="../Imagens/ramoesquerdo.png" alt=""></li>
             <!--pagina inicial do site-->
-            <li><a href="index.html">Início</a></li>
-            <!--A pagina1.html será desenvolvida somente mais tarde-->
-            <li><a href="pagina1.html">Quem somos nós?</a></li>
+            <li class="li-menu"><a href="index.html">Início</a></li>
+            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
+            <li class="li-menu"><a href="quemsomosnos.html">Quem somos nós?</a></li>
             <!--pagina com produtos a serem vendidos-->
-            <li><a href="pagina2.html">Nossos produtos</a></li>
+            <li class="li-menu"><a href="produtos.html">Nossos produtos</a></li>
             <!--A pagina3.html será desenvolvida somente mais tarde-->
-            <li><a href="pagina3.html">Receitinhas</a></li>
+            <li class="li-menu"><a href="receitinhas.html">Receitinhas</a></li>
             <!--imagem para decoração-->
-            <li><a href="index.html"><img src="../Imagens/ramodireito.png" alt=""></a></li>
+            <li class="decoracao"><img src="../Imagens/ramodireito.png" alt=""></li>
         </ul>
 
         <div class="carrinho">
-
             <div class="autenticacao">
-                <a href="">Login</a>
                 <a href="">Cadastre-se</a>
+                <a href="">Login</a>
             </div>
 
             <a href=""><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
         </div>
+
     </nav>
 
     <header>
@@ -49,18 +50,15 @@
     </header>
 
     <main>
-        <article>
-            <figure id="figureindex">
-                <!--imagem que retrata o casal de agricultores que produz os alimentos vendidos no site-->
-                <img src="https://static.ndmais.com.br/2014/08/10-08-2014-14-41-35-agricultores-edesio-schmitt-maria-lucia-schmitt-antonio-carlos-foto.-rosane-lima-04agosto2014-mg-0090.jpg"
-                    alt="Casal de agricultores Edésio Schmitt e Maria Lúcia Klein Schmitt em sua roça">
-                <!--legenda da foto-->
-                <figcaption id="figcaptionindex">Casal de agricultores Edésio Schmitt e Maria Lúcia Klein Schmitt em sua
-                    roça</figcaption>
-            </figure>
-
+        <figure class="index-figure">
+            <!--imagem que retrata o casal de agricultores que produz os alimentos vendidos no site-->
+            <img src="../Imagens/indexphoto3.jpg">
+            <!--legenda da foto-->
+            <!--  <figcaption id="figcaptionindex">Alimentos</figcaption> -->
+        </figure>
+        <div class="index-texto">
             <!--breve descrição do serviço de alimentação oferecido pelo site. Mais informações serão produzidas na seção "Quem somos nós?"-->
-            <p id="textoindex">Somos uma família de agricultores da cidade de Antônio Carlos, Santa Catarina. Cuidar da
+            <p>Somos uma família de agricultores da cidade de Antônio Carlos, Santa Catarina. Cuidar da
                 terra e
                 prouduzir alimentos nos dá muito orgulho. Aqui você pode encontrar o que estamos produzindo no
                 momento. Você escolhe o que precisa e nós levamos até sua casa. Sustentável, barato e prático! E,
@@ -69,37 +67,49 @@
                 verdadeiro pilar
                 que alimenta as famílias brasileiras!
             </p>
-        </article>
+        </div>
     </main>
 
     <p id="subir">
         <!--imagem linkada para subir ao inicio da pagina-->
-        <a href="#index"><img src="../Imagens/subir.png"></a>
+        <a href="#topo"><img src="../Imagens/subir.png"></a>
     </p>
 
     <footer>
-        <div class="footer-flexitem">
-            <!--banner do header-->
-            <img src="../Imagens/greenbanner.gif" class="greenbanner" alt="Produtos da Terra Alimentos Naturais">
+        <!--Img-footer para orientar as duas imagens do footer-->
+        <div class="img-footer">
+            <div class="footer-flexitem">
+                <!--logo da empresa-->
+                <img src="../Imagens/greenbanner1.gif" alt="Produtos da Terra Alimentos Naturais">
+            </div>
+
+            <div class="footer-flexitem">
+                <!--logo agricultura familiar-->
+                <img src="../Imagens/aquitemagriculturafamiliar.png">
+            </div>
         </div>
 
-        <div class="footer-flexitem">
-            <!--informações importantes que constam no rodapé de todas as páginas-->
-            <img src="../Imagens/aquitemagriculturafamiliar.png" class="imgfooter">
-        </div>
+        <div class="info-footer">
 
-        <div class="footer-flexitem">
-            <b>&copy; 2021 Produtos da Terra. Todos os direitos reservados</b><br>
-            Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000<br>
-        </div>
+        <!--DIV para copyright e endereço-->
+        <div class="copyright">
+            <div class="copytight-flexitem">
+                <a href="faleconosco.html">Fale conosco</a>
+                ||<a href="politicadeprivacidade.html"> Política de Privacidade</a>
+            </div>
 
-        <!--adição dos ícones de redes sociais-->
-        <div class="footer-flexitem">
+            <div class="copytight-flexitem">Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000 </div>
+
+            <div class="copytight-flexitem"><b>&copy;2021 Produtos da Terra. Todos os direitos reservados</b></div>
+        </div>
+         <!--adição dos ícones de redes sociais-->
+         <div class="footer-redessociais" id="redes-sociais">
             <a href="https://web.whatsapp.com/"><img src="../Imagens/whatsapp.png"
                     alt="Entre em contato pelo whatsapp"></a>
             <a href="https://www.facebook.com/"><img src="../Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
             <a href="https://www.instagram.com/bischmitt98/"><img src="../Imagens/instagram.png"
                     alt="Veja nossas novidades no Instagram"></a>
+        </div>
         </div>
     </footer>
 </body>
