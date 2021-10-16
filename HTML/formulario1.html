@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="../Imagens/iconleaf.png">
     <link rel="stylesheet" type="text/CSS" href="../CSS/formulario1.css">
     <script src="../JavaScript/formulario1.js"></script>
+    <script src="../JavaScript/validarCPF.js"></script>
+    <script src="../JavaScript/validarCEP.js"></script>
 
 </head>
 
@@ -86,20 +88,23 @@
                     </div>
 
                     <div class="campo">
-                        <label for="CEP">CEP:</label>
-                        <input type="number" id="CEP" name="CEP" placeholder="xxxxx-xxx"></input>
+                        <label for="cep">CEP:</label>
+                        <input type="text" maxlength="9" name="cep" id="cep" onblur="consultaCEP();" placeholder="xxxxx-xxx"></input>
                     </div>
                 </div>
 
                 <div class="grupo">
                     <div class="campo">
-                        <label for="endereco">Estado:</label>
-                        <input type="text" id="estado" name="estado" value="Santa Catarina" disabled></input>
+                        <label for="uf">Estado:</label>
+                        <input type="text" id="uf" name="uf" value="Santa Catarina" disabled></input>
                     </div>
 
                     <div class="campo">
-                        <label for="municipio">Município:</label>
-                        <select id="municipio" name="municipio">
+                        <label for="localidade">Município:</label>
+                        <input type="text" id="localidade" name="localidade"></input>
+                    </div>
+
+<!--                        <select id="localidade" name="localidade">
                             <option value="AC">Antônio Carlos</option>
                             <option value="BI">Biguaçu</option>
                             <option value="FL">Florianópolis</option>
@@ -109,14 +114,14 @@
                             <option value="SAI">Santo Amaro da Imperatriz</option>
                             <option value="SJ">São José</option>
                             <option value="SPA">São Pedro de Alcântara</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
 
                 <div class="grupo">
                     <div class="campo">
-                        <label for="endereco">Endereço:</label>
-                        <input type="text" id="endereco" name="endereco"
+                        <label for="logradouro">Endereço:</label>
+                        <input type="text" id="logradouro" name="logradouro"
                             placeholder="Insira o endereço de entrega"></input>
                     </div>
 
@@ -128,8 +133,8 @@
 
                 <div class="grupo">
                     <div class="campo">
-                        <label for="nome">CPF:</label>
-                        <input type="text" id="CPF" name="CPF" placeholder="Insira seu CPF"></input>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Insira seu CPF" onblur="return validarCPF(this)"></input>
                     </div>
 
                     <div class="campo">
@@ -163,7 +168,7 @@
                 <!--botão para limpar campos-->
                 <button type="reset" name="limpar" class="botao">Limpar</button>
                 <!--Enviar formulário e concluir compra-->
-                <button type="submit" name="enviar" class="botao" onclick="Alert()" value="Exibir Alert">Concluir
+                <button type="submit" name="enviar" class="botao">Concluir
                     compra</button>
             </div>
         </form>
