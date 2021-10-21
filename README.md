@@ -31,25 +31,23 @@ Por fim, será efetuado o merge da **branch develop** para a **branch main**.
 <br>
 <br>
 2. Verificar se está na branch apropriada.
+
    - Abrir o VS-Code na pasta do projeto clonado.
+      
    - Abrir o terminal do VS-Code nessa pasta.
+   
    - Executar no terminal:
-  
+   
       ```bash
       git status
-      ```
-
+      ```  
    - Exibirá na primeira linha do terminal.
-  <br>
-  <br>
+
 3. Atualizar o projeto local.
    - Trazer as atualizações da branch develop para se manter atualizado.
-  
       ```bash
       git pull origin develop
       ```
-<br>
-
 4. Trazer alterações necessárias para a área de **stage**.
      - Puxar todas as alterações:
        ```bash
