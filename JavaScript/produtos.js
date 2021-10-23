@@ -93,14 +93,31 @@ class Produto {
     }
     enviarParaCarrinho(idEscolhido) {
         let idDoProdutoEscolhido = idEscolhido;
+
+        if(this.validarCarrinho(idDoProdutoEscolhido)){
+           return 
+        }
+
         this.todosOsProdutos.forEach(produto => {
             if (produto.id == idEscolhido) {
                 let quantidadeDoProdutoEscolhido = $(".item" + idEscolhido + " .pesokg").val()
-                produto.quantidade = Number(quantidadeDoProdutoEscolhido)
+                Number(quantidadeDoProdutoEscolhido) == 0 ? 0.5 : produto.quantidade = Number(quantidadeDoProdutoEscolhido);
                 this.itensDoCarrinho.push(this.todosOsProdutos[idEscolhido - 1])
             }
         })
+
         this.enviarParaTabela(idDoProdutoEscolhido)
+
+        $(".item" + idEscolhido + " .pesokg").val("")
+    }
+
+    validarCarrinho(idProduto) { 
+        let verificarItem = Boolean(this.itensDoCarrinho.map(item => item.id).indexOf(idProduto))
+        if(verificarItem){
+           return false
+        }else{
+            return true
+        }
     }
 
     enviarParaTabela(idEscolhido) {
