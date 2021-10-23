@@ -1,6 +1,13 @@
 /*CARRINHO DE COMPRAS*/
 #modalCarrinho{
     display: none;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    width: 80vw;
+    background-color: #ccc;
+
 }
 .carrinho {
     display    : flex;
