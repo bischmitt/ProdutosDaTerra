@@ -1,62 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exemplo</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos da Terra</title>
     <link rel="shortcut icon" href="/Imagens/iconleaf.png">
     <link rel="stylesheet" type="text/CSS" href="CSS/index.css">
-    <script src="JavaScript/index.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-
-        <!--lista não ordenada com links que compõem a <nav>-->
-        <ul class="nav-bar">
-            <!--imagem para decoração-->
-            <li class="decoracao"><img src="Imagens/ramoesquerdo.png" alt=""></li>
-            <!--pagina inicial do site-->
-            <li class="li-menu"><a href="index.html">Início</a></li>
-            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
-            <li class="li-menu"><a href="HTML/quemsomosnos.html">Quem somos nós?</a></li>
-            <!--pagina com produtos a serem vendidos-->
-            <li class="li-menu"><a href="HTML/produtos.html">Nossos produtos</a></li>
-            <!--A pagina3.html será desenvolvida somente mais tarde-->
-            <li class="li-menu"><a href="HTML/receitinhas.html">Receitinhas</a></li>
-            <!--imagem para decoração-->
-            <li class="decoracao"><img src="Imagens/ramodireito.png" alt=""></li>
-        </ul>
-
-        <div class="carrinho">
-            <div class="autenticacao">
-                <a href="">Cadastre-se</a>
-                <a href="">Login</a>
-            </div>
-
-            <a href=""><img src="Imagens/carrinho.png" alt="Carrinho de compras"></a>
+    <header>
+        <div class="menuHamburguer">
+            <a href="#" class="icone_menu"><img src="Imagens/menuhamburguer.svg" /></a>
         </div>
+    </header>
+    <nav class="menu">
+        <a href="#" class="item_menu">Home</a>
+        <a href="#" class="item_menu">Quem somos</a>
+        <a href="#" class="item_menu">Produtos</a>
 
     </nav>
 
-    <header id="topo">
-        <div>
-            <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1>Produtos da Terra</h1>
-            <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
+    <div class="carrinho">
+        <div class="autenticacao">
+            <a href="">Cadastre-se</a>
+            <a href="">Login</a>
         </div>
-    </header>
+
+        <a href=""><img src="Imagens/carrinho.png" alt="Carrinho de compras"></a>
+    </div>
+
 
     <main>
-        <figure class="index-figure">
-            <!--imagem que retrata o casal de agricultores que produz os alimentos vendidos no site-->
-            <img src="Imagens/indexphoto3.jpg">
-            <!--legenda da foto-->
-            <!--  <figcaption id="figcaptionindex">Alimentos</figcaption> -->
-        </figure>
-        <div class="index-texto">
+        <section id="banner">
+            <div id="btnAnte"></div>
+            <div id="btnProx"></div>
+            <div id="botoes">
+                <input type="radio" id="b0" name="banners" value="0" />
+                <input type="radio" id="b1" name="banners" value="1" />
+                <input type="radio" id="b2" name="banners" value="2" />
+                <input type="radio" id="b3" name="banners" value="3" />
+            </div>
+        </section>
+
+
+        <section class="index-texto">
             <!--breve descrição do serviço de alimentação oferecido pelo site. Mais informações serão produzidas na seção "Quem somos nós?"-->
             <p>Somos uma família de agricultores da cidade de Antônio Carlos, Santa Catarina. Cuidar da
                 terra e
@@ -67,7 +57,7 @@
                 verdadeiro pilar
                 que alimenta as famílias brasileiras!
             </p>
-        </div>
+        </section>
     </main>
 
     <p id="subir">
@@ -75,43 +65,11 @@
         <a href="#topo"><img src="Imagens/subir.png"></a>
     </p>
 
-    <footer>
-        <!--Img-footer para orientar as duas imagens do footer-->
-        <div class="img-footer">
-            <div class="footer-flexitem">
-                <!--logo da empresa-->
-                <img src="Imagens/greenbanner1.gif" alt="Produtos da Terra Alimentos Naturais">
-            </div>
 
-            <div class="footer-flexitem">
-                <!--logo agricultura familiar-->
-                <img src="Imagens/aquitemagriculturafamiliar.png">
-            </div>
-        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="JavaScript/jquery.js"></script>
+    <script src="JavaScript/index.js"></script>
 
-        <div class="info-footer">
-
-        <!--DIV para copyright e endereço-->
-        <div class="copyright">
-            <div class="copytight-flexitem">
-                <a href="HTML/faleconosco.html">Fale conosco</a>
-                ||<a href="HTML/politicadeprivacidade.html"> Política de Privacidade</a>
-            </div>
-
-            <div class="copytight-flexitem">Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000 </div>
-
-            <div class="copytight-flexitem"><b>&copy;2021 Produtos da Terra. Todos os direitos reservados</b></div>
-        </div>
-         <!--adição dos ícones de redes sociais-->
-         <div class="footer-redessociais" id="redes-sociais">
-            <a href="https://web.whatsapp.com/"><img src="Imagens/whatsapp.png"
-                    alt="Entre em contato pelo whatsapp"></a>
-            <a href="https://www.facebook.com/"><img src="Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
-            <a href="https://www.instagram.com/bischmitt98/"><img src="Imagens/instagram.png"
-                    alt="Veja nossas novidades no Instagram"></a>
-        </div>
-        </div>
-    </footer>
 </body>
 
 </html>
