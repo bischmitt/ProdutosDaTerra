@@ -1,8 +1,8 @@
 class Modal {
-    abrirModal(){
+    abrirModal() {
         $("#modalCarrinho").css("display", "block");
     }
-    fecharModal(){
+    fecharModal() {
         $("#modalCarrinho").css("display", "none");
     }
 
@@ -10,16 +10,20 @@ class Modal {
 
 let modal = new Modal()
 
-$("#abrirModal").click(function(){
+$("#abrirModal").click(function () {
     modal.abrirModal()
 })
 
-$("#but1").click(function(){
+$("#but1").click(function () {
     modal.fecharModal()
 })
+$("#but2").click(function () {
+    location.href = "formulario1.html";
+
+});
 
 class Produto {
-    constructor(){
+    constructor() {
         this.todosOsProdutos = [
             {
                 id: 1,
@@ -87,15 +91,78 @@ class Produto {
         ]
         this.itensDoCarrinho = new Array()
     }
-    enviarParaCarrinho(idEscolhido){
-        this.todosOsProdutos.forEach(produto =>{
-            if(produto.id == idEscolhido){
+    enviarParaCarrinho(idEscolhido) {
+        let idDoProdutoEscolhido = idEscolhido;
+        this.todosOsProdutos.forEach(produto => {
+            if (produto.id == idEscolhido) {
                 let quantidadeDoProdutoEscolhido = $(".item" + idEscolhido + " .pesokg").val()
                 produto.quantidade = Number(quantidadeDoProdutoEscolhido)
                 this.itensDoCarrinho.push(this.todosOsProdutos[idEscolhido - 1])
             }
         })
+        this.enviarParaTabela(idDoProdutoEscolhido)
+    }
+
+    enviarParaTabela(idEscolhido) {
+        // declaração de uma variável para referenciar o tbody da tabela
+        let tbody = document.getElementById("tbody");
+
+        // limpar a tabela antes de ser mostrada 
+        tbody.innerText = "";
+
+        //loop para percorrer o array de Produtos
+        for (let i = 0; i < this.itensDoCarrinho.length; i++) {
+            // inserir um nova linha no tbody
+            let novaLinha = tbody.insertRow();
+
+            // criar cada coluna(célula) de cada linha
+            let td_id = novaLinha.insertCell();
+            let td_nome = novaLinha.insertCell();
+            let td_quantidade = novaLinha.insertCell();
+            let td_preco = novaLinha.insertCell();
+            let td_precoTotal = novaLinha.insertCell();
+            let td_acoes = novaLinha.insertCell();
+
+            //alimentar as células
+            td_id.innerText = this.itensDoCarrinho[i].id;
+            td_nome.innerText = this.itensDoCarrinho[i].nome;
+            $('<input type="number" min="0.5" step="0.1">').val(this.itensDoCarrinho[i].quantidade).appendTo(td_quantidade)
+            td_preco.innerText = this.itensDoCarrinho[i].preco;
+            td_precoTotal.innerText = this.calcularPrecoTotal(this.itensDoCarrinho[i].preco, this.itensDoCarrinho[i].quantidade);
+
+            //para adiconar uma classe (.center) as colunas
+            td_id.classList.add("center");
+            td_acoes.classList.add("center");
+
+            // criando um elemento de imagem para ser colocado na quarta coluna da linha
+            let imgDelete = document.createElement("img");
+            // atribuindo a esse elemento o caminho
+            imgDelete.src = "../Imagens/delete.png";
+            //adicionando um filho para a quarta coluna
+            td_acoes.appendChild(imgDelete);
+
+            //atribuir um método para imgDelete através do setAttribute como os parâmetros: ("evento", método)
+            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + ")");
+
+        }
+
+    }
+
+    calcularPrecoTotal(preco, quantidade) {
+        let resultado = Number(preco) * Number(quantidade)
+        return resultado
+    }
+
+    deletar(id) {
+        if (confirm("Deseja realmente deletar o produto de id " + id)) {
+            for (let i = 0; i < this.itensDoCarrinho.length; i++) {
+                if (this.itensDoCarrinho[i].id == id) {
+                    this.itensDoCarrinho.splice(i, 1);
+                    tbody.deleteRow(i);
+                }
+            }
+        }
     }
 }
 let produto = new Produto()
-console.log(produto.itensDoCarrinho)
+
