@@ -24,15 +24,14 @@ header {
 header>.menuHamburguer {
     position: absolute;
     top: 15px;
-    left: 25px;
-
+    left: 15px;
+    z-index: 1;
 }
 
-header>.menuHamburguer a.icone_menu img{
-    
-    font-size: 40px;
-    padding-top: 5px;
+header>.menuHamburguer a.icone_menu{
+    padding: 5px;
     transition: .2s ease;
+    
 }
 
 header>.menuHamburguer a.icone_menu:hover img{
@@ -56,24 +55,26 @@ nav.menu>a {
     text-transform: uppercase;
 }
 
-
+nav.menu>a:first-child{
+    padding-top: 55px;
+} 
 
 .exibe_menu {
     left: 0 !important;
 }
 
-
 /*CARRINHO DE COMPRAS*/
-.carrinho {
+/* .carrinho {
     display: flex;
     align-items: center;
+
+} */
+
+/*CARRINHO E ENTRAR*/
+.autenticacao {
     position: absolute;
     right: 20px;
     margin: auto;
-}
-
-/*LOGIN E CADASTRE-SE*/
-.autenticacao {
     display: flex;
     flex-direction: column;
 }
@@ -88,10 +89,13 @@ nav.menu>a {
     text-align: center;
 }
 
+/* SECTION LOGO */
+.logo img{
+    width: 20vw;
+}
 
-
+/* MAIN */
 /* SECTION */
-
 #banner {
     margin: auto;
     width: 75%;

@@ -11,8 +11,8 @@ let vtBanner = ["../Imagens/banana.png", "../Imagens/pimentaoverde.png", "../Ima
 let max = vtBanner.length - 1;
 let i = 0;
 
-$("#btnAnte").text("<");
-$("#btnProx").text(">");
+$("#btnAnte").prepend($('<img>', {id: 'arrowleft', src '../Imagens/arrowright.svg'}));
+$("#btnProx").text("../Imagens/arrowright.svg");
 // quando a gente chama o css no js, as propriedades que tem palavras compostas tira o hifen e coloca a letra maiuscula, colocando a palabra em camelCase.
 $("#banner").css("backgroundImage", "url(" + vtBanner[0] + ")");
 
