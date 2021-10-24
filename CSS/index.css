@@ -3,60 +3,62 @@
     margin: 0;
     box-sizing: border-box;
     list-style-type: none;
-    /*TROUXE A LIST-STYLE PARA O RESET*/
     text-decoration: none;
-    /*TROUXE O TEXT PARA O RESET*/
 }
 
 /*ESTILIZAÇÃO DO BODY*/
 body {
-    background-color: rgba(232, 220, 167, 0.45);
-    background-image: url(../Imagens/background2.png);
+    background-image: url(../Imagens/background2.png); 
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 1;
+    
 }
 
 header {
     height: 70px;
+    padding-bottom: 22rem;
+    
 }
 
 header>.menuHamburguer {
     position: absolute;
     top: 15px;
-    left: 15px;
-    z-index: 1;
+    left: 20px;
+    z-index: 2;
 }
 
-header>.menuHamburguer a.icone_menu{
-    padding: 5px;
-    transition: .2s ease;
-    
-}
+header>.menuHamburguer a img.icone_menu{
+    transition: 1s ease;
+} 
 
-header>.menuHamburguer a.icone_menu:hover img{
-    color: #fff;
-}
+header>.menuHamburguer a img.icone_menu:hover{
+    opacity: 0.5;
+} /* O hover nã está funcionando -- Bianca */
 
 nav.menu {
-    width: 20%;
-    background-color: tomato;
-    min-height: calc(50vh - 50px);
+    width: 16%;
+    background-color: #11302E;
+    min-height: calc(40vh - 40px);
     position: absolute;
     left: -300px;
     transition: .3s all;
+    border-radius: 0 10px 10px 0;
 }
 
 nav.menu>a {
     display: block;
     padding: 5px;
-    margin: 10px 0 0px 20px;
-    color: #bd1212;
+    margin: 15px 0 0px 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #E4C54A;
     text-transform: uppercase;
 }
 
 nav.menu>a:first-child{
-    padding-top: 55px;
+    padding-top: 70px;
 } 
 
 .exibe_menu {
@@ -91,20 +93,31 @@ nav.menu>a:first-child{
 
 /* SECTION LOGO */
 .logo img{
-    width: 20vw;
+    height: 200px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
 }
 
 /* MAIN */
+main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 /* SECTION */
 #banner {
     margin: auto;
-    width: 70%;
-    height: 36vh;
+    width: 100%;
+    height: 32vh;
     border: 2px solid rgb(38, 66, 50);
     background-size: 100%;
     background-repeat:no-repeat;
     background-position:center;
     border-radius: 20px;
+    opacity: 0.95;
+    z-index: 3;
 }
 
 #btnAnte,
@@ -123,10 +136,23 @@ nav.menu>a:first-child{
 
 #botoes {
     position: absolute;
-    bottom: 75px;
+    bottom: 190px;
     left: 49%;
 }
 
+/* SECTION TEXTO */
+.index-texto{
+    margin-top: 20px;
+    width: 100%;
+    color: rgba(17, 48, 46, 1);
+    padding: 1.5rem;
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: 32px;
+    border-radius: 20px;
+    opacity: 0.9;
+    background-color: #E8DCBB;
+}
 
 
 /* FOOTER */
