@@ -7,12 +7,12 @@ $(document).ready(function() {
 
 
 // Lista de imagens a serem exibidas
-let vtBanner = ["../Imagens/banana.png", "../Imagens/pimentaoverde.png", "../Imagens/pimentaoamarelo.png", "../Imagens/chuchu.png"];
+let vtBanner = ["../Imagens/banner1.png", "../Imagens/banner2.png", "../Imagens/banner3.png", "../Imagens/banner4.png"];
 let max = vtBanner.length - 1;
 let i = 0;
 
-$("#btnAnte").prepend($('<img>', {id: 'arrowleft', src '../Imagens/arrowright.svg'}));
-$("#btnProx").text("../Imagens/arrowright.svg");
+$("#btnAnte").prepend($('<img>', {src: '../Imagens/arrowleft.svg'}));
+$("#btnProx").prepend($('<img>', {src: '../Imagens/arrowright.svg'}));
 // quando a gente chama o css no js, as propriedades que tem palavras compostas tira o hifen e coloca a letra maiuscula, colocando a palabra em camelCase.
 $("#banner").css("backgroundImage", "url(" + vtBanner[0] + ")");
 
@@ -26,7 +26,7 @@ $("#btnProx").click(function () {
 setInterval(() => troca(1), 4000)
 
 function troca(opr) {
-    $("#banner").css("backgroundImage", "url(" + vtBanner[i] + ")").fadeOut(1000, function () {
+    $("#banner").css("backgroundImage", "url(" + vtBanner[i] + ")").fadeIn(1000, function () {
         i += opr;
         if (i > max) {
             i = 0;

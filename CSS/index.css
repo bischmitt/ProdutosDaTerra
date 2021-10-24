@@ -50,7 +50,7 @@ nav.menu {
 nav.menu>a {
     display: block;
     padding: 5px;
-    margin: 15px 0 0px 20px;
+    margin: 10px 0 0px 20px;
     color: #bd1212;
     text-transform: uppercase;
 }
@@ -98,21 +98,18 @@ nav.menu>a:first-child{
 /* SECTION */
 #banner {
     margin: auto;
-    width: 75%;
-    height: 300px;
-    border: 1px solid rgb(38, 66, 50);
-    background-color: rgb(218, 115, 183);
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 70%;
+    height: 36vh;
+    border: 2px solid rgb(38, 66, 50);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
     border-radius: 20px;
 }
 
 #btnAnte,
 #btnProx {
-    line-height: 250px;
-    font-size: 20px;
-    color: rgb(148, 1, 99);
-    font-weight: bold;
+    line-height: 300px;
     cursor: pointer;
 }
 
@@ -126,8 +123,8 @@ nav.menu>a:first-child{
 
 #botoes {
     position: absolute;
-    bottom: 120px;
-    left: 27%;
+    bottom: 75px;
+    left: 49%;
 }
 
 
@@ -373,5 +370,7 @@ footer {
 
 /* Color Theme Swatches in Hex */
 .My-Color-Theme-1-hex {
-    color: #630050, #FFBAF2, #FFD1FF, #0C2222 #11302E, #29873E, #62771F, #BCAC4E, #E8DAC5, #E9DC82, #E4C54A, #ECC636, #FEA545, #CEAF83, #F2897D, #F38930, #D36A21,
+    color: #630050, #FFBAF2, #FFD1FF, #0C2222 #11302E, #29873E, #62771F,
+     #BCAC4E, #E8DCBB, #FAE8C7 #E9DC82, #E4C54A, #F0A941, #ff993a,
+      #f37e30
 }
