@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <title>Exemplo</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Imagens/iconleaf.png">
     <link rel="stylesheet" type="text/CSS" href="CSS/index.css">
+    <script src="JavaScript/jquery.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -26,11 +27,20 @@
         <div class="logo">
             <img src="Imagens/logo.svg" alt="logo" />
         </div>
-        
+
         <div class="autenticacao">
-            <a href=""><img src="Imagens/carrinho.png" alt="Carrinho de compras"></a> <a href="">Entrar</a>
+            <a href="">Entrar</a>
+            <a href=""><img src="Imagens/carrinho.svg" alt="Carrinho de compras"></a>
         </div>
     </header>
+
+    <section class="buscar">
+        <div id="divBusca">
+            <img src="Imagens/lupa.svg" alt="Pesquisar..." />
+            <input type="text" id="txtBusca" placeholder="Encontre um produto..." />
+            <button id="btnBusca">Pesquisar</button>
+        </div>
+    </section>
 
     <main>
         <section id="banner">
@@ -65,8 +75,8 @@
     </p>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="JavaScript/jquery.js"></script>
+   <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    
     <script src="JavaScript/index.js"></script>
 
 </body>
