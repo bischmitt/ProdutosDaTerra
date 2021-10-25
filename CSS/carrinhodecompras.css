@@ -1,0 +1,64 @@
+/*CARRINHO DE COMPRAS*/
+#modalCarrinho{
+    display: none;
+    position: absolute;
+    top: 11%;
+    left: 10%;
+    right: 10%;
+    width: 80vw;
+    background-color:darkorange;
+
+}
+.headercarrinho{
+    width: 100%;
+    text-align: center;
+    font-size: 25pt;
+    color:  rgba(99, 0, 80, 1);
+    
+}
+
+table {
+    border-collapse: collapse;
+    border         : 3px solid rgba(232, 220, 167, 0.8);
+    width          : 100%;
+}
+
+table th {
+    background-color: rgb(214, 214, 214);
+}
+
+table th,
+td {
+    padding   : 1px 5px;
+    text-align: left;
+
+}
+
+table td img {
+    cursor: pointer;
+    width : 22px;
+}
+
+#but1 {
+    float   : left;
+    margin-top: 20px;
+}
+
+#but2 {
+    float: right;
+    margin-top: 20px;
+  
+
+}
+.anime hover{
+    opacity: 1;
+    transition: .3s;
+}
+#car{
+    font-size: 20pt;
+    background-color: rgba(232, 220, 167, 0.8);
+}
+#cart{
+    font-size: 15pt;
+    background-color: rgba(232, 220, 167, 0.8);
+}

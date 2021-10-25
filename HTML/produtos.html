@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos da Terra - Nossos Produtos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../Imagens/iconleaf.png">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/carrinhodecompras.css">
     <link rel="stylesheet" type="text/CSS" href="../CSS/produtos.css">
-    <script src="../JavaScript/produtos.js"></script>
+
+
 </head>
 
 <body>
@@ -36,7 +40,8 @@
                 <a href="">Login</a>
             </div>
 
-            <a href=""><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
+            <a id="abrirModal"><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
+            <!-- <p id="cart"><span id="car">0</span></p> -->
         </div>
     </nav>
 
@@ -54,79 +59,79 @@
                 <h2>Banana</h2>
                 <img src="../Imagens/banana.png" alt="Banana">
                 <h4>R$5,50/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar banana<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number"  min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn1" onclick="produto.enviarParaCarrinho(1)">Adicionar ao carrinho</button> <br />
             </div>
             <div class="item2">
                 <h2>Chuchu</h2>
                 <img src="../Imagens/chuchu.png" alt="Chuchu">
                 <h4>R$3,50/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar chuchu<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn2" onclick="produto.enviarParaCarrinho(2)">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item3">
                 <h2>Maracujá</h2>
                 <img src="../Imagens/maracuja.png" alt="Maracujá">
                 <h4>R$8,00/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar maracujá<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn3" onclick="produto.enviarParaCarrinho(3)">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item4">
                 <h2>Pimentão amarelo</h2>
                 <img src="../Imagens/pimentaoamarelo.png" alt="Pimentão amarelo">
                 <h4>R$5,50/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar pimentão amarelo<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn4" onclick="produto.enviarParaCarrinho(4)">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item5">
                 <h2>Pimentão verde</h2>
                 <img src="../Imagens/pimentaoverde.png" alt="Pimentão verde">
                 <h4>R$4,25/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar pimentão verde<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn5" onclick="produto.enviarParaCarrinho(5)">Adicionar ao carrinho</button> <br />
             </div>
             <div class="item6">
                 <h2>Pimentão vermelho</h2>
                 <img src="../Imagens/pimentaovermelho.png" alt="Pimentão vermelho">
                 <h4>R$5,75/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar pimentão vermelho<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn6" onclick="produto.enviarParaCarrinho(6)">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item7">
                 <h2>Pitaya branca</h2>
                 <img src="../Imagens/pitayabranca.png" alt="Pitaya branca">
                 <h4>R$8,50/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar pitaya branca<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn7" onclick="produto.enviarParaCarrinho(7)">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item8">
                 <h2>Pitaya rosa</h2>
                 <img src="../Imagens/pitayarosa.png" alt="Pitaya rosa">
                 <h4>R$10,00/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar pitaya rosa<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn8" onclick="produto.enviarParaCarrinho(8)">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item9">
                 <h2>Quiabo</h2>
                 <img src="../Imagens/quiabo.png" alt="Quiabo">
                 <h4>R$3,00/kg</h4>
-                <input type="checkbox" name="opcoes"> Comprar quiabo<br />
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" id="pesokg" placeholder="quantidade em quilos">
+                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <button id="btn9" onclick="produto.enviarParaCarrinho(9)">Adicionar ao carrinho</button> <br />
 
             </div>
         </div>
@@ -137,7 +142,8 @@
             <!--botão para limpar campos-->
             <button type="reset" name="limpar" class="botao">Limpar</button>
             <!--botão com link para voltar à página anterior-->
-            <button type="button" name="voltar" class="botao" value="" class="botao"><a href="formulario1.html">Concluir compra</a></button>
+            <button type="button" name="voltar" class="botao" value="" class="botao"><a href="formulario1.html">Concluir
+                    compra</a></button>
         </div>
     </form>
 
@@ -183,6 +189,45 @@
             </div>
         </div>
     </footer>
+    <!-- Modal carrinho -->
+    <div id="modalCarrinho">
+
+        <header class="headercarrinho">
+                <h3>Carrinho de Compras</h3>
+        </header>
+        <main>
+            <section class="card">
+                <div id="produtos">
+                </div>
+                <div id="carrinho">
+
+                </div>
+
+            </section>
+            <section class="conteudo">
+                <div>
+                    <table border=1>
+                        <thead>
+                            <th class="center">ID</th>
+                            <th>Nome Produto</th>
+                            <th>Quantidade kg</th>
+                            <th>Valor Unitário R$</th>
+                            <th>Valor Total R$</th>
+                            <th>Ações</th>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <button id="but1" >Continuar Comprando</button>
+                <button id="but2" >Concluir</button>
+            </section>
+        </main>
+    </div>
+    <!-- Vamos utilizar Dom -->
+    <script src="../JavaScript/produtos.js"></script>
 </body>
 
 </html>
