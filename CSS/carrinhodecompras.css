@@ -50,3 +50,15 @@ table td img {
   
 
 }
+.anime hover{
+    opacity: 1;
+    transition: .3s;
+}
+#car{
+    font-size: 20pt;
+    background-color: rgba(232, 220, 167, 0.8);
+}
+#cart{
+    font-size: 15pt;
+    background-color: rgba(232, 220, 167, 0.8);
+}

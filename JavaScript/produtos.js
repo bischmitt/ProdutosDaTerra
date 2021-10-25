@@ -17,10 +17,11 @@ $("#abrirModal").click(function () {
 $("#but1").click(function () {
     modal.fecharModal()
 })
+
 $("#but2").click(function () {
     location.href = "formulario1.html";
-
 });
+
 
 class Produto {
     constructor() {
@@ -94,30 +95,33 @@ class Produto {
     enviarParaCarrinho(idEscolhido) {
         let idDoProdutoEscolhido = idEscolhido;
 
-        if(this.validarCarrinho(idDoProdutoEscolhido)){
-           return 
+        if (this.validarCarrinho(idEscolhido)) {
+            this.todosOsProdutos.forEach(produto => {
+                if (produto.id == idEscolhido) {
+                    let quantidadeDoProdutoEscolhido = $(".item" + idEscolhido + " .pesokg").val()
+                    Number(quantidadeDoProdutoEscolhido) == 0 ? 0.5 : produto.quantidade = Number(quantidadeDoProdutoEscolhido);
+                    this.itensDoCarrinho.push(this.todosOsProdutos[idEscolhido - 1])
+                }
+            })
+
+            this.enviarParaTabela(idDoProdutoEscolhido)
+
+            $(".item" + idEscolhido + " .pesokg").val("")
         }
 
-        this.todosOsProdutos.forEach(produto => {
-            if (produto.id == idEscolhido) {
-                let quantidadeDoProdutoEscolhido = $(".item" + idEscolhido + " .pesokg").val()
-                Number(quantidadeDoProdutoEscolhido) == 0 ? 0.5 : produto.quantidade = Number(quantidadeDoProdutoEscolhido);
-                this.itensDoCarrinho.push(this.todosOsProdutos[idEscolhido - 1])
-            }
-        })
-
-        this.enviarParaTabela(idDoProdutoEscolhido)
-
-        $(".item" + idEscolhido + " .pesokg").val("")
+      
+        
     }
 
-    validarCarrinho(idProduto) { 
-        let verificarItem = Boolean(this.itensDoCarrinho.map(item => item.id).indexOf(idProduto))
-        if(verificarItem){
-           return false
-        }else{
+    validarCarrinho(idProduto) {
+        if (this.itensDoCarrinho.length == 0) {
             return true
+        } else {
+            let listaDeId = this.itensDoCarrinho.map(item => item.id)
+            let verificaId = listaDeId.includes(idProduto, 0)
+            return !verificaId
         }
+
     }
 
     enviarParaTabela(idEscolhido) {
@@ -143,7 +147,7 @@ class Produto {
             //alimentar as células
             td_id.innerText = this.itensDoCarrinho[i].id;
             td_nome.innerText = this.itensDoCarrinho[i].nome;
-            $('<input type="number" min="0.5" step="0.1">').val(this.itensDoCarrinho[i].quantidade).appendTo(td_quantidade)
+            $('<input id="qtd" type="number" min="0.5" step="0.1">').val(this.itensDoCarrinho[i].quantidade).appendTo(td_quantidade)
             td_preco.innerText = this.itensDoCarrinho[i].preco;
             td_precoTotal.innerText = this.calcularPrecoTotal(this.itensDoCarrinho[i].preco, this.itensDoCarrinho[i].quantidade);
 
@@ -162,13 +166,21 @@ class Produto {
             imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + ")");
 
         }
+        
 
     }
 
     calcularPrecoTotal(preco, quantidade) {
         let resultado = Number(preco) * Number(quantidade)
-        return resultado
+        return (resultado).toFixed(2)
     }
+
+    // mudarPrecoTotal(e) {
+    //     $("#qtd").html()
+    //     console.log(e.target.value)
+    // }
+
+
 
     deletar(id) {
         if (confirm("Deseja realmente deletar o produto de id " + id)) {
@@ -182,4 +194,17 @@ class Produto {
     }
 }
 let produto = new Produto()
+
+$("#qtd").change(() => {
+
+})
+
+// let qtdcar = 0;
+// $("#btn1").click(function(){
+//     $("#car") 
+// })
+
+
+
+
 

@@ -41,6 +41,7 @@
             </div>
 
             <a id="abrirModal"><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
+            <!-- <p id="cart"><span id="car">0</span></p> -->
         </div>
     </nav>
 
@@ -59,7 +60,7 @@
                 <img src="../Imagens/banana.png" alt="Banana">
                 <h4>R$5,50/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <input type="number"  min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
                 <button id="btn1" onclick="produto.enviarParaCarrinho(1)">Adicionar ao carrinho</button> <br />
             </div>
             <div class="item2">
@@ -209,9 +210,9 @@
                         <thead>
                             <th class="center">ID</th>
                             <th>Nome Produto</th>
-                            <th>Quantidade</th>
-                            <th>Valor Unitário</th>
-                            <th>Valor Total</th>
+                            <th>Quantidade kg</th>
+                            <th>Valor Unitário R$</th>
+                            <th>Valor Total R$</th>
                             <th>Ações</th>
                         </thead>
                         <tbody id="tbody">
