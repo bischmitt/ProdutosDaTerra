@@ -1,0 +1,195 @@
+
+/* ----------------------------------MARIANA ----------------------------- */
+/* Escopo de trabalho e desenvolvedores */
+.flex-container {
+     width:100%;
+     height: 600px;
+     float: left;
+
+}
+
+#flex-item1 {
+    background-color:#BCAC4E;
+    width: 19%;
+    height: 600px;
+    padding: 40px;
+    float: right;
+    
+}
+#flex-item {
+    background-color: #E8DCBB;
+    width: 68%;
+    height: 600px;
+    padding: 40px;
+    float: left;
+    
+}
+    
+.img{
+    border-radius:50px;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+}
+.esconder1, .esconder2, .esconder3, .esconder4{
+    display: none;
+    text-align: justify;
+}
+
+.btnDev{
+    display: flex;
+    width: 20vw;
+    padding: 0.6em;
+    margin-top: 5px;
+    color:#11302E;
+    background-color: white;
+    border: 3px solid ;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #29873E;
+    line-height: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;    
+}
+.escondido{
+    /* Adicionei display none para não ficar aparecendo a informação após entrar na tela (Mari) */
+    display: none;
+}
+.tituloEscopo{
+    text-align: center;
+    font-size: 12 px;
+    font-weight: bold;
+}
+.img1{
+    border-radius:50px;
+    margin-left: 200px;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+}
+
+.My-Color-Theme-1-hex {
+    color: #630050, #FFBAF2, #FFD1FF, #0C2222 #11302E, #29873E, #62771F,
+     #BCAC4E, #E8DCBB, #FAE8C7 #E9DC82, #E4C54A, #F0A941, #ff993a,
+      #f37e30
+}
+/* -------------------------------------------------------FOOTER ---------------------------- */
+ul {
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+#institucional {
+    font-size: 15 px;
+    color: black;
+    text-decoration: none;
+}
+
+.sectionFooter {
+    width: 100%;
+    height: 240px;
+    background-color:#FAF6F2;
+    color: black;
+    justify-content: space-around;
+    border-bottom: solid #E4C54A 1px;
+    display: block;
+    clear: both;
+    text-decoration: none;
+
+}
+
+#footer1 {
+    width: 33%;
+    height: 200px;
+    float: left;
+    position: relative;
+    text-align: center;
+    color: black;
+
+}
+
+#links {
+    color: black;
+    text-decoration: underline;
+}
+
+/*  ----------------------------------------------- LINK DAS REDES SOCIAIS --------------- */
+.redesSociais {
+    width: 100%;
+    height: 200px;
+    border-bottom: solid #E4C54A 1px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.redesSociais div {
+    justify-content: center;
+    text-decoration: none;
+}
+
+/*  ----------------------------------------------- FOOTER 2 E 3--------------------------- */
+#footer2 {
+    width: 33%;
+    height: 200px;
+    float: left;
+    position: relative;
+    text-align: center;
+    color: black;
+
+
+}
+
+#footer3 {
+    width: 33%;
+    height: 200px;
+    float: left;
+    position: relative;
+    text-align: center;
+    color: black;
+
+}
+
+/* ----------------------------------------RODAPÉ------------------------------------------ */
+#rodape {
+    text-align: center;
+    background-color: #11302E;
+    color: white;
+    margin: 0px;    
+    width: 100%;
+    height: 35px;
+    font-size: small;
+       
+   } 
+
+#btnNews{
+    border: none;
+    background-color: none;
+    }
+
+#pagamento{
+    width:100%;
+    height:40px;
+    text-decoration: none;
+    list-style-type: none;
+   
+}
+
+.pagamento{
+    width:14%;
+    height:50px;
+    text-decoration: none;
+    float: left;
+    list-style-type: none;
+    text-align:  center;
+    
+}
+
+#formaPag{
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+}
