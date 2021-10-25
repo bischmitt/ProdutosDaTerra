@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Imagens/iconleaf.png">
+    <link rel="stylesheet" type="text/CSS" href="CSS/index.css">
+    <script src="JavaScript/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="menuHamburguer">
+            <a href="#"><img class="icone_menu" src="Imagens/menuhamburguer.svg" /></a>
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="item_menu">Home</a>
+            <a href="HTML/quemsomosnos.html" class="item_menu">Quem somos</a>
+            <a href="HTML/produtos.html" class="item_menu">Produtos</a>
+        </nav>
+
+        <div class="logo">
+            <img src="Imagens/logo.svg" alt="logo" />
+        </div>
+
+        <div class="autenticacao">
+            <a href="">Entrar</a>
+            <a href=""><img src="Imagens/carrinho.svg" alt="Carrinho de compras"></a>
+        </div>
+    </header>
+
+    <section class="buscar">
+        <div id="divBusca">
+            <img src="Imagens/lupa.svg" alt="Pesquisar..." />
+            <input type="text" id="txtBusca" placeholder="Encontre um produto..." />
+            <button id="btnBusca">Pesquisar</button>
+        </div>
+    </section>
+
+    <main>
+        <section id="banner">
+            <div id="btnAnte"></div>
+            <div id="btnProx"></div>
+            <div id="botoes">
+                <input type="radio" id="b0" name="banners" value="0" />
+                <input type="radio" id="b1" name="banners" value="1" />
+                <input type="radio" id="b2" name="banners" value="2" />
+                <input type="radio" id="b3" name="banners" value="3" />
+            </div>
+        </section>
+
+
+        <section class="index-texto">
+            <!--breve descrição do serviço de alimentação oferecido pelo site. Mais informações serão produzidas na seção "Quem somos nós?"-->
+            <p>Somos uma família de agricultores da cidade de Antônio Carlos, Santa Catarina. Cuidar da
+                terra e
+                prouduzir alimentos nos dá muito orgulho. Aqui você pode encontrar o que estamos produzindo no
+                momento. Você escolhe o que precisa e nós levamos até sua casa. Sustentável, barato e prático! E,
+                fazendo
+                isso, você ainda contribui para o crescimento e desenvolvimento da agricultura familiar, o
+                verdadeiro pilar
+                que alimenta as famílias brasileiras!
+            </p>
+        </section>
+    </main>
+
+    <p id="subir">
+        <!--imagem linkada para subir ao inicio da pagina-->
+        <a href="#topo"><img src="Imagens/subir.png"></a>
+    </p>
+
+
+   <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    
+    <script src="JavaScript/index.js"></script>
+
+</body>
+
+</html>
