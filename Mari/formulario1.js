@@ -1,4 +1,4 @@
-//  -------1. CPF - Validar campo- Chamar um alert se invalido ou campo do formulário (vermelho)
+//OK  -------1. CPF - Validar campo- Chamar um alert se invalido ou campo do formulário (vermelho)
         function _cpf(cpf) {
             cpf = cpf.replace(/[^\d]+/g, '');
             if (cpf == '') return false;
@@ -41,36 +41,31 @@
         }
 
 // --------2. Data de Nascimento - Não pode ter idade negativa e mais de 130 anos ( considerar 16/03/ 2021) chamar um alert se invalido ou campo do formulário (vermelho)
-// Criei uma função validarNascimento, abri e fechei o parametro.
 
-// --------3. CEP - Para completar os campos: Rua, Bairro, Cidade e Estado (através da API ViaCep)
-// const apresentaDados = (resultado) =>{
-//     for(let campo in resultado){
-//         if(document.querySelector("#"+campo)){
-//             console.log(campo);
-//             document.querySelector("#"+campo).value = resultado[campo];
-//         }
-//     }
-// }
-// function consultaCep(){
-//     let cepDigitado = document.getElementById("cep");
-    
-//     if(cepDigitado.value == "") {
-//         cepDigitado.style.border = "1px solid red";
-//     }else{
-//         let cepProcurado = cepDigitado.value.replace("-","");
-//         console.log(cepProcurado);
-
-//         fetch(`http://viacep.com.br/ws/${cepProcurado}/json/`)
-//         .then(response => {response.json()
-//         .then(data => console.log(apresentaDados(data)))
-//         })
-//         .catch(x => console.log("CEP não encontrado!"))
-//     }
-// }
+// OK --------3. CEP - Para completar os campos: Rua, Bairro, Cidade e Estado (através da API ViaCep)
 // --------4. Email - ser validado - Chamar um alert se invalido ou campo do formulário (vermelho)
 
-// --------5.  Ao clicar no botão Enviar - Exibir os campos dentro em uma div com a seguinte frase "Ola (nome ) , seu login é (email) e pode usar (CPF) como senha"
 
+// --------5.  Ao clicar no botão Enviar - Exibir os campos dentro em uma div com a seguinte frase "Ola (nome ) , seu login é (email) e pode usar (CPF) como senha"
+function frase() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var cpf = document.getElementById('cpf').value;
+    // Verificar se existe erro, caso exista return false
+    let erro = email;
+  }
+    if (!verificarEmail()){
+        erro = true
+return false
+    } else {
+        document.getElementById('mensagem').innerHTML = `Olá <strong>${nome}</strong>, seu login é <strong>${email}</strong>, pode usar <strong>${cpf}</strong> como senha.`;
+    }
+
+
+// OK --------6. Footer
+
+function mostraParagrafo(){
+    $("#btnNews").fadeIn("slow");
+}
 
 

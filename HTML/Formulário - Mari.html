@@ -7,59 +7,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos da Terra</title>
     <link rel="shortcut icon" href="../Imagens/arvore.png">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/index.css">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/footer2.css">
-    <script src="../JavaScript/receitinhas.js"></script>
-
+    <link rel="stylesheet" type="text/CSS" href="../CSS/formulario2-Mari.css">
+    <!-- <link rel="stylesheet" type="text/CSS" href="../CSS/formulario1-Mari.css"> -->
+    <script src="../JavaScript/validarCEP.js"></script>
+    <script src="../JavaScript/formulario1.js"></script>
+    <script src="../Mari/formulario1.js"></script>
+    <script type="text/Javascript" src="../jquery.js"></script>
 </head>
 
 <body>
-
     <nav>
+        <article id="formularioLado">
+            <form class="formulario" action="" method="POST" name="form" onsubmit="return enviardados();">
+                <section id="parte1">
+                    <div id="login">
+                        <p id="letrasForm">LOGIN</p>
+                        <p>
+                            <label for="email">
+                                Email:
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="digite seu email aqui">
+                        </p>
+                        <!--CAIXA PARA SELECIONAR A DATA DE NASCIMENTO com calendário-->
 
-        <!--lista não ordenada com links que compõem a <nav>-->
-        <ul class="nav-bar">
-            <!--imagem para decoração-->
-            <li class="decoracao"><img src="../Imagens/ramoesquerdo.png" alt=""></li>
-            <!--pagina inicial do site-->
-            <li class="li-menu"><a href="../index.html">Início</a></li>
-            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
-            <li class="li-menu"><a href="quemsomosnos.html">Quem somos nós?</a></li>
-            <!--pagina com produtos a serem vendidos-->
-            <li class="li-menu"><a href="produtos.html">Nossos produtos</a></li>
-            <!--A pagina3.html será desenvolvida somente mais tarde-->
-            <li class="li-menu"><a href="receitinhas.html">Receitinhas</a></li>
-            <!--imagem para decoração-->
-            <li class="decoracao"><img src="../Imagens/ramodireito.png" alt=""></li>
-        </ul>
+                        <p>
+                            <!--Placeholder não funciona nas datas-->
+                            <!--Password - oculta a informação digitada no input-->
+                            <label for="senha">
+                                Senha:
+                            </label>
+                            <input type="password" id="senha" placeholder="digite sua senha aqui">
+                        </p>
+                        <button class="botaoEntrar" type="submit" class="botaoEntrar">Entrar
+                        </button>
+                    </div>
 
-        <div class="carrinho">
-            <div class="autenticacao">
-                <a href="">Cadastre-se</a>
-                <a href="">Login</a>
+            </form>
+            <p class="endereço">
+                <img id="logo" src="../Imagens/logo.svg"></p>
+            <p class="endereço">
+                Endereço: Rua x, Cidade - Estado, Brasil, CEP 00000-000.</p>
+            <p class="endereço">
+                CNPJ:XX.XXX.XXX/0001-XX</p>
+            <p class="endereço">
+                Caixa Postal: XXXX-XX
+            </p>
+            <iframe id="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14582.292517002776!2d-46.1995978!3d-23.97553045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e2!4m0!4m0!5e0!3m2!1spt-BR!2sbr!4v1633808173653!5m2!1spt-BR!2sbr"></iframe>
             </div>
+        </article>
+        <article id="formulario">
+            <form id="cadastro"  class="formulario" action="" method="POST" name="form1" onsubmit="return enviardados();">
+                <p id="letrasForm"> CADASTRE- SE AQUI</p>
+                <p>
+                    <label for="nome">
+                        Nome:
+                    </label>
+                    <input type="text" id="nome" name="nome" placeholder="digite seu nome aqui">
 
-            <a href=""><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
-        </div>
+                    <p>
+                        <label for="numero">
+                            CPF:
+                        </label>
+                        <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF"
+                            onblur="return validarCPF(this)">
 
-    </nav>
+                    </p>
+                    <p>
+                        <label for=" numero">
+                            Telefone:
+                        </label>
+                        <input type="number" id="numero" name="numero" placeholder="digite seu telefone">
 
-    <header id="topo">
-        <div>
-            <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1>Produtos da Terra</h1>
-            <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
-        </div>
-    </header>
+                    </p>
 
-    <main>
+                    <p>
+                        <label for="dataNascimento"></label>Data:
+                        <input id="date" type="date" id="dataNascimento" name="dataNascimento"
+                            onclick="validarNascimento()" placeholder="Selecione sua data de nascimento">
+                    </p>
 
-    </main>
 
-    <p id="subir">
-        <!--imagem linkada para subir ao inicio da pagina-->
-        <a href="#topo"><img src="../Imagens/subir.png"></a>
-    </p>
+                    <!--radio é usado para seleção de um único elemento na lista.-->
+                    <p class="genero1"> Gênero: </p>
+                    <label><input type="radio" class="genero" name="genero">Feminino</label>
+                    <label><input type="radio" class="genero" name="genero">Masculino</label><label><input type="radio"
+                            class="genero" name="genero">Não-Binário</label>
+                    <br />
+                    <br />
+                    <br />
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" maxlength="9" name="cep" id="cep" onblur="consultaCEP();"
+                        placeholder="xxxxx-xxx"></input>
+
+
+
+                    <label for="uf">Estado:</label>
+                    <input type="text" id="uf" name="uf"  disabled></input>
+
+
+
+                    <label for="localidade">Município:</label>
+                    <input type="text" id="localidade" name="localidade"></input>
+
+                    <label for="logradouro">Endereço:</label>
+                    <input type="text" id="logradouro" name="logradouro"
+                        placeholder="Insira o endereço de entrega"></input>
+
+                    <label for="endereco">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento"
+                        placeholder="digite aqui o complemento"></input>
+
+
+                    <label>Mensagem: </label></br></br>
+                    <textarea name="mensagem" cols="35" rows="8"></textarea><br /></br></br></br></br>
+                    <Button type="submit" name="enviar" onclick="Alert()" value="Exibir Alert" frase() >Enviar</Button>
+                    <Button type="reset" name="limpar">Limpar</button></br></br></br>
+
+            </form>
+
+            </section>
+        </article>
 
         <!-- *****************************************FOOTER*************************************** -->
         <footer>
@@ -76,8 +145,7 @@
                             <li> Famílias produtora</li>
                             <li> Visitas ao produtor</li>
                             <li>
-                                <input id="btnNews" type="button" onclick="mostrarParagrafo()"
-                                    value="Newsletter"/>
+                                <input id="btnNews" type="button" onclick="mostrarParagrafo()" value="Newsletter" />
                                 <p class="escondido">Deixe seu email aqui e receba ofertas e novidades exclusivas:</a>
                                 </p>
                                 <p class="escondido"><input type="text" placeholder="digite o seu e-mail aqui" /></p>
@@ -190,13 +258,13 @@
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
             <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
+                <div class="vw-plugin-top-wrapper"></div>
             </div>
-          </div>
-          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-          <script>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
-          </script>
-          </body>
-</html>
+        </script>
+</body>
 
+</html>

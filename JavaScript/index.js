@@ -58,7 +58,7 @@ $("input[name='banners']").click(function () {
     $("#banner").css("backgroundImage", "url(" + vtBanner[getNumber] + ")").fadeIn(1000);
 })
 
-//********************CÓDIGO PARA O BANNER ROTATIVO************************/
+//********************CÓDIGO PARA O NEWSLETTER************************/
 function mostrarParagrafo() {
      $(".escondido").slideDown("slow").toggle();
 

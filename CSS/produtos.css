@@ -241,43 +241,43 @@ button a:hover{
     margin-top: 35px;
 }
 
-/* FOOTER */
+/* FOOTER
 footer{
     background-color:rgba(99, 0, 80, 0.1);
     /* box-shadow: inset 0 0 2em rgba(99, 0, 80, 0.2); */
-}
+/* } */
 
-.img-footer{
+/* .img-footer{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     gap: 1rem;
-}
-
+} */
+/* 
 .img-footer img{
     width: 15vw;
     border-radius: 20px;
-}
-
+/* } */
+/* 
 .info-footer{
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
     gap: 2rem;
-}
-
+}  */
+/* 
 .info-footer .copyright{
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
     line-height: 1.2rem;
     text-align: center;
     
-}
+} */
 
-.info-footer .copyright a{
+/* .info-footer .copyright a{
     color: rgba(99, 0, 80, 0.8);
     font-weight: bold;
-}
+} */ 
 
 
 
@@ -439,40 +439,40 @@ footer{
     }
 
     /* RESPONSIVIDADE DO FOOTER */
-    footer{
+    /* footer{
         background-color:rgba(99, 0, 80, 0.1);
         /* box-shadow: inset 0 0 2em rgba(99, 0, 80, 0.2); */
     }
-    
-    .img-footer{
+     
+    /* .img-footer{
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 1rem;
         gap: 1rem;
-    }
+    } */
     
-    .img-footer img{
+    /* .img-footer img{
         width: 35vw;
-        border-radius: 10px;
-    }
+        border-radius: 10px; */
+    /* } */
     
-    .info-footer{
+    /* .info-footer{
         display: flex;
         justify-content: center;
         padding: 5px;
-        gap: 1rem;
-    }
+        gap: 1rem; */
+    /* } */
     
-    .info-footer .copyright{
+    /* .info-footer .copyright{
         font-size: 10px;
-        line-height: 0.8rem;        
-    }
+        line-height: 0.8rem;         */
+    /* } */
     
-    .info-footer .footer-redessociais img{
+    /* .info-footer .footer-redessociais img{
         width: 7vw;
     }
-}
+} */
 
     /* Toda a responsividade anterior funciona entre 768 e 320px, com exceção do header height. Para a cascata funcionar, retornei aqui no fim a responsividade deste único elemento */
 @media screen and (max-width: 768px) {
