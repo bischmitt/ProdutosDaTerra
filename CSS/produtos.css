@@ -40,7 +40,7 @@ nav{
 
 /*Estilização do li com class .li-menu + a*/
 .li-menu a{
-    color: rgba(228, 197, 74, 1);
+    color: #E4C54A;
     padding: 0 0.8rem;
     text-decoration: none;
     font-variant: small-caps;
@@ -49,21 +49,24 @@ nav{
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-/*CARRINHO DE COMPRAS*/
-.carrinho{
+
+.li-menu a:hover{
+    font-size: 2.1rem;
+    color: #E9DC82;
+}
+
+/*CARRINHO E ENTRAR*/
+.autenticacao {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     position: absolute;
-    right: 20px;
-    margin: auto;
-    cursor: pointer;
+    right: 10px;
+    margin: auto;    
 }
-/*LOGIN E CADASTRE-SE*/
-.autenticacao{
-    display: flex;
-    flex-direction: column;
-}
-.autenticacao a{
+
+.autenticacao a {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: bold;

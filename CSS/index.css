@@ -10,6 +10,7 @@
 body {
     background-image: url(../Imagens/background2.png);
     overflow-x: hidden;
+    background-attachment:fixed;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
@@ -18,7 +19,7 @@ body {
 /* HEADER */
 header {
     height: 70px;
-    background-color: #11302E;    
+    background-color: #11302E;
 }
 
 header>.menuHamburguer {
@@ -33,7 +34,8 @@ header>.menuHamburguer a img.icone_menu{
 } 
 
 header>.menuHamburguer a img.icone_menu:hover{
-    opacity: 0.5;
+    transform: scale(1.2);
+    opacity: 0.4;
 }
 
 /* NAV(QUE ESTÁ DENTRO DO HEADER */
@@ -57,7 +59,11 @@ nav.menu>a {
     font-size: 1.2rem;
     color: #E4C54A;
     text-transform: uppercase;
-    
+}
+
+nav.menu a:hover{
+    font-size: 1.4rem;
+    color: #E9DC82;
 }
 
 nav.menu>a:first-child{
@@ -79,6 +85,10 @@ nav.menu>a:first-child{
     margin: auto;    
 }
 
+.autenticacao img:hover{
+    transform:rotate(340deg);
+}
+
 .autenticacao a {
     text-decoration: none;
     font-size: 1.4rem;
@@ -93,9 +103,13 @@ nav.menu>a:first-child{
 .logo img{
     height: 200px;
     position: absolute;
-    left: 0px;
-    top: 75px;   
-} 
+    left: 10px;
+    top: 85px;   
+}
+
+.logo img:hover{
+    transform: scale(1.1);
+}
 
 /*SECTION CAMPO DE BUSCA*/
 section.buscar{
@@ -383,15 +397,11 @@ main{
  }
 
 #flex-item1 {
-
     border: 1px solid transparent;
     border-radius: 20px;
     background-color:#BCAC4E;
-    
     padding: 1.5rem;
-
     text-align: center;
-
  }
 
  #flex-item1 h2{

@@ -40,7 +40,7 @@ nav{
 
 /*Estilização do li com class .li-menu + a*/
 .li-menu a{
-    color: rgba(228, 197, 74, 1);
+    color: #E4C54A;
     padding: 0 0.8rem;
     text-decoration: none;
     font-variant: small-caps;
@@ -49,20 +49,24 @@ nav{
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-/*CARRINHO DE COMPRAS*/
-.carrinho{
+
+.li-menu a:hover{
+    font-size: 2.1rem;
+    color: #E9DC82;
+}
+
+/*CARRINHO E ENTRAR*/
+.autenticacao {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     position: absolute;
-    right: 20px;
-    margin: auto;
+    right: 10px;
+    margin: auto;    
 }
-/*LOGIN E CADASTRE-SE*/
-.autenticacao{
-    display: flex;
-    flex-direction: column;
-}
-.autenticacao a{
+
+.autenticacao a {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: bold;
@@ -338,35 +342,26 @@ footer{
         font-variant: small-caps;
     }
 
-    .carrinho{
-        position:relative;
-        left: 0px;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        padding-bottom: 150px;
-    }
+/*CARRINHO E ENTRAR*/
+.autenticacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    right: 10px;
+    margin: auto;    
+}
 
-    .autenticacao{
-        flex-direction: row;
-    }
-
-    .autenticacao a{
-        width: 110px;
-        display: flex;
-        padding: 0;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-
-    .autenticacao a:nth-child(1){
-        justify-content: right;
-    }
-
-    .autenticacao a:nth-child(2){
-        justify-content: left;
-    } 
+.autenticacao a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: rgba(228, 197, 74, 1);
+    margin: 4px 20px;
+    text-align: center;
+}
 
     /* RESPONSIVIDADE DO HEADER */
     header{
