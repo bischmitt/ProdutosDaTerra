@@ -10,29 +10,18 @@ function enviardados() {
         return false;
     }
 
-    if (document.form1.sobrenome.value == "" || document.form1.sobrenome.value.length < 3) {
-        alert("Preencha campo sobrenome corretamente!");
-        document.form1.sobrenome.focus();
-        return false;
-    }
-
-    if (document.form1.dataNascimento.value == ""){
+   if (document.form1.dataNascimento.value == ""){
         alert("Preencha campo Data de nascimento corretamente!");
         document.form1.dataNascimento.focus();
         return false;
     } 
 
-    if (document.form1.numeroContato.value == "" || document.form1.numeroContato.value.length < 10) {
-        alert("Preencha campo Celular corretamente!");
+    if (document.form1.numero.value == "" || document.form1.numeroContato.value.length < 10) {
+        alert("Preencha campo telefone corretamente!");
         document.form1.numeroContato.focus();
         return false;
     }
 
-    if (document.form1.email.value == "" || document.form1.email.value.length < 8) {
-        alert("Preencha campo email corretamente!");
-        document.form1.email.focus();
-        return false;
-    }
 
     if (document.form1.localidade.value == "" || document.form1.localidade.value.length < 3) {
         alert("Preencha campo Município corretamente!");

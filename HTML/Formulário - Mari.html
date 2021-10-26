@@ -12,13 +12,14 @@
     <script src="../JavaScript/validarCEP.js"></script>
     <script src="../JavaScript/formulario1.js"></script>
     <script src="../Mari/formulario1.js"></script>
+    <script src="../JavaScript/Alert email.js"></script>
     <script type="text/Javascript" src="../jquery.js"></script>
 </head>
 
 <body>
     <nav>
         <article id="formularioLado">
-            <form class="formulario" action="" method="POST" name="form" onsubmit="return enviardados();">
+            <form class="formulario" action="" method="POST" name="form" onsubmit="return enviarDados1();">
                 <section id="parte1">
                     <div id="login">
                         <p id="letrasForm">LOGIN</p>
@@ -84,7 +85,7 @@
                     <p>
                         <label for="dataNascimento"></label>Data:
                         <input id="date" type="date" id="dataNascimento" name="dataNascimento"
-                            onclick="validarNascimento()" placeholder="Selecione sua data de nascimento">
+                            onclick="validarNascimento()" max="2021-03-16" required placeholder="Selecione sua data de nascimento">
                     </p>
 
 

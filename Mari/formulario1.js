@@ -42,6 +42,15 @@
 
 // --------2. Data de Nascimento - Não pode ter idade negativa e mais de 130 anos ( considerar 16/03/ 2021) chamar um alert se invalido ou campo do formulário (vermelho)
 
+var idade = function(idade(){
+
+    if (i<=130){
+
+          }else if (idade > 130; i<0) {
+        if (!confirm("Idade incorreta. Por gentileza, verificar")) {
+            continue;
+        });
+    
 // OK --------3. CEP - Para completar os campos: Rua, Bairro, Cidade e Estado (através da API ViaCep)
 // --------4. Email - ser validado - Chamar um alert se invalido ou campo do formulário (vermelho)
 
