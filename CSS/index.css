@@ -18,6 +18,7 @@ body {
 
 /* HEADER */
 header {
+    width: 100%;
     height: 70px;
     background-color: #11302E;
 }
@@ -40,15 +41,15 @@ header>.menuHamburguer a img.icone_menu:hover{
 
 /* NAV(QUE ESTÁ DENTRO DO HEADER */
 nav.menu {
-    width: 16%;
+    width: 18%;
     background-color: #11302E;
-    min-height: calc(48vh - 40px);
+    /* height: 28vh; */
     position: absolute;
     left: -300px;
     transition: .3s all;
     border-radius: 0 10px 10px 0;
     z-index: 2;
-    opacity: 0.95;
+    opacity: 0.90;
 }
 
 nav.menu>a {
@@ -101,7 +102,7 @@ nav.menu>a:first-child{
 
 /*LOGO */
 .logo img{
-    height: 200px;
+    height: 18vh;
     position: absolute;
     left: 10px;
     top: 85px;   
@@ -229,35 +230,7 @@ main{
 
 /*RESPONSIVIDADE DO INDEX*/
 @media screen and (max-width: 1024px) {
-    article.content {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    nav.sidebar {
-        left: -30%;
-    }
-
-    .close_sidebar {
-        display: block;
-    }
-
-    div.show_sidebar {
-        display: block;
-    }
-
-    .carrinho a img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .autenticacao a {
-        width: 110px;
-        text-align: center;
-        margin-right: 10px;
-        text-decoration: none;
-        font-size: 1.2rem;
-    }
+ 
 
 
 }
@@ -275,54 +248,87 @@ main{
         width: 9vw;
         height: 6vh;
     }
-
-    /* RESPONSIVIDADE DO FOOTER */
-    footer {
-        background-color: rgba(99, 0, 80, 0.1);
-        /* box-shadow: inset 0 0 2em rgba(99, 0, 80, 0.2); */
-    }
-
-    .img-footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .img-footer img {
-        width: 35vw;
-        border-radius: 10px;
-    }
-
-    .info-footer {
-        display: flex;
-        justify-content: center;
-        padding: 5px;
-        gap: 1rem;
-    }
-
-    .info-footer .copyright {
-        font-size: 10px;
-        line-height: 0.8rem;
-    }
-
-    .info-footer .footer-redessociais img {
-        width: 7vw;
-    }
 }
 
 /* Toda a responsividade anterior funciona entre 768 e 320px, com exceção do header height. Para a cascata funcionar, retornei aqui no fim a responsividade deste único elemento */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 320px) {
     header {
-        height: 20vw;
+        width: 100%;
+        height: 70px;
+        background-color: #11302E;
+    }
+    
+    /* NAV(QUE ESTÁ DENTRO DO HEADER */
+    nav.menu {
+        width: 57%;
+        height: 38vh;
+    }
+    
+    nav.menu>a {
+        font-size: 1.3rem;
+    }
+    
+    nav.menu>a:first-child{
+        padding-top: 70px;
     }
 
-    /* SETA SUBIR */
-    #subir img {
-        width: 8vw;
-        height: 4vh;
+    /*CARRINHO E ENTRAR*/
+    .autenticacao {
+        right: 0px;   
     }
+
+    .autenticacao a {
+        font-size: 1.4rem;
+        margin: 8px 10px;
+    }
+
+    /*LOGO */
+    .logo img{
+        height: 25vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 85px;   
+    }
+
+
+/*SECTION CAMPO DE BUSCA*/
+    section.buscar{
+        width: 90%;
+        display: flex;
+        margin: auto;
+        margin-top: 15rem;
+        margin-bottom: 35rem;
+    }
+
+    #divBusca{
+        width:100%;
+        height:3rem;
+    }
+  
+    #txtBusca{
+        float:left;
+        
+        padding-left:5px;
+        font-size:16px;
+        border:none;
+        height:48px;
+        width:60%;
+    }
+  
+    #btnBusca{
+        height:2.9rem;
+        width:4.5rem;
+        font-weight:bold;
+        background:#11302E;
+        color:#E8DCBB
+    }
+  
+    #divBusca img{
+        margin-top: 4px;
+        float:left;
+    }
+
 }
 
 /* Color Theme Swatches in Hex */
