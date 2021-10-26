@@ -49,20 +49,19 @@ nav{
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-/*CARRINHO DE COMPRAS*/
-.carrinho{
+
+/*CARRINHO E ENTRAR*/
+.autenticacao {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     position: absolute;
-    right: 20px;
-    margin: auto;
+    right: 10px;
+    margin: auto;    
 }
-/*LOGIN E CADASTRE-SE*/
-.autenticacao{
-    display: flex;
-    flex-direction: column;
-}
-.autenticacao a{
+
+.autenticacao a {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: bold;
@@ -104,37 +103,69 @@ h2 {
 /* MAIN */
 main{
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    color: #11302E;
     width: 80vw; 
-    height: 30vw; 
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: justify; 
-    padding: 0 9rem;
+    padding: 2rem;
     margin: auto;
-    /* margin-top: 2.30rem; */
     border-radius: 20px;
     background-color:  rgba(17, 48, 46, 0.2);
+    gap: 20px;
 }
 
-.index-figure img{
-    width: 550px;
+
+#index_figure img{
+    width: 450px;
+    border: 2 px solid #11302E;
     border-radius: 20px;
 }
-/* #index-figure figcaption{
+#index_figure figcaption{
     text-align: center;
-    font-size: 0.9em;
+    font-size: 16px;
     margin-top: 5px;
-} */
+}
 
 /*texto do main */
-.index-texto{
+#index_texto{
     width: 100%;
-    color: rgba(17, 48, 46, 1);
-    padding: 6rem;
     text-align: justify;
-    font-size: 1.3rem;
-    line-height: 32px;
+    font-size: 1.2rem;
+    line-height: 28px;
+    
+}
+
+.aside_container {
+    width: 90vw;
+    display: flex;
+    
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.aside_item {
+    margin: 0 auto 12px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/* .aside_item:first-child {
+    margin-right: 8px;
+}
+.aside_item:last-child {
+    margin-left: 8px;
+} */
+
+iframe{
+    width: 400px;
+    height: 250px;
+    border: 1px solid #11302E;
+    border-radius: 20px;
 }
 
 

@@ -113,6 +113,14 @@ class Produto {
         
     }
 
+    notificarUsuario() {
+        if (this.itensDoCarrinho.length > 0) {
+            $('#car').text(this.itensDoCarrinho.length).show()
+        } 
+    }
+   
+       
+
     validarCarrinho(idProduto) {
         if (this.itensDoCarrinho.length == 0) {
             return true
@@ -192,6 +200,7 @@ class Produto {
             }
         }
     }
+
 }
 let produto = new Produto()
 
@@ -199,10 +208,7 @@ $("#qtd").change(() => {
 
 })
 
-// let qtdcar = 0;
-// $("#btn1").click(function(){
-//     $("#car") 
-// })
+
 
 
 

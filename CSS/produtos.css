@@ -73,6 +73,22 @@ nav{
     text-align: center;
 }
 
+#car {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    padding: 0 10px;
+    border: 2px solid rgb(232, 220, 167);
+    border-radius: 100%;
+    
+    background: rgb(232, 220, 167);
+    color: #11302e;
+    font: 25px bold Roboto;
+}
+
 /* HEADER */
 header{
     display: flex;

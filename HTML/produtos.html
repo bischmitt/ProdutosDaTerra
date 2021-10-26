@@ -40,8 +40,11 @@
                 <a href="">Login</a>
             </div>
 
-            <a id="abrirModal"><img src="../Imagens/carrinho.png" alt="Carrinho de compras"></a>
-            <!-- <p id="cart"><span id="car">0</span></p> -->
+            <a id="abrirModal">
+                <img src="../Imagens/carrinho.png" alt="Carrinho de compras">
+                <span id="car"></span>
+            </a>
+            
         </div>
     </nav>
 
@@ -61,7 +64,7 @@
                 <h4>R$5,50/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number"  min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn1" onclick="produto.enviarParaCarrinho(1)">Adicionar ao carrinho</button> <br />
+                <button id="btn1" onclick="produto.enviarParaCarrinho(1), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
             <div class="item2">
                 <h2>Chuchu</h2>
@@ -69,7 +72,7 @@
                 <h4>R$3,50/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn2" onclick="produto.enviarParaCarrinho(2)">Adicionar ao carrinho</button> <br />
+                <button id="btn2" onclick="produto.enviarParaCarrinho(2), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item3">
@@ -78,7 +81,7 @@
                 <h4>R$8,00/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn3" onclick="produto.enviarParaCarrinho(3)">Adicionar ao carrinho</button> <br />
+                <button id="btn3" onclick="produto.enviarParaCarrinho(3), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item4">
@@ -87,7 +90,7 @@
                 <h4>R$5,50/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn4" onclick="produto.enviarParaCarrinho(4)">Adicionar ao carrinho</button> <br />
+                <button id="btn4" onclick="produto.enviarParaCarrinho(4), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item5">
@@ -96,7 +99,7 @@
                 <h4>R$4,25/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn5" onclick="produto.enviarParaCarrinho(5)">Adicionar ao carrinho</button> <br />
+                <button id="btn5" onclick="produto.enviarParaCarrinho(5), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
             <div class="item6">
                 <h2>Pimentão vermelho</h2>
@@ -104,7 +107,7 @@
                 <h4>R$5,75/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn6" onclick="produto.enviarParaCarrinho(6)">Adicionar ao carrinho</button> <br />
+                <button id="btn6" onclick="produto.enviarParaCarrinho(6), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item7">
@@ -113,7 +116,7 @@
                 <h4>R$8,50/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn7" onclick="produto.enviarParaCarrinho(7)">Adicionar ao carrinho</button> <br />
+                <button id="btn7" onclick="produto.enviarParaCarrinho(7), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item8">
@@ -122,7 +125,7 @@
                 <h4>R$10,00/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn8" onclick="produto.enviarParaCarrinho(8)">Adicionar ao carrinho</button> <br />
+                <button id="btn8" onclick="produto.enviarParaCarrinho(8), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
 
             <div class="item9">
@@ -189,6 +192,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Modal carrinho -->
     <div id="modalCarrinho">
 

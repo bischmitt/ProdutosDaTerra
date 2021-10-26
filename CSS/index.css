@@ -118,9 +118,9 @@ input #txtBusca{
     border-radius:10px;
     width:90%;
     height:2.5rem;
-  }
+}
   
-  #txtBusca{
+#txtBusca{
     float:left;
     background-color:transparent;
     padding-left:5px;
@@ -128,9 +128,9 @@ input #txtBusca{
     border:none;
     height:37px;
     width:369px;
-  }
+}
   
-  #btnBusca{
+#btnBusca{
     border:none;
     float:right;
     height:2.4rem;
@@ -139,13 +139,13 @@ input #txtBusca{
     font-weight:bold;
     background:#11302E;
     color:#E8DCBB
-  }
+}
   
-  #divBusca img{
+#divBusca img{
     padding: 2px;
     padding-left: 5px;
     float:left;
-  }
+}
 
 /* MAIN */
 main{
@@ -155,6 +155,7 @@ main{
     align-items: center;
     margin: auto;
 }
+
 /* SECTION */
 #banner {
     margin: auto;
@@ -169,8 +170,7 @@ main{
     z-index: 4;
 }
 
-#btnAnte,
-#btnProx {
+#btnAnte,#btnProx {
     line-height: 300px;
     cursor: pointer;
 }
@@ -193,7 +193,7 @@ main{
 /* SECTION TEXTO */
 .index-texto{
     margin-top: 20px;
-    width: 70%;
+    width: 90%;
     color: rgba(17, 48, 46, 1);
     padding: 1.5rem;
     text-align: justify;
@@ -204,43 +204,14 @@ main{
     background-color: #E8DCBB;
 }
 
-
-/* FOOTER */
-footer {
-    background-color: rgba(99, 0, 80, 0.1);
-    /* box-shadow: inset 0 0 2em rgba(99, 0, 80, 0.2); */
+#subir {
+    margin: 16px 16px 0 0;
+    align-self: flex-end;
 }
 
-.img-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 1rem;
-}
-
-.img-footer img {
-    width: 15vw;
-    border-radius: 20px;
-}
-
-.info-footer {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    gap: 2rem;
-}
-
-.info-footer .copyright {
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    line-height: 1.2rem;
-    text-align: center;
-
-}
-
-.info-footer .copyright a {
-    color: rgba(99, 0, 80, 0.8);
-    font-weight: bold;
+#subir img {
+    width: 4vw;
+    height: 5vh;
 }
 
 
@@ -283,107 +254,6 @@ footer {
 /*ESTA RESPONSIVIDADE SUPORTA ENTRE 768 E 320px*/
 @media screen and (max-width: 768px) {
 
-    /* RESPONSIVIDADE DA NAV */
-    nav {
-        position: static;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-bar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: 70px;
-        margin-right: 0;
-    }
-
-    .nav-bar .decoracao {
-        margin-top: 1rem;
-    }
-
-    .nav-bar li a {
-        font-size: 5vw;
-        display: flex;
-        flex-wrap: nowrap;
-        font-variant: small-caps;
-    }
-
-    .carrinho {
-        position: relative;
-        left: 0px;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        padding-bottom: 150px;
-    }
-
-    .autenticacao {
-        flex-direction: row;
-    }
-
-    .autenticacao a {
-        width: 110px;
-        display: flex;
-        padding: 0;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-
-    .autenticacao a:nth-child(1) {
-        justify-content: right;
-    }
-
-    .autenticacao a:nth-child(2) {
-        justify-content: left;
-    }
-
-    /* RESPONSIVIDADE DO HEADER */
-    header {
-        width: 100vw;
-        height: 12vh;
-        margin: 1.5rem 0;
-    }
-
-    h1 {
-        font-size: 7vw;
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        font-size: 4vw;
-        line-height: 5vw;
-    }
-
-
-    /* RESPONSIVIDADE DO MAIN */
-    main {
-        width: 95vw;
-        height: 100%;
-        display: flex;
-        margin: auto;
-        padding: 0.8rem;
-        flex-direction: column;
-        justify-content: space-around;
-
-    }
-
-    .index-figure img {
-        width: 85vw;
-    }
-
-    .index-texto {
-        padding-top: 0.5rem;
-        width: 85vw;
-        font-size: 16px;
-        line-height: 24px;
-
-    }
 
     /* SETA SUBIR */
     #subir {
@@ -449,4 +319,216 @@ footer {
     color: #630050, #FFBAF2, #FFD1FF, #0C2222 #11302E, #29873E, #62771F,
      #BCAC4E, #E8DCBB, #FAE8C7 #E9DC82, #E4C54A, #F0A941, #ff993a,
       #f37e30
+}
+
+/* ----------------------------------MARIANA ----------------------------- */
+/* Escopo de trabalho e desenvolvedores */
+.flex-container {
+    margin-top: 20px;
+
+    width:90%;
+    height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#flex-item {
+   border: 1px solid transparent;
+   border-radius: 20px;
+   background-color: #E8DCBB;
+   height: 600px;
+   padding: 40px;
+   
+   margin-right: 20px;
+   
+}
+
+#flex-item1 {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color:#BCAC4E;
+    
+    height: 600px;
+    padding: 40px;
+    
+    
+ }
+
+ article div{
+    margin: 16px auto 0;
+    width: 25%;
+
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .parceiros{
+    height: 100px;
+    border-radius:20px;
+ }
+   
+.img{
+   border-radius:50px;
+   align-items: center;
+   text-align: center;
+   height: 150px;
+}
+.esconder1, .esconder2, .esconder3, .esconder4{
+   display: none;
+   text-align: justify;
+}
+
+.btnDev{
+   display: flex;
+   width: 20vw;
+   padding: 0.6em;
+   margin-top: 5px;
+   color:#11302E;
+   background-color: white;
+   border: 3px solid ;
+   border-radius: 20px;
+   box-sizing: border-box;
+   box-shadow: 2px 2px 2px #16722a;
+   line-height: 20px;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   align-items: center;    
+}
+.escondido{
+   /* Adicionei display none para não ficar aparecendo a informação após entrar na tela (Mari) */
+   display: none;
+}
+.tituloEscopo{
+   text-align: center;
+   font-size: 12 px;
+   font-weight: bold;
+}
+
+
+.My-Color-Theme-1-hex {
+   color: #630050, #FFBAF2, #FFD1FF, #0C2222 #11302E, #29873E, #62771F,
+    #BCAC4E, #E8DCBB, #FAE8C7 #E9DC82, #E4C54A, #F0A941, #ff993a,
+     #f37e30
+}
+/* -------------------------------------------------------FOOTER ---------------------------- */
+ul {
+   list-style: none;
+   text-decoration: none;
+   list-style-type: none;
+
+}
+
+#institucional {
+   font-size: 15 px;
+   color: black;
+   text-decoration: none;
+}
+
+.sectionFooter {
+   width: 100%;
+   height: 240px;
+   background-color:#FAF6F2;
+   color: black;
+   justify-content: space-around;
+   border-bottom: solid #E4C54A 1px;
+   display: block;
+   clear: both;
+   text-decoration: none;
+
+}
+
+#footer1 {
+   width: 33%;
+   height: 200px;
+   float: left;
+   position: relative;
+   text-align: center;
+   color: black;
+
+}
+
+#links {
+   color: black;
+   text-decoration: underline;
+}
+
+/*  ----------------------------------------------- LINK DAS REDES SOCIAIS --------------- */
+.redesSociais {
+   width: 100%;
+   height: 200px;
+   border-bottom: solid #E4C54A 1px;
+   text-align: center;
+   text-decoration: none;
+}
+
+.redesSociais div {
+   justify-content: center;
+   text-decoration: none;
+}
+
+/*  ----------------------------------------------- FOOTER 2 E 3--------------------------- */
+#footer2 {
+   width: 33%;
+   height: 200px;
+   float: left;
+   position: relative;
+   text-align: center;
+   color: black;
+
+
+}
+
+#footer3 {
+   width: 33%;
+   height: 200px;
+   float: left;
+   position: relative;
+   text-align: center;
+   color: black;
+
+}
+
+/* ----------------------------------------RODAPÉ------------------------------------------ */
+#rodape {
+   text-align: center;
+   background-color: #11302E;
+   color: white;
+   margin: 0px;    
+   width: 100%;
+   height: 35px;
+   font-size: small;
+      
+  } 
+
+#btnNews{
+   border: none;
+   background-color: none;
+   }
+
+#pagamento{
+   width:100%;
+   height:40px;
+   text-decoration: none;
+   list-style-type: none;
+  
+}
+
+.pagamento{
+   width:14%;
+   height:50px;
+   text-decoration: none;
+   float: left;
+   list-style-type: none;
+   text-align:  center;
+   
+}
+
+#formaPag{
+   color:black;
+   text-decoration: none;
+   font-size: 15px;
 }

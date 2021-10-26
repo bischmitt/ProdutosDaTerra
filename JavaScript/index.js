@@ -58,3 +58,21 @@ $("input[name='banners']").click(function () {
     $("#banner").css("backgroundImage", "url(" + vtBanner[getNumber] + ")").fadeIn(1000);
 })
 
+//********************CÓDIGO PARA O BANNER ROTATIVO************************/
+// function mostrarParagrafo() {
+//     $(".escondido").slideDown("slow").toggle();
+
+// }
+//********************CÓDIGO PARA MOSTRAR DESCRIÇÃO DOS DESENVOLVEDORES******************** */
+function mostrar1() {
+    $(".escondido, .esconder1").slideDown("slow").toggle();
+}
+function mostrar2() {
+    $(".escondido, .esconder2").slideDown("slow").toggle();
+}
+function mostrar3() {
+    $(".escondido, .esconder3").slideDown("slow").toggle();
+}
+function mostrar4() {
+    $(".escondido, .esconder4").slideDown("slow").toggle();
+}
