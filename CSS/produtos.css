@@ -66,27 +66,18 @@ nav{
     margin: auto;    
 }
 
-.autenticacao a {
-    text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: bold;
-    font-variant: small-caps;
-    color: rgba(228, 197, 74, 1);
-    margin: 4px 20px;
-    text-align: center;
+.autenticacao img:hover{
+    transform:rotate(340deg);
 }
 
 #car {
     display: none;
-
     position: absolute;
     right: 0;
     bottom: 0;
-
     padding: 0 10px;
     border: 2px solid rgb(232, 220, 167);
     border-radius: 100%;
-    
     background: rgb(232, 220, 167);
     color: #11302e;
     font: 25px bold Roboto;
