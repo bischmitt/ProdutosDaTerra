@@ -13,14 +13,21 @@
 <body>
     <div id="calculadora">
         <div id="calculadora-wrapper">
+            <div class="opcoes">
+                <label class="interruptor">
+                    <input type="checkbox">
+                    <span class="deslizante"></span>
+                </label>
+                <p>Científica</p>
+            </div>
             <section id="display">
                 <input type="text" id="input-display" disabled>
             </section>
             <section id="teclado">
                 <div class="teclado-linha">
-                    <button value="raiz">&radic;</button>
-                    <button value="quadrado">x&sup2;</button>
-                    <button value="cubo">x&sup3;</button>
+                    <button id="raiz">&radic;</button>
+                    <button id="quadrado">x&sup2;</button>
+                    <button id="cubo">x&sup3;</button>
                     <button value="apagar">C</button>
                 </div>
                 <div class="teclado-linha">
