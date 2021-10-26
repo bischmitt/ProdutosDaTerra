@@ -40,7 +40,7 @@ nav{
 
 /*Estilização do li com class .li-menu + a*/
 .li-menu a{
-    color: rgba(228, 197, 74, 1);
+    color: #E4C54A;
     padding: 0 0.8rem;
     text-decoration: none;
     font-variant: small-caps;
@@ -49,41 +49,35 @@ nav{
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-/*CARRINHO DE COMPRAS*/
-.carrinho{
+
+.li-menu a:hover{
+    font-size: 2.1rem;
+    color: #E9DC82;
+}
+
+/*CARRINHO E ENTRAR*/
+.autenticacao {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     position: absolute;
-    right: 20px;
-    margin: auto;
-    cursor: pointer;
+    right: 10px;
+    margin: auto;    
 }
-/*LOGIN E CADASTRE-SE*/
-.autenticacao{
-    display: flex;
-    flex-direction: column;
-}
-.autenticacao a{
-    text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: bold;
-    font-variant: small-caps;
-    color: rgba(228, 197, 74, 1);
-    margin: 4px 20px;
-    text-align: center;
+
+.autenticacao img:hover{
+    transform:rotate(340deg);
 }
 
 #car {
     display: none;
-
     position: absolute;
     right: 0;
     bottom: 0;
-
     padding: 0 10px;
     border: 2px solid rgb(232, 220, 167);
     border-radius: 100%;
-    
     background: rgb(232, 220, 167);
     color: #11302e;
     font: 25px bold Roboto;
