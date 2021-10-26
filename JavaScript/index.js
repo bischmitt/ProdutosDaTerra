@@ -59,10 +59,10 @@ $("input[name='banners']").click(function () {
 })
 
 //********************CÓDIGO PARA O BANNER ROTATIVO************************/
-// function mostrarParagrafo() {
-//     $(".escondido").slideDown("slow").toggle();
+function mostrarParagrafo() {
+     $(".escondido").slideDown("slow").toggle();
 
-// }
+}
 //********************CÓDIGO PARA MOSTRAR DESCRIÇÃO DOS DESENVOLVEDORES******************** */
 function mostrar1() {
     $(".escondido, .esconder1").slideDown("slow").toggle();
