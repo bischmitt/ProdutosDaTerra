@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calc</title>
+    <link rel="stylesheet" href="../CSS/calculadora.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="calculadora">
+        <div id="calculadora-wrapper">
+            <div class="opcoes">
+                <label class="interruptor">
+                    <input type="checkbox">
+                    <span class="deslizante"></span>
+                </label>
+                <p>Científica</p>
+            </div>
+            <section id="display">
+                <input type="text" id="input-display" disabled>
+            </section>
+            <section id="teclado">
+                <div class="teclado-linha">
+                    <button id="raiz">&radic;</button>
+                    <button id="quadrado">x&sup2;</button>
+                    <button id="cubo">x&sup3;</button>
+                    <button value="apagar">C</button>
+                </div>
+                <div class="teclado-linha">
+                    <button value="7" class="botaoNumero">7</button>
+                    <button value="8" class="botaoNumero">8</button>
+                    <button value="9" class="botaoNumero">9</button>
+                    <button value="/" class="botaoOperadorComum">&divide;</button>
+                </div>
+                <div class="teclado-linha">
+                    <button value="4" class="botaoNumero">4</button>
+                    <button value="5" class="botaoNumero">5</button>
+                    <button value="6" class="botaoNumero">6</button>
+                    <button value="*" class="botaoOperadorComum">&times;</button>
+                </div>
+                <div class="teclado-linha">
+                    <button value="1" class="botaoNumero">1</button>
+                    <button value="2" class="botaoNumero">2</button>
+                    <button value="3" class="botaoNumero">3</button>
+                    <button value="-" class="botaoOperadorComum">&minus;</button>
+                </div>
+                <div class="teclado-linha">
+                    <button value="remover">&#8678</button>
+                    <button value="0" class="botaoNumero">0</button>
+                    <button value="." class="botaoDecimal">.</button>
+                    <button value="+" class="botaoOperadorComum">&plus;</button>
+                </div>
+                <div class="teclado-linha">
+                    <button id="calcular">&equals;</button>
+                </div>
+        </div>
+    </div>
+    </section>
+    </div>
+    <script src="../JavaScript/calculadora.js"></script>
+</body>
+
+</html>

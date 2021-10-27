@@ -1,62 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos da Terra</title>
     <link rel="shortcut icon" href="/Imagens/iconleaf.png">
     <link rel="stylesheet" type="text/CSS" href="CSS/index.css">
-    <script src="JavaScript/index.js"></script>
+    <script src="JavaScript/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
 
-        <!--lista não ordenada com links que compõem a <nav>-->
-        <ul class="nav-bar">
-            <!--imagem para decoração-->
-            <li class="decoracao"><img src="Imagens/ramoesquerdo.png" alt=""></li>
-            <!--pagina inicial do site-->
-            <li class="li-menu"><a href="index.html">Início</a></li>
-            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
-            <li class="li-menu"><a href="HTML/quemsomosnos.html">Quem somos nós?</a></li>
-            <!--pagina com produtos a serem vendidos-->
-            <li class="li-menu"><a href="HTML/produtos.html">Nossos produtos</a></li>
-            <!--A pagina3.html será desenvolvida somente mais tarde-->
-            <li class="li-menu"><a href="HTML/receitinhas.html">Receitinhas</a></li>
-            <!--imagem para decoração-->
-            <li class="decoracao"><img src="Imagens/ramodireito.png" alt=""></li>
-        </ul>
-
-        <div class="carrinho">
-            <div class="autenticacao">
-                <a href="">Cadastre-se</a>
-                <a href="">Login</a>
-            </div>
-
-            <a href=""><img src="Imagens/carrinho.png" alt="Carrinho de compras"></a>
+    <header>
+        <div class="menuHamburguer">
+            <a href="#"><img class="icone_menu" src="Imagens/menuhamburguer.svg" /></a>
         </div>
 
-    </nav>
+        <nav class="menu">
+            <a href="#" class="item_menu">Início</a>
+            <a href="HTML/quemsomosnos.html" class="item_menu">Quem somos?</a>
+            <a href="HTML/produtos.html" class="item_menu">Produtos</a>
+            <a href="HTML/receitinhas.html" class="item_menu">Receitinhas</a>
+        </nav>
 
-    <header id="topo">
-        <div>
-            <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1>Produtos da Terra</h1>
-            <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
+        <div class="logo">
+            <img src="Imagens/logo.svg" alt="logo" />
+        </div>
+
+        <div class="autenticacao">
+            <a href="">Entrar</a>
+            <a href=""><img src="Imagens/carrinho.svg" alt="Carrinho de compras"></a>
         </div>
     </header>
 
+    <section class="buscar">
+        <div id="divBusca">
+            <img src="Imagens/lupa.svg" alt="Pesquisar..." />
+            <input type="text" id="txtBusca" placeholder="Encontre um produto..." />
+            <button id="btnBusca">Pesquisar</button>
+        </div>
+    </section>
+
     <main>
-        <figure class="index-figure">
-            <!--imagem que retrata o casal de agricultores que produz os alimentos vendidos no site-->
-            <img src="Imagens/indexphoto3.jpg">
-            <!--legenda da foto-->
-            <!--  <figcaption id="figcaptionindex">Alimentos</figcaption> -->
-        </figure>
-        <div class="index-texto">
+        <section id="banner">
+            <div id="btnAnte"></div>
+            <div id="btnProx"></div>
+            <div id="botoes">
+                <input type="radio" id="b0" name="banners" value="0" />
+                <input type="radio" id="b1" name="banners" value="1" />
+                <input type="radio" id="b2" name="banners" value="2" />
+                <input type="radio" id="b3" name="banners" value="3" />
+            </div>
+        </section>
+
+
+        <section class="index-texto">
             <!--breve descrição do serviço de alimentação oferecido pelo site. Mais informações serão produzidas na seção "Quem somos nós?"-->
             <p>Somos uma família de agricultores da cidade de Antônio Carlos, Santa Catarina. Cuidar da
                 terra e
@@ -67,51 +67,254 @@
                 verdadeiro pilar
                 que alimenta as famílias brasileiras!
             </p>
-        </div>
+        </section>
+
+
+        <section class="flex-container">
+            <article id="flex-item">
+                <div class="escopo-wrapper">
+                    <h2>Escopo do Projeto</h2>
+                    <p>
+                        A empresa Produtos da Terra procurou os desenvolvedores Bianca Schmitt, Eduardo Franco,
+                        Guilherme
+                        Rodrigues e Mariana Paz para o desenvolvimento de um site, com intuito de realizar o comércio
+                        eletrônico(E-commerce) de legumes e verduras, com especificações para criar uma landing page que acesse outras 3 páginas, cada uma com as funções pré-definidas abaixo:
+                    </p>
+                    <h3>
+                        1. Landing Page
+                    </h3>
+                    <p>
+                        Com base na empresa (grupo), fale brevemente sobre os fundadores e a parte do
+                        desenvolvimento. Deve existir um botão de acessibilidade que transforme as letras utilizadas na
+                        página em um tamanho maior para pessoas com baixa visão;
+                    </p>
+                    <h3>
+                        2.Pagina de Calculadora (Simples e Científica);
+                    </h3>
+                    <p>Criar uma calculadora simples, contendo apenas as 4 operações básicas da matemática</p>
+                    <h3>
+                        3.Pagina de cadastro com seguintes campos:
+                    </h3>
+                    <p>
+                        Nome, CPF, data de nascimento, gênero, CEP, telefone, email, mensagem,
+                        botão de limpar formulário e botão de enviar;
+                    </p>
+
+                    <h3>
+                        4.Página com Programação Orientada a Objetos.
+                    </h3>
+                    <p>
+                        Foram realizadas diversas reuniões para aprimorar o escopo e desenvolver o site.
+                    </p>
+                </div>
+
+                <div class="parceria-wrapper">
+                    <h3>PARCERIAS:</h3>
+                    <div>
+                        <img class="parceiros" src="Imagens/SoulCode.jpg">
+                        <img class="parceiros" src="Imagens/logo-tnt.png">
+                    </div>
+                </div>
+            </article>
+
+            <aside id="flex-item1">
+                <h2>Desenvolvedores:</h2>
+                
+                <button class="btnDev" type="button" onclick="mostrar1()">Bianca
+                    Schmitt</button>
+                <div class="esconder1">
+                    <img class="img" src="Imagens/Bianca.jpeg">
+                    <p >
+                        
+                        Bianca Klein Schmitt é estudante de desenvolvimento Web
+                        Full-Stack na SoulCode Academy. Com os conhecimentos obtidos no curso, concebeu a ideia e o estilo
+                        do
+                        site.
+                        Além disso, desenvolveu a landing page, o carrossel de imagens, a responsividade, além de colaborar
+                        com
+                        a
+                        equipe quando foi preciso.
+                    </p>
+                </div>
+
+                <button class="btnDev" type="button" onclick="mostrar2()">Eduardo
+                    Franco</button>
+                <div class="esconder2">
+                    <img class="img" src="Imagens/WhatsApp Image 2021-10-23 at 22.07.13 (1).jpeg">
+                    <p>
+                        Eduardo Franco é Técnico em Informática e estudante de desenvolvimento Web Full Stack na Soul Code Academy. Utilizou a tecnologia Javascript voltada para a programação orientada a objeto e colaborou com o time em detalhes relacionados ao design.
+                    </p>
+                </div>
+
+                <button class="btnDev" type="button" onclick="mostrar3()">Guilherme
+                    Rodrigues</button>
+                <div class="esconder3">
+                    <img class="img" src="Imagens/Guilherme.jpeg"/>
+                    <p >
+                        Guilherme Marcelino Rodrigues tem 19 anos, é técnico industrial e estudante de desenvolvimento Web Full-Stack na SoulCode Academy. Com os conhecimentos obtidos no curso, concebeu as funcionalidades e a interface da calculadora. Além disso, desenvolveu utilizando o paradigma POO, compôs o fluxo de trabalho no git/github, além de colaborar com o resto da equipe quando foi preciso.
+                    </p>
+                </div>
+
+                <button class="btnDev" type="button" onclick="mostrar4()">Mariana Paz</button>
+                <div class="esconder4">
+                    <img class="img" src="Imagens/Mariana1 (1) (1) (1) (1).jpeg">
+                    <p >
+                        Mariana Paz, advogada e estudante de desenvolvimento Web Full Stack na SoulCode Academy. Utilizou a tecnologia Javascript para realizar validação do formulário e colaborou no design do site, além de colaborar com o resto da equipe quando foi preciso.
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <p id="subir">
+            <!--imagem linkada para subir ao inicio da pagina-->
+            <a href="#topo"><img src="Imagens/subir.png"></a>
+        </p>
+
+
     </main>
 
-    <p id="subir">
-        <!--imagem linkada para subir ao inicio da pagina-->
-        <a href="#topo"><img src="Imagens/subir.png"></a>
-    </p>
-
+    <!-- *****************************************FOOTER*************************************** -->
     <footer>
-        <!--Img-footer para orientar as duas imagens do footer-->
-        <div class="img-footer">
-            <div class="footer-flexitem">
-                <!--logo da empresa-->
-                <img src="Imagens/greenbanner1.gif" alt="Produtos da Terra Alimentos Naturais">
+
+        <!-- ***************************************************COMECEI A SECTION************* -->
+        <section class="sectionFooter">
+            <div id="footer1">
+                <nav class=" classfooter">
+                    <ul>
+                        <p id="institucional"> INSTITUCIONAL </p>
+                        <li>Quem somos</li>
+                        <li> Como funciona</li>
+                        <li>Fundo do pequeno produtor</a></li>
+                        <li> Famílias produtora</li>
+                        <li> Visitas ao produtor</li>
+                        <li>
+                            <button id="btnNews" type="button" onclick="mostrarParagrafo()"
+                                value="exibe paragrafo">Newsletter</button>
+                            <p class="escondido">Deixe seu email aqui e receba ofertas e novidades exclusivas:</p>
+                            <p class="escondido"><input type="text" placeholder="digite o seu e-mail aqui" /></p>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-
-            <div class="footer-flexitem">
-                <!--logo agricultura familiar-->
-                <img src="Imagens/aquitemagriculturafamiliar.png">
+            <div id="footer2">
+                <nav class="classfooter">
+                    <ul>
+                        <section class="redesSociais">
+                            <p id="redesSociais"> SIGA NOSSAS REDES </p>
+                            <div id="central">
+                                <div id="div1">
+                                    <li class="linha">
+                                        <img src="https://img.icons8.com/material-outlined/24/000000/twitter.png"
+                                            alt=" ícone do Twitter" a href="" />
+                                    </li>
+                                </div>
+                                <div id="div2">
+                                    <li>
+                                        <img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png"
+                                            alt="ícone do linkedIn " />
+                                    </li>
+                                </div>
+                                <div id="div3">
+                                    <li>
+                                        <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png"
+                                            alt="ícone do instagram" />
+                                    </li>
+                                </div>
+                                <div id="div4">
+                                    <li>
+                                        <img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"
+                                            alt="ícone do facebook" />
+                                    </li>
+                                </div>
+                            </div>
+                        </section>
+                    </ul>
+                </nav>
+            </div>
+            <div id="footer3">
+                <nav class=" classfooter">
+                    <ul>
+                        <p id="central"> FALE CONOSCO </p>
+                        <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
+                                alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
+                        <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
+                                alt="ícone de email " />
+                            faleconosco@produtodaterra.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/internet.png"
+                                alt="ícone de servidor " />
+                            www.produtosdaterra.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png" alt="ícone de mapa" />
+                            Rua Desidério Schmitt, Antônio Carlos-SC, Brasil, CEP 88180-000.
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- *******************************************************FECHEI A SECTION************* -->
+        <!-- ************************************* DIV PARA FORMAS DE PAGAMENTO -->
+        <p id="formaPag"> Formas de pagamento:</p>
+        <div id="pagamento">
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/mastercard.png" alt="ícone do cartão " />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/visa.png" alt="ícone do cartão" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/card-in-use-1.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/color/50/000000/mercado-pago.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/color/48/000000/paypal.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/fluency/48/000000/diners-club.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li>
+                    <img src="https://img.icons8.com/color/48/000000/american-express-squared.png" />
+                </li>
             </div>
         </div>
 
-        <div class="info-footer">
-
-        <!--DIV para copyright e endereço-->
-        <div class="copyright">
-            <div class="copytight-flexitem">
-                <a href="HTML/faleconosco.html">Fale conosco</a>
-                ||<a href="HTML/politicadeprivacidade.html"> Política de Privacidade</a>
-            </div>
-
-            <div class="copytight-flexitem">Rua Desidério Schmitt, s/n, Antônio Carlos-SC. 88180000 </div>
-
-            <div class="copytight-flexitem"><b>&copy;2021 Produtos da Terra. Todos os direitos reservados</b></div>
-        </div>
-         <!--adição dos ícones de redes sociais-->
-         <div class="footer-redessociais" id="redes-sociais">
-            <a href="https://web.whatsapp.com/"><img src="Imagens/whatsapp.png"
-                    alt="Entre em contato pelo whatsapp"></a>
-            <a href="https://www.facebook.com/"><img src="Imagens/facebook.png" alt="Siga-nos no Facebook"></a>
-            <a href="https://www.instagram.com/bischmitt98/"><img src="Imagens/instagram.png"
-                    alt="Veja nossas novidades no Instagram"></a>
-        </div>
-        </div>
     </footer>
+    <section id="rodape">
+        <p>
+            Copyright © 2021 Produtos da Terra | Todos os direitos reservados | Políticas de
+            Privacidade | Políticas de
+            Cookies
+        </p>
+    </section>
+
+
+    <script src="JavaScript/index.js"></script>
+
+    <!-- ***************************************************ADICIONANDO O VLIBRAS *********************** -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- *************************************************** VLIBRAS *********************** -->
 </body>
 
 </html>
