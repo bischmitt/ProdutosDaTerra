@@ -40,7 +40,7 @@ nav{
 
 /*Estilização do li com class .li-menu + a*/
 .li-menu a{
-    color: rgba(228, 197, 74, 1);
+    color: #E4C54A;
     padding: 0 0.8rem;
     text-decoration: none;
     font-variant: small-caps;
@@ -49,21 +49,28 @@ nav{
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
-/*CARRINHO DE COMPRAS*/
-.carrinho{
+
+.li-menu a:hover{
+    font-size: 2.1rem;
+    color: #E9DC82;
+}
+
+/*CARRINHO E ENTRAR*/
+.autenticacao {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     position: absolute;
-    right: 20px;
+    right: 10px;
     margin: auto;
-    cursor: pointer;
 }
-/*LOGIN E CADASTRE-SE*/
-.autenticacao{
-    display: flex;
-    flex-direction: column;
+
+.autenticacao img:hover{
+    transform:rotate(340deg);
 }
-.autenticacao a{
+
+.autenticacao a {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: bold;
@@ -75,15 +82,12 @@ nav{
 
 #car {
     display: none;
-
     position: absolute;
     right: 0;
     bottom: 0;
-
     padding: 0 10px;
     border: 2px solid rgb(232, 220, 167);
     border-radius: 100%;
-    
     background: rgb(232, 220, 167);
     color: #11302e;
     font: 25px bold Roboto;
@@ -150,7 +154,7 @@ main{
   
   /*estilização usando para os itens dentro do container*/
 .grid-container div {
-    background-color: rgba(99, 0, 79, 0.205);
+    background-color: rgba(99, 0, 79, 0.13);
     align-self: center;
     text-align: center;
     padding: 10px;
@@ -169,7 +173,7 @@ main{
 
 .grid-container div img{
     width: auto;
-    height: 15vh;
+    height: 18vh;
     padding: 10px;
 }
 
@@ -194,7 +198,6 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 2px 2px 2px rgba(232, 220, 167, 0.8);
     background: rgba(232, 220, 167, 1);
 }
-
 
 .botoes{
     display: flex;
@@ -314,6 +317,7 @@ footer{
         width: 100vw;
         height: 100vh;
         display: flex;
+        padding-top: 15rem;
         flex-direction: column;
     }
 
@@ -338,35 +342,17 @@ footer{
         font-variant: small-caps;
     }
 
-    .carrinho{
-        position:relative;
-        left: 0px;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        padding-bottom: 150px;
-    }
-
-    .autenticacao{
-        flex-direction: row;
-    }
-
     .autenticacao a{
         width: 110px;
         display: flex;
         padding: 0;
         align-items: center;
         margin-top: 30px;
-        margin-bottom: 20px;
     }
 
     .autenticacao a:nth-child(1){
         justify-content: right;
     }
-
-    .autenticacao a:nth-child(2){
-        justify-content: left;
-    } 
 
     /* RESPONSIVIDADE DO HEADER */
     header{

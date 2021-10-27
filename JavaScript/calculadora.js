@@ -1,46 +1,7 @@
-class Operacoes {
-    soma(num1, num2) {
-        let resultado = Number(num1) + Number(num2);
-        return resultado;
-    }
-    subtracao(num1, num2) {
-        let resultado = Number(num1) - Number(num2);
-        return resultado;
-    }
-    multiplicacao(num1, num2) {
-        let resultado = Number(num1) * Number(num2);
-        return resultado;
-    }
-    divisao(num1, num2) {
-        let resultado = Number(num1) / Number(num2);
-        return resultado;
-    }
-    raiz(num1) {
-        let resultado = Math.SQRT2(num1);
-        return resultado;
-    }
-    quadrado(num1) {
-        let resultado = Math.pow(num1, 2);
-        return resultado;
-    }
-    cubo(num1) {
-        let resultado = Math.pow(num1, 3);
-        return resultado;
-    }
-}
-
-class Calculadora {
+class Calculadora{
     constructor() {
         this.dadosInseridos = new Array();
-    }
-
-    calcular() {
-        if(this.dadosInseridos.length == 0) {
-            return
-        }
-        let operacaoCompleta = this.dadosInseridos;
-        console.log(operacaoCompleta);
-        
+        this.operadoresComuns = ['+', '-', '*', '/'];
     }
 
     coletarEntrada(e) {
@@ -56,6 +17,22 @@ class Calculadora {
 
     }
 
+    calcular() {
+        let display = $("#input-display");
+        if(this.dadosInseridos.length == 0) {
+            return
+        }
+        const expressãoCompleta = this.dadosInseridos.join('')
+
+        const resultado = Number(eval(expressãoCompleta))
+
+        display.val(resultado);
+
+        this.dadosInseridos.splice(0, this.dadosInseridos.length)
+        this.dadosInseridos.push(resultado)
+
+    }
+    
     mostrarSaida() {
         let display = $("#input-display");
         let dados = this.dadosInseridos;
@@ -117,13 +94,69 @@ class Calculadora {
         this.dadosInseridos.length = 0;
         this.mostrarSaida();
     }
+
+    raiz() {
+        let numeros = this.dadosInseridos
+        let ultimoElemento = numeros[numeros.length - 1]
+        if(numeros.length == 0 || typeof ultimoElemento == 'string') {
+            this.mostrarErro();
+        }
+        let resultado = Math.sqrt(ultimoElemento)
+        this.dadosInseridos.pop()
+        this.dadosInseridos.push(resultado);
+        this.mostrarSaida();
+    }
+    
+    quadrado() {
+        let numeros = this.dadosInseridos
+        let ultimoElemento = numeros[numeros.length - 1]
+        if(numeros.length == 0 || typeof ultimoElemento == 'string') {
+            this.mostrarErro();
+        }
+        let resultado = Math.pow(ultimoElemento, 2)
+        this.dadosInseridos.pop()
+        this.dadosInseridos.push(resultado);
+        this.mostrarSaida();
+    }
+
+    cubo() {
+        let numeros = this.dadosInseridos
+        let ultimoElemento = numeros[numeros.length - 1]
+        if(numeros.length == 0 || typeof ultimoElemento == 'string') {
+            this.mostrarErro();
+        }
+        let resultado = Math.pow(ultimoElemento, 3)
+        this.dadosInseridos.pop()
+        this.dadosInseridos.push(resultado);
+        this.mostrarSaida();
+    }
 }
 
-const operacoes = new Operacoes();
 const calculadora = new Calculadora();
+
+$("#raiz").prop('disabled', true).css('cursor', 'not-allowed');
+$("#quadrado").prop('disabled', true).css('cursor', 'not-allowed');
+$("#cubo").prop('disabled', true).css('cursor', 'not-allowed');
+
+$('.interruptor input').on('click', () => {
+    if($('.interruptor input').is(':checked')) {
+        $("#raiz").prop('disabled', false).css('cursor', 'pointer');
+        $("#quadrado").prop('disabled', false).css('cursor', 'pointer');
+        $("#cubo").prop('disabled', false).css('cursor', 'pointer');
+    } else {
+        $("#raiz").prop('disabled', true).css('cursor', 'not-allowed');
+        $("#quadrado").prop('disabled', true).css('cursor', 'not-allowed');
+        $("#cubo").prop('disabled', true).css('cursor', 'not-allowed');
+    } 
+})
 
 $(".botaoNumero, .botaoDecimal, .botaoOperadorComum").click((e) => calculadora.coletarEntrada(e));
 $("button[value='apagar']").click(() => calculadora.apagarTodosDados());
 $("button[value='remover']").click(() => calculadora.apagarUltimoDado());
+
+$("#raiz").click(() => calculadora.raiz());
+$("#quadrado").click(() => calculadora.quadrado());
+$("#cubo").click(() => calculadora.cubo());
+
 $("#calcular").click(() => calculadora.calcular());
 // $(".botaoOperador").click((e) => calculadora.coletarEntrada(e));
