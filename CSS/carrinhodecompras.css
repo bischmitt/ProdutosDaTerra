@@ -58,6 +58,7 @@ table td img {
     opacity: 1;
     transition: .3s;
 }
+
 /* #car{
     font-size: 20pt;
     background-color: rgba(232, 220, 167, 0.8);
@@ -66,6 +67,7 @@ table td img {
     font-size: 15pt;
     background-color: rgba(232, 220, 167, 0.8);
 } */
+
 /* Alinhamento da imagem cesto 1 dentro do modal carrinho */
 #cesto1{
     position: absolute;
