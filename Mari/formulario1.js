@@ -41,34 +41,61 @@
         }
 
 // --------2. Data de Nascimento - Não pode ter idade negativa e mais de 130 anos ( considerar 16/03/ 2021) chamar um alert se invalido ou campo do formulário (vermelho)
-
-var idade = function(idade(){
-
-    if (i<=130){
-
-          }else if (idade > 130; i<0) {
-        if (!confirm("Idade incorreta. Por gentileza, verificar")) {
-            continue;
-        });
+$('#date').val("2021-10-27");
+function validarData(evento) {
+    const dataUsuario = evento.target.value;
+    const data = new Date();
+    const dataAtual = data.getFullYear();
     
-// OK --------3. CEP - Para completar os campos: Rua, Bairro, Cidade e Estado (através da API ViaCep)
-// --------4. Email - ser validado - Chamar um alert se invalido ou campo do formulário (vermelho)
+    const menorData = dataAtual - 130;
+    const maiorData = new Date('March 16, 2021');
 
+    if(dataUsuario < menorData || dataUsuario > maiorData){
+        alert('Data invalida')
+    }
+    
+}
+
+
+// OK --------3. CEP - Para completar os campos: Rua, Bairro, Cidade e Estado (através da API ViaCep)
+const apresentaDados = (resultado) => {
+    for (let campo in resultado) {
+        if (document.querySelector("#" + campo)) {
+            console.log(campo);
+            document.querySelector("#" + campo).value = resultado[campo]
+        }
+    }
+}
+
+function consultaCEP() {
+    let cepDigitado = document.getElementById("cep");
+
+    if (cepDigitado.value == "") {
+        cepDigitado.style.border = "1px solid red";
+    } else {
+        //tira o que tá no primeiro parâmetro e insere o que está no segundo. Nessa situação o - do CEP é apagado, caso retirado
+        let cepProcurado = cepDigitado.value.replace("-", "");
+        console.log(cepProcurado);
+
+        fetch(`http://viacep.com.br/ws/${cepProcurado}/json/`)
+            .then(response => {
+                response.json()
+                    .then(data => console.log(apresentaDados(data)));
+            })
+            .catch(x => console.log("CEP não encontrado!!"));
+    }
+}
+// --------4. Email - ser validado - Chamar um alert se invalido ou campo do formulário (vermelho)
+function enviarDados1() {
+    if (document.form.email.value == "" || document.form.email.value.length < 8) {
+        alert("Preencha campo email corretamente!");
+        document.form.email.focus();
+        return false;
+    }
+    }
 
 // --------5.  Ao clicar no botão Enviar - Exibir os campos dentro em uma div com a seguinte frase "Ola (nome ) , seu login é (email) e pode usar (CPF) como senha"
-function frase() {
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var cpf = document.getElementById('cpf').value;
-    // Verificar se existe erro, caso exista return false
-    let erro = email;
-  }
-    if (!verificarEmail()){
-        erro = true
-return false
-    } else {
-        document.getElementById('mensagem').innerHTML = `Olá <strong>${nome}</strong>, seu login é <strong>${email}</strong>, pode usar <strong>${cpf}</strong> como senha.`;
-    }
+
 
 
 // OK --------6. Footer
@@ -77,4 +104,68 @@ function mostraParagrafo(){
     $("#btnNews").fadeIn("slow");
 }
 
+//FUNÇÃO PARA VALIDAÇÃO TOTAL
+function enviardados() {
+    //if para verificar se o campo nome do formulário form1 está vazio ou com menos de 2 caracteres
+    if (document.form1.nome.value == "" || document.form1.nome.value.length < 3) {
+        //alert trazendo a informação de que o campo não foi preenchido corretamente
+        alert("Preencha campo nome corretamente!");
+        //focus para levar à caixa de texto que não foi preenchida corretamente
+        document.form1.nome.focus();
+        //sem o return false, entra numa repetição de caixas de alert e perde a função do focus
+        return false;
+    }
 
+   if (document.form1.dataNascimento.value == ""){
+        alert("Preencha campo Data de nascimento corretamente!");
+        document.form1.dataNascimento.focus();
+        return false;
+    } 
+
+    if (document.form1.numero.value == "" || document.form1.numeroContato.value.length < 10) {
+        alert("Preencha campo telefone corretamente!");
+        document.form1.numeroContato.focus();
+        return false;
+    }
+
+
+    if (document.form1.localidade.value == "" || document.form1.localidade.value.length < 3) {
+        alert("Preencha o campo Município corretamente!");
+        document.form1.localidade.focus();
+        return false;
+    }
+
+    if (document.form1.cep.value == "" || document.form1.cep.value.length < 7 ) {
+        alert("Preencha o  campo CEP corretamente!");
+        document.form1.cep.focus();
+        return false;
+    }
+
+    if (document.form1.logradouro.value == "" || document.form1.logradouro.value.length < 5) {
+        alert("Preencha o campo Endereço corretamente!");
+        document.form1.logradouro.focus();
+        return false;
+    }
+
+    if (document.form1.complemento.value == ""){
+        alert("Preencha o campo complemento corretamente!");
+        document.form1.complemento.focus();
+        return false;
+    }
+
+    if (document.form1.cpf.value == "" || document.form1.cpf.value.length < 5) {
+        alert("Preencha campo CPF corretamente!");
+        document.form1.cpf.focus();
+        return false;
+    }
+
+   {
+        alert("Cadastro enviado com sucesso!")
+    }
+}
+
+//********************CÓDIGO PARA O NEWSLETTER************************/
+function mostrarParagrafo() {
+    $(".escondido").slideDown("slow").toggle();
+
+}

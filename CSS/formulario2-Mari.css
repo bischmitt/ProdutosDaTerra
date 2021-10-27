@@ -392,3 +392,7 @@ ul {
     background-color: none;
     text-decoration: none;
 }
+
+#modal {
+    display: none;
+}
