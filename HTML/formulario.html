@@ -7,37 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos da Terra</title>
     <link rel="shortcut icon" href="../Imagens/arvore.png">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/formulario2-Mari.css">
-    <!-- <link rel="stylesheet" type="text/CSS" href="../CSS/formulario1-Mari.css"> -->
-
-    <script src="../JavaScript/validarCEP.js"></script>
-    <script src="../JavaScript/formulario1.js"></script>
-    <script src="../Mari/formulario1.js"></script>
-    <script src="../JavaScript/Alert email.js"></script>
-    <script src="../JavaScript/Acessibilidade.js"></script>
-    <script src="../jquery.js"></script>
-</head>
-
-<body>
-  
- 
-    <article id="formularioLado">
-        <form class="acessibilidade" class="formulario" action="" method="POST" name="form"
-            onsubmit="return enviarDados1();">
-            <section id="parte1">
-                <div id="login">
-                    <p class="acessibilidade" id="letrasForm">LOGIN</p>
-                    <p>
-                        <label class="acessibilidade" for="email">
-
-    <!-- <script src="../JavaScript/validarCEP.js"></script> -->
-    <!-- <script src="../JavaScript/formulario1.js"></script> -->
+    <link rel="stylesheet" type="text/CSS" href="../CSS/formulario.css">
     
-    <!-- <script src="../JavaScript/Alert email.js"></script> -->
     <script type="text/Javascript" src="../jquery.js"></script>
 </head>
 
 <body>
+    <nav>
+        <!--lista não ordenada com links que compõem a <nav>-->
+        <ul class="nav-bar">
+            <!--imagem para decoração-->
+            <li class="decoracao"><img src="../Imagens/ramoesquerdo.png" alt=""></li>
+            <!--pagina inicial do site-->
+            <li class="li-menu"><a href="../index.html">Início</a></li>
+            <!--A quemsomosnos.html será desenvolvida somente mais tarde-->
+            <li class="li-menu"><a href="quemsomosnos.html">Quem somos?</a></li>
+            <!--pagina com produtos a serem vendidos-->
+            <li class="li-menu"><a href="produtos.html">Nossos produtos</a></li>
+            <!--A pagina3.html será desenvolvida somente mais tarde-->
+            <li class="li-menu"><a href="receitinhas.html">Receitinhas</a></li>
+            <!--imagem para decoração-->
+            <li class="decoracao"><img src="../Imagens/ramodireito.png" alt=""></li>
+        </ul>
+
+        <div class="autenticacao">
+            <a href="">Entrar</a>
+            <a href=""><img src="../Imagens/carrinho.svg" alt="Carrinho de compras"></a>
+        </div>
+
+    </nav>
+
+    <header id="topo">
+        <div>
+            <!--tags <h> para o nome da empresa e frase de efeito-->
+            <h1>Produtos da Terra</h1>
+            <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
+        </div>
+    </header>
     <article id="formularioLado">
         <form class="formulario" action="#" method="POST" name="form" onsubmit="return enviarDados1();">
             <section id="parte1">
@@ -45,7 +51,6 @@
                     <p id="letrasForm">LOGIN</p>
                     <p>
                         <label for="email">
-
                             Email:
                         </label>
                         <input type="email" id="email" name="email" placeholder="digite seu email aqui">
@@ -55,117 +60,105 @@
                     <p>
                         <!--Placeholder não funciona nas datas-->
                         <!--Password - oculta a informação digitada no input-->
-
-                        <label class="acessibilidade" for="senha">
-                            Senha:
-                        </label>
-                        <input type="password" id="senha" placeholder="digite sua senha aqui">
-
                         <label for="senha">
                             Senha:
                         </label>
                         <input type="password" name="senha" id="senha" placeholder="digite sua senha aqui">
-
                     </p>
                     <button class="botaoEntrar" type="submit" class="botaoEntrar">Entrar
                     </button>
                 </div>
 
         </form>
-        <p class="acessibilidade" id="endereço">
-            <img id="logo" src="../Imagens/logo.svg"></p>
-        <p class="acessibilidade" id="endereço">
+        <p class="endereço">
+            <img id="logo" src="../Imagens/logo.svg">
+        </p>
+        <p class="endereço">
             Endereço: Rua x, Cidade - Estado, Brasil, CEP 00000-000.</p>
-        <p class="acessibilidade" id="endereço">
+        <p class="endereço">
             CNPJ:XX.XXX.XXX/0001-XX</p>
-        <p class="acessibilidade" id="endereço">
+        <p class="endereço">
             Caixa Postal: XXXX-XX
         </p>
-        
         <iframe id="mapa"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14582.292517002776!2d-46.1995978!3d-23.97553045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e2!4m0!4m0!5e0!3m2!1spt-BR!2sbr!4v1633808173653!5m2!1spt-BR!2sbr"></iframe>
         </div>
-        
     </article>
     <article id="formulario">
         <form id="cadastro" class="formulario" action="" method="POST" name="form1" onsubmit="return enviardados();">
-            <p class="acessibilidade" id="letrasForm"> CADASTRE- SE AQUI</p>
+            <p id="letrasForm"> CADASTRE- SE AQUI</p>
             <p>
-                <label class="acessibilidade" for="nome">
+                <label for="nome">
                     Nome:
                 </label>
                 <input type="text" id="nome" name="nome" placeholder="digite seu nome aqui">
 
-                <p>
-                    <label class="acessibilidade" for="numero">
-                        CPF:
-                    </label>
-                    <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF"
-                        onblur="return validarCPF(this)">
+            <p>
+                <label for="numero">
+                    CPF:
+                </label>
+                <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF" onblur="return validarCPF(this)">
 
-                </p>
-                <p>
-                    <label class="acessibilidade" for=" numero">
-                        Telefone:
-                    </label>
-                    <input type="number" id="numero" name="numero" placeholder="digite seu telefone">
+            </p>
+            <p>
+                <label for=" numero">
+                    Telefone:
+                </label>
+                <input type="tel" id="numero" name="numero"  placeholder="digite seu telefone">
 
-                </p>
+            </p>
 
-                <p>
-                    <label class="acessibilidade" for="dataNascimento"></label>Data:
-                    <input id="date" type="date" id="dataNascimento" name="dataNascimento" onclick="validarNascimento()"
-                        max="2021-03-16" required placeholder="Selecione sua data de nascimento">
-                </p>
+            <p>
+                <label for="dataNascimento"></label>Data:
+                <input id="date" type="date" id="dataNascimento" name="dataNascimento" min="1889-03-16" max="2021-03-16" required placeholder="Selecione sua data de nascimento" onchange="validarData(event);">
+            </p>
 
 
-                <!--radio é usado para seleção de um único elemento na lista.-->
-                <p class="acessibilidade" class="genero1"> Gênero: </p>
-                <label><input type="radio" class="genero" name="genero">Feminino</label>
-                <label><input type="radio" class="genero" name="genero">Masculino</label><label><input type="radio"
-                        class="genero" name="genero">Não-Binário</label>
-           
+            <!--radio é usado para seleção de um único elemento na lista.-->
+            <p class="genero1"> Gênero: </p>
+            <label><input type="radio" class="genero" name="genero">Feminino</label>
+            <label><input type="radio" class="genero" name="genero">Masculino</label><label><input type="radio"
+                    class="genero" name="genero">Não-Binário</label>
+            <br />
+            <br />
+            <br />
 
-                <label class="acessibilidade" for="cep">CEP:</label>
-                <input type="text" maxlength="9" name="cep" id="cep" onblur="consultaCEP();"
-                    placeholder="xxxxx-xxx"></input>
-
-
-
-                <label class="acessibilidade" for="uf">Estado:</label>
-                <input type="text" id="uf" name="uf" disabled></input>
+            <label for="cep">CEP:</label>
+            <input type="text" maxlength="9" name="cep" id="cep" onblur="consultaCEP();"
+                placeholder="xxxxx-xxx"></input>
 
 
 
-                <label class="acessibilidade" for="localidade">Município:</label>
-                <input type="text" id="localidade" name="localidade"></input>
-
-                <label class="acessibilidade" for="logradouro">Endereço:</label>
-                <input type="text" id="logradouro" name="logradouro" placeholder="Insira o endereço de entrega"></input>
-
-                <label class="acessibilidade" for="endereco">Complemento:</label>
-                <input type="text" id="complemento" name="complemento" placeholder="digite aqui o complemento"></input>
+            <label for="uf">Estado:</label>
+            <input type="text" id="uf" name="uf" disabled></input>
 
 
-                <label class="acessibilidade">Mensagem: </label>
-                <textarea name="mensagem" cols="35" rows="8"></textarea>
-                <Button type="submit" name="enviar" onclick="Alert()" value="Exibir Alert" frase()>Enviar</Button>
-                <Button type="reset" name="limpar">Limpar</button>
+
+            <label for="localidade">Município:</label>
+            <input type="text" id="localidade" name="localidade"></input>
+
+            <label for="logradouro">Endereço:</label>
+            <input type="text" id="logradouro" name="logradouro" placeholder="Insira o endereço de entrega"></input>
+
+            <label for="endereco">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" placeholder="digite aqui o complemento"></input>
+
+
+            <label>Mensagem: </label></br></br>
+            <textarea name="mensagem" cols="35" rows="8"></textarea><br /></br></br></br></br>
+            <Button type="submit" name="enviar" onclick="alert(); frase()" value="Exibir Alert" >Enviar</Button>
+            <Button type="reset" name="limpar">Limpar</button></br></br></br>
 
         </form>
-             </section>
-    </article>
-      <section id="acessibilidade">
-            <button onClick="fonte('a');">A+</button> <!-- Botão + -->
-            <button onClick="fonte('n');" title="Normal">A</button> <!-- Botão - -->
-            <button onClick="fonte('d');">A-</button> <!-- Botão - -->
+
         </section>
+    </article>
 
     <!-- *****************************************FOOTER*************************************** -->
     <footer>
 
         <!-- ***************************************************COMECEI A SECTION************* -->
-        <section class="acessibilidade" class="sectionFooter">
+        <section class="sectionFooter">
             <div id="footer1">
                 <nav class=" classfooter">
                     <ul>
@@ -193,7 +186,8 @@
                                 <div id="div1">
                                     <li class="linha">
                                         <img src="https://img.icons8.com/material-outlined/24/000000/twitter.png"
-                                            alt=" ícone do Twitter" a href="" /></li>
+                                            alt=" ícone do Twitter" a href="" />
+                                    </li>
                                     <!--A FALTA DE UMA DIV ALINHA OS ICONES, NÃO CONSEGUI ENTENDER O BUG  -->
                                     <!-- </div> -->
                                     <div id="div2">
@@ -213,28 +207,27 @@
                                             <li><img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"
                                                     alt="ícone do facebook" /></li>
                                     </div>
+
                     </ul>
                 </nav>
             </div>
             <div id="footer3">
                 <nav class=" classfooter">
                     <ul>
-
-                        <p class="acessibilidade" id="central"> FALE CONOSCO </p>
-                        <li class="acessibilidade"> <img
-                                src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
-                        <li class="acessibilidade"><img
-                                src="https://img.icons8.com/material-outlined/24/000000/email.png"
-                                alt="ícone de email " />
-                            faleconosco@produtodaterra.com.br </li>
-                        <li class="acessibilidade"><img src="https://img.icons8.com/material/24/000000/internet.png"
-                                alt="ícone de servidor " />
-                            www.produtosdaterra.com.br </li>
-                        <li class="acessibilidade"><img src="https://img.icons8.com/material/24/000000/marker--v1.png"
-                                alt="ícone de mapa" />
-                      <p id="central"> FALE CONOSCO </p>
+                        <p id="central"> FALE CONOSCO </p>
                         <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
                                 alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
+                        <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
+                                alt="ícone de email " />
+                            faleconosco@produtodaterra.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/internet.png"
+                                alt="ícone de servidor " />
+                            www.produtosdaterra.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png" alt="ícone de mapa" />
+                            Rua x, Cidade - Estado, Brasil, CEP 00000-000.
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </section>
         <!-- *******************************************************FECHEI A SECTION************* -->
@@ -243,7 +236,7 @@
         <div id="pagamento">
             <div class="pagamento">
 
-                <li><img src="https://img.icons8.com/fluency/48/000000/mastercard.png"/ alt="ícone do cartão ">
+                <li><img src="https://img.icons8.com/fluency/48/000000/mastercard.png" / alt="ícone do cartão ">
                 </li>
 
             </div>
@@ -275,16 +268,20 @@
         </div>
         </div>
     </footer>
-    <section class="acessibilidade" id="rodape">
+    <section id="rodape">
         <p>
             Copyright © 2021 Produtos da Terra | Todos os direitos reservados | Políticas de
             Privacidade | Políticas de
             Cookies
         </p>
     </section>
-    <!-- Botões de Acessibilidade -->
+
+    <div id="modal">
+        <p></p>
+    </div>
     <!-- ***********************************************FINAL DO BODY E HTML************************* -->
-    <script src="../JavaScript/index.js"></script>
+    <script src="../Mari/formulario1.js"></script>
+    
 
     <!-- *******************************************VLIBRAS****************************** -->
     <div vw class="enabled">
@@ -298,4 +295,5 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
+
 </html>
