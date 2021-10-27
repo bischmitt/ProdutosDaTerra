@@ -36,7 +36,10 @@
 
         <div class="autenticacao">
             <a href="">Entrar</a>
-            <a href=""><img src="../Imagens/carrinho.svg" alt="Carrinho de compras"></a>
+            <a href="#" id="abrirModal">
+                <img src="../Imagens/carrinho.svg" alt="Carrinho de compras">
+                <span id="car"></span>
+            </a>
         </div>
 
     </nav>
@@ -128,7 +131,7 @@
                 <h4>R$3,00/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn9" onclick="produto.enviarParaCarrinho(9)">Adicionar ao carrinho</button> <br />
+                <button id="btn9" onclick="produto.enviarParaCarrinho(9),  produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
 
             </div>
         </div>
@@ -152,15 +155,12 @@
 
 
     <!-- Modal carrinho -->
-    <a id="abrirModal">
-        <img src="../Imagens/carrinho.png" alt="Carrinho de compras">
-        <span id="car"></span></a>
     <div id="modalCarrinho">
-        <div><img id="cesto1" src="../Imagens/cesta fruits-icon.png" alt=""></div>
-        <div><img id="cesto2" src="../Imagens/cesta apples-icon.png" alt=""></div>
         <!-- Cabeçalho para adiconar um título -->
         <header class="headercarrinho">
-                <h3>Carrinho de Compras</h3>
+            <img src="../Imagens/cesta fruits-icon.png" alt="">
+            <h3>Carrinho de Compras</h3>
+            <img src="../Imagens/cesta apples-icon.png" alt="">
         </header>
         <!-- Criado uma main com section e divs para criação de uma tabela dentro do modal -->
         <main>
