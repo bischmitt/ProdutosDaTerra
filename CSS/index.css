@@ -175,6 +175,7 @@ main{
 #banner {
     margin: auto;
     width: 90%;
+    height: 44vh;
     border: 2px solid #11302E;
     background-size: 100%;
     background-repeat:no-repeat;
@@ -185,10 +186,9 @@ main{
 }
 
 #botoes {
-    margin-top: 280px;
-    position: relative;
-    bottom: 0px;
-    left: 49%;
+    position: absolute;
+    top: 69rem;
+    left:50%;
 }
 
 /* SECTION TEXTO */
@@ -489,6 +489,16 @@ p.redesSociais{
     #btnBusca{
         width:5.2rem;
     }
+
+    #banner {
+        width: 90%;
+        height: 26vh;
+    }
+    
+    #botoes {
+        position: absolute;
+        top: 62rem;
+    }
 }
 
 
@@ -566,6 +576,16 @@ p.redesSociais{
     #divBusca img{
         margin-top: 4px;
         float:left;
+    }
+
+    #banner {
+        width: 90%;
+        height: 20vh;
+    }
+    
+    #botoes {
+        position: absolute;
+        top: 72.1rem;
     }
 
     #subir {
@@ -744,6 +764,19 @@ p.redesSociais{
       p#redesSociais, p#central{
           margin-top: 1.5rem;
       }
+}
+
+@media screen and (max-width:425px) {
+
+    #banner {
+        border: none;
+        width: 0;
+        height: 0;
+    }
+    
+    #botoes {
+        display: none;
+    }
 }
 
 /*ESTA RESPONSIVIDADE SERVE PARA CORRIGIR UM PROBLEMA NO 768 px*/
