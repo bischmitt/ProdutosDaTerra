@@ -531,6 +531,24 @@ p.redesSociais{
 
 /*ESTA RESPONSIVIDADE SUPORTA ENTRE 768 E 320px*/
 @media screen and (max-width: 768px) {
+    table {
+        width: 50vw;
+    }
+
+    table th, td {
+        padding:0;
+    }
+
+    .headercarrinho img {
+        display: none;
+    }
+
+    .conteudo > div:nth-child(2) {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
     /* RESPONSIVIDADE DA NAV */
     nav{
         position: static;
