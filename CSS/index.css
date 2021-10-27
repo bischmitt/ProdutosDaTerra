@@ -175,7 +175,6 @@ main{
 #banner {
     margin: auto;
     width: 90%;
-    /* height: 45vh; */
     border: 2px solid #11302E;
     background-size: 100%;
     background-repeat:no-repeat;
@@ -479,6 +478,7 @@ p.redesSociais{
     text-align: center;
     font-size: 20px;
 }
+
 
 /*ESTA RESPONSIVIDADE SUPORTA 1024*/
 @media screen and (max-width: 1024px) {

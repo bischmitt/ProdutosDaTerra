@@ -2,7 +2,7 @@
 #modalCarrinho{
     display: none;
     position: absolute;
-    top: 11%;
+    top: 40%;
     left: 10%;
     right: 10%;
     width: 80vw;
@@ -18,7 +18,14 @@
     text-align: center;
     font-size: 25pt;
     color:   #0C2222;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.headercarrinho img {
+    margin-bottom: 20px; 
 }
 /* Tamanho e borda da Tabela dentro do modal */
 table {
@@ -68,18 +75,4 @@ table td img {
     background-color: rgba(232, 220, 167, 0.8);
 } */
 
-/* Alinhamento da imagem cesto 1 dentro do modal carrinho */
-#cesto1{
-    position: absolute;
-    padding: 98px;
-    margin-left: 800px;
-
-}
-/* Alinhamento da imagem cesto 2 dentro do modal carrinho */
-#cesto2{
-    left: 0;
-    position: absolute;
-    padding: 98px;
-    margin-right: 50px;
-}
 

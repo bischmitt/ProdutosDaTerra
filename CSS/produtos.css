@@ -245,43 +245,263 @@ button a:hover{
 }
 
 /* FOOTER */
-footer{
-    background-color:rgba(99, 0, 80, 0.1);
-    /* box-shadow: inset 0 0 2em rgba(99, 0, 80, 0.2); */
+/* ----------------------------------MARIANA ----------------------------- */
+/* Escopo de trabalho e desenvolvedores */
+article, aside, footer{
+    opacity: 0.9;
 }
 
-.img-footer{
+/* footer{
+    margin-top: 2rem;
+} */
+
+.flex-container {
+    margin-top: 20px;
+    width:90%;
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 1rem;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-.img-footer img{
-    width: 15vw;
-    border-radius: 20px;
+#flex-item {
+   border: 1px solid transparent;
+   border-radius: 20px;
+   background-color: #E8DCBB;
+   padding: 1.5rem;
+   margin-right: 20px;
 }
 
-.info-footer{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    gap: 2rem;
+.escopo-wrapper {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 20px;
 }
 
-.info-footer .copyright{
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    line-height: 1.2rem;
+.escopo-wrapper h2{
+    color: #0C2222;
     text-align: center;
+    padding-bottom: 8px;
     
 }
 
-.info-footer .copyright a{
-    color: rgba(99, 0, 80, 0.8);
-    font-weight: bold;
+.escopo-wrapper h3 {
+    color: #0C2222;
+    margin: 16px 0;
 }
 
+.parceria-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.parceria-wrapper h3 {
+    color: #0C2222;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.parceria-wrapper div {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.parceiros{
+    height: 80px;
+    padding: 8px;
+    border-radius:20px;
+}
+
+#flex-item1 {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color:#BCAC4E;
+    padding: 1.5rem;
+    text-align: center;
+} 
+
+#flex-item1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 95%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color:#BCAC4E;
+    padding: 1rem;
+ }
+
+
+ #flex-item1 h2{
+     color: #0C2222;
+    padding-bottom: 10px;
+}
+
+ 
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    padding: 0.5rem;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+}
+.esconder1, .esconder2, .esconder3, .esconder4{
+   display: none;
+   text-align: justify;
+}
+
+.btnDev{
+    display: flex;
+    width: 20vw;
+    padding: 0.6em;
+    margin: 0.5em;
+    color:#0C2222;
+    background-color: #E8DCBB;
+    border: 3px solid #0C2222 ;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #11302eb4;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 1rem;
+    font-weight: bolder;     
+}
+   
+
+.escondido{
+   /* Adicionei display none para não ficar aparecendo a informação após entrar na tela (Mari) */
+   display: none;
+}
+.tituloEscopo{
+   text-align: center;
+   font-size: 12 px;
+   font-weight: bold;
+}
+
+/* -------------------------------------------------------FOOTER ---------------------------- */
+
+.sectionFooter {
+   padding-top: 16px;
+   width: 100%;
+   height: 240px;
+   background-color:#FAF6F2;
+   color: #0C2222;
+   border-bottom: solid #E4C54A 1px;
+   display: block;
+   clear: both;
+   text-decoration: none;
+}
+
+.sectionFooter ul p {
+    padding-bottom: 16px;
+}
+
+#footer1 {
+   width: 33%;
+   height: 200px;
+   float: left;
+   position: relative;
+   text-align: center;
+   color: #0C2222;
+
+}
+
+#links {
+   color: #0C2222;
+   text-decoration: underline;
+}
+
+/*  ----------------------------------------------- LINK DAS REDES SOCIAIS --------------- */
+.redesSociais {
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   border-bottom: solid #E4C54A 1px;
+   text-align: center;
+   text-decoration: none;
+}
+
+.redesSociais div {
+   justify-content: center;
+   text-decoration: none;
+}
+
+p.redesSociais{
+    width: 100%;
+    text-align: center;
+}
+
+/*  ----------------------------------------------- FOOTER 2 E 3--------------------------- */
+#footer2 {
+   width: 33%;
+   height: auto;
+   float: left;
+   position: relative;
+   text-align: center;
+   color: #0C2222;
+}
+
+#footer3 {
+   width: 33%;
+   height: 200px;
+   float: left;
+   position: relative;
+   text-align: center;
+   color: #0C2222;
+}
+
+/* ----------------------------------------RODAPÉ------------------------------------------ */
+#rodape {
+   text-align: center;
+   background-color: #11302E;
+   color: #E8DCBB;
+   margin: 0px;    
+   width: 100%;
+   height: 35px;
+   font-size: small;
+  } 
+
+#btnNews{
+   border: none;
+   background-color: none;
+   }
+
+#pagamento{
+   width:100%;
+   height:40px;
+   text-decoration: none;
+   list-style-type: none;
+   background-color: #FAF6F2;
+   padding: 10px 0 60px;
+}
+
+.pagamento{
+   width:14%;
+   height:50px;
+   text-decoration: none;
+   float: left;
+   list-style-type: none;
+   text-align:  center;
+}
+
+#formaPag{
+    padding-top: 8px;
+    color: #0C2222;
+    background-color: #FAF6F2;
+    text-align: center;
+    font-size: 20px;
+}
 
 
 /*RESPONSIVIDADE DO INDEX*/
@@ -311,6 +531,24 @@ footer{
 
 /*ESTA RESPONSIVIDADE SUPORTA ENTRE 768 E 320px*/
 @media screen and (max-width: 768px) {
+    table {
+        width: 50vw;
+    }
+
+    table th, td {
+        padding:0;
+    }
+
+    .headercarrinho img {
+        display: none;
+    }
+
+    .conteudo > div:nth-child(2) {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
     /* RESPONSIVIDADE DA NAV */
     nav{
         position: static;
@@ -423,41 +661,74 @@ footer{
         width: 10vw;
         height: 5vh; 
     }
+    .sectionFooter{
+        height: auto; 
+        display: flex; 
+        flex-direction: column; 
+      }
+  
+      #footer1{
+        width: 100%; 
+        border-bottom: solid #F8B500 1px; 
+      }
+  
+      #footer2{
+        width: 100%; 
+      }
+  
+      #footer2 section div{
+        display: flex; 
+        flex-direction: row; 
+      }
+      
+      #footer2 section div img{
+        width: 35px;
+        margin: 20px;
+      }
+  
+      #footer3{
+        width: 100%; 
+      }
+      /* **FIM DO RODAPE** */
+  
+      /* **INICIANDO O ARTICLE** */
+      .beneficios{
+        display: flex; 
+        flex-direction: column; 
+      }
+  
+      .beneficios section{
+        width: 100%; 
+        border-right: none; 
+        border-bottom: solid #F8B500 1px; 
+        margin: auto; 
+        margin-top: 25px;
+      }
 
-    /* RESPONSIVIDADE DO FOOTER */
-    footer{
-        background-color:rgba(99, 0, 80, 0.1);
-        /* box-shadow: inset 0 0 2em rgba(99, 0, 80, 0.2); */
-    }
-    
-    .img-footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    
-    .img-footer img{
-        width: 35vw;
-        border-radius: 10px;
-    }
-    
-    .info-footer{
-        display: flex;
-        justify-content: center;
-        padding: 5px;
-        gap: 1rem;
-    }
-    
-    .info-footer .copyright{
-        font-size: 10px;
-        line-height: 0.8rem;        
-    }
-    
-    .info-footer .footer-redessociais img{
-        width: 7vw;
-    }
+      /* **FIM DO ARTICLE** */
+
+      /* **INICIANDO A SECTION** */
+      .section2{
+        width: 90vw;
+        height: 270vw;
+        margin: 0 20px;
+        padding: 10px;
+      }
+  
+      .section2 h1{
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 20px 0;
+      }
+  
+        .section2 p{
+        font-size: 1.2rem;
+        margin: 25px 10px;
+      }
+
+      p#redesSociais, p#central{
+          margin-top: 1.5rem;
+      }
 }
 
     /* Toda a responsividade anterior funciona entre 768 e 320px, com exceção do header height. Para a cascata funcionar, retornei aqui no fim a responsividade deste único elemento */

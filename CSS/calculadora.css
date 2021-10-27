@@ -1,15 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 #calculadora {    
     width: 250px;
-    margin: 25px auto;
+    margin: 100px auto 10px;
     padding: 16px 12px;
 
-    border: 2px solid #000;
+    border: 5px solid #000;
     border-radius: 20px;
 }
 
@@ -129,4 +123,10 @@
 #calculadora #calculadora-wrapper #teclado .teclado-linha:last-child button {
     width: 100%;
     background-color: green;
+}
+
+@media screen and (max-width: 768px) {
+    #calculadora {
+        margin: 0 0 0 20px;
+     }
 }

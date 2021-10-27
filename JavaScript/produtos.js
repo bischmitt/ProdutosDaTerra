@@ -199,17 +199,17 @@ class Produto {
         }
     }
 
-    mudarPrecoTotal() {
-        let mudarQtd = document.getElementsByClassName("pesokg");
-        let valorUnitario = document.getElementById("preco");
-        let valorNovo = Number(mudarQtd) * Number(valorUnitario);
-        return (valorNovo);
-        // console.log(valorNovo)
-        // console.log(mudarValor)
-        // console.log(valorUnitario)
+    // mudarPrecoTotal() {
+    //     let mudarQtd = document.getElementsById("pesokg");
+    //     let valorUnitario = document.getElementsByClassName("preco");
+    //     let valorNovo = Number(mudarQtd) * Number(valorUnitario);
+    //     return (valorNovo);
+    //     // console.log(valorNovo)
+    //     // console.log(mudarValor)
+    //     // console.log(valorUnitario)
         
         
-    }
+    // }
 
 
 
