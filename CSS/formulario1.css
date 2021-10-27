@@ -63,11 +63,21 @@ nav{
     align-content: center;
     position: absolute;
     right: 10px;
-    margin: auto;    
+    margin: auto;
 }
 
 .autenticacao img:hover{
     transform:rotate(340deg);
+}
+
+.autenticacao a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: rgba(228, 197, 74, 1);
+    margin: 4px 20px;
+    text-align: center;
 }
 
 /* HEADER */
