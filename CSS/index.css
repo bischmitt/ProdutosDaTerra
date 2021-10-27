@@ -608,7 +608,7 @@ p.redesSociais{
     }
 
     .enabled{
-        margin: 0px -100px 0px;
+        margin: 0px 0px 0px;
     }
 
     .flex-container {
@@ -790,13 +790,13 @@ p.redesSociais{
     }
 
     .enabled{
-        margin: 100px 200px 0px;
+        margin: 100px 310px 0px;
     }
 }
 
 @media screen and (max-width:375px) {
     .enabled{
-        margin: 0px 250px 0px;
+        margin: 0px 310px 0px;
     }
 }
 
