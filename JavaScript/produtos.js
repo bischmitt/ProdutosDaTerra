@@ -20,7 +20,7 @@ $("#but1").click(function () {
 })
 
 $("#but2").click(function () {
-    location.href = "formulario1.html";
+    location.href = "formulario.html";
 });
 
 //Criação de uma Classe Produto e adicionando uma lista de produtos com id, nome, preço e quantidade.

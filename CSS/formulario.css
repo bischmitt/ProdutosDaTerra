@@ -1,9 +1,16 @@
 ul li {
     text-decoration: none;
+    list-style-type: none;
 }
 
 body {
     margin: 0;
+    background-image: url(../Imagens/background2.png);
+    overflow-x: hidden;
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 
 body > nav{
@@ -15,6 +22,35 @@ body > nav{
     background-color:  rgba(17, 48, 46, 1);
     position: fixed;
     top: 0;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    align-content: center;
+    justify-content: center;
+    width: 100vw; 
+    height: 9vw; 
+    text-align: center;
+    margin-top: 110px; 
+}
+
+h1 {
+    font-size: 3vw;
+    font-weight: bolder;
+    font-style: italic;
+    margin-bottom: 20px;
+    /* margin: 0.5rem; */
+    color:  rgba(99, 0, 80, 1);
+}
+
+
+h2 {
+    line-height: 2vw;
+    font-weight: bold;
+    /* padding: 0.6rem; */
+    color: rgba(99, 0, 80, 1)
 }
 
 /*Estilização da ul com class .nav-bar*/
@@ -72,20 +108,6 @@ body > nav{
     margin: 4px 20px;
     text-align: center;
 }
-
-/* HEADER */
-header{
-    display: flex;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    align-content: center;
-    justify-content: center;
-    width: 100vw; 
-    height: 9vw; 
-    text-align: center;
-    margin-top: 7rem;
-    margin-bottom: 1rem;
-}
-
 
 .campo input:focus,
 .campo select:focus,
@@ -334,9 +356,23 @@ textarea {
     float: left;
 }
 
+#formulario form {
+    background-color: #fff;
+}
+
 #formularioLado {
     width: 49%;
     float: left;
+}
+
+#formularioLado #login {
+    background-color: #fff;
+}
+
+
+
+.acessibilidade p{
+    margin-top: 0;
 }
 
 
@@ -449,6 +485,7 @@ textarea {
  }
  
  #formaPag{
+     margin: 0;
      padding-top: 8px;
      color: #0C2222;
      background-color: #FAF6F2;
@@ -459,8 +496,8 @@ textarea {
 #modal {
     display: none;
 }
-h1, h2{
+/* h1, h2{
     font-size: 18px;
     font-weight: bold;
     color:#630050;
-}
+} */
