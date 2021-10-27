@@ -494,7 +494,25 @@ textarea {
  }
 
 #modal {
+    position: absolute;
+    border: 5px solid  #11302eb4;
+    border-radius: 20px;
+    top: 150%;
+    left: 10%;
+    right: 10%;
+    margin: 0px auto;
+    width: 50%;
     display: none;
+    background-color: #FAF6F2;
+    
+    text-align: center;
+    font-size: 25px;
+    color: #000;
+    box-shadow: 5px 5px 5px #11302eb4;
+}
+
+#botaoOk {
+    margin: 0 0 10px 0;
 }
 /* h1, h2{
     font-size: 18px;

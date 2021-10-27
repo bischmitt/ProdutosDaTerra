@@ -102,7 +102,7 @@ function abrirModal() {
     let email = $("#email").val()
     let cpf = $("#cpf").val()
 
-    let mensagem = `Olá, ${nome}! Seu login é o seu e-mail: ${email} e a sua senha é o seu CPF: ${cpf}`
+    let mensagem = `Olá, ${nome}! Seja bem vindo! Utilize seu email para realizar seu login e sua senha será seu CPF: ${cpf}`
     
     caixaDaMensagem.text(mensagem);
 
@@ -139,9 +139,9 @@ function enviardados() {
         return false;
     }
 
-    if (document.form1.numero.value == "" || document.form1.numeroContato.value.length < 10) {
+    if (document.form1.numero.value == "" || document.form1.numero.value.length < 10) {
         alert("Preencha campo telefone corretamente!");
-        document.form1.numeroContato.focus();
+        document.form1.numero.focus();
         return false;
     }
 
@@ -176,9 +176,7 @@ function enviardados() {
         return false;
     }
 
-    {
-        alert("Cadastro enviado com sucesso!")
-    }
+    abrirModal()
 }
 
 //********************CÓDIGO PARA O NEWSLETTER************************/

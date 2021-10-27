@@ -91,7 +91,7 @@
         </div>
     </article>
     <article id="formulario">
-        <form id="cadastro" class="formulario" action="" method="POST" name="form1" onsubmit="return enviardados();">
+        <form id="cadastro" class="formulario" action="#" method="POST" name="form1">
             <p  class="acessibilidade" id="letrasForm"> CADASTRE- SE AQUI</p>
             <p>
                 <label class="acessibilidade" for="nome">
@@ -152,7 +152,7 @@
 
             <label class="acessibilidade">Mensagem: </label></br></br>
             <textarea name="mensagem" cols="35" rows="8"></textarea><br /></br></br></br></br>
-            <button type="submit" name="enviar" onsubmit="abrirModal()" value="Exibir Alert" >Enviar</button>
+            <button type="button" name="enviar" onclick="enviardados()"  value="Exibir Alert" >Enviar</button>
             <button type="reset" name="limpar">Limpar</button></br></br></br>
 
         </form>
@@ -289,18 +289,10 @@
 
     <div id="modal">
         <div id="caixaDeMensagem">
-            <p id="mensagemCaixa">Texto da caixa de aviso</p>
+            <p id="mensagemCaixa"></p>
             <button id="botaoOk" onclick="fecharModal()">Ok</button>
         </div>
     </div>
-
-
-<div id="modal">
-    <div id="caixaDeMensagem">
-        <p id="mensagemCaixa"></p>
-        <button id="botaoOk" onclick="fecharJanela()">Ok</button>
-    </div>
-</div>
 
 
 <script type="text/Javascript" src="../JavaScript/Acessibilidade.js"></script>
