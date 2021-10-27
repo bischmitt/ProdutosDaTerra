@@ -57,13 +57,14 @@
     </header>
 
     <main>
+        <!-- Criado um container com as imagens dos produtos e  -->
         <div class="grid-container">
             <div class="item1">
                 <h2>Banana</h2>
                 <img src="../Imagens/banana.png" alt="Banana">
-                <h4>R$5,50/kg</h4>
+                <h4 id="preco">R$5,50/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
-                <input type="number"  min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
+                <input type="number" onchange="mudarPrecoTotal(1)" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos" value="">
                 <button id="btn1" onclick="produto.enviarParaCarrinho(1), produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
             </div>
             <div class="item2">
@@ -195,10 +196,13 @@
 
     <!-- Modal carrinho -->
     <div id="modalCarrinho">
-
+        <div><img id="cesto1" src="../Imagens/cesta fruits-icon.png" alt=""></div>
+        <div><img id="cesto2" src="../Imagens/cesta apples-icon.png" alt=""></div>
+        <!-- Cabeçalho para adiconar um título -->
         <header class="headercarrinho">
                 <h3>Carrinho de Compras</h3>
         </header>
+        <!-- Criado uma main com section e divs -->
         <main>
             <section class="card">
                 <div id="produtos">
@@ -210,6 +214,7 @@
             </section>
             <section class="conteudo">
                 <div>
+                    <!-- Tabela criada para adicionar no modal -->
                     <table border=1>
                         <thead>
                             <th class="center">ID</th>
@@ -225,6 +230,7 @@
 
                     </table>
                 </div>
+                <!-- Botões incluidos no modal com finalidade de facilitar a nevegação do usuário -->
                 <button id="but1" >Continuar Comprando</button>
                 <button id="but2" >Concluir</button>
             </section>

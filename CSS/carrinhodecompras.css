@@ -6,14 +6,17 @@
     left: 10%;
     right: 10%;
     width: 80vw;
-    background-color:darkorange;
+    background-color:#E4C54A;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 8px 8px 8px 8px black;
+    padding: 0;
 
 }
 .headercarrinho{
     width: 100%;
     text-align: center;
     font-size: 25pt;
-    color:  rgba(99, 0, 80, 1);
+    color:   #0C2222;
     
 }
 
@@ -62,3 +65,16 @@ table td img {
     font-size: 15pt;
     background-color: rgba(232, 220, 167, 0.8);
 } */
+#cesto1{
+    position: absolute;
+    padding: 100px;
+    margin-left: 800px;
+
+}
+#cesto2{
+    left: 0;
+    position: absolute;
+    padding: 100px;
+    margin-right: 50px;
+}
+
