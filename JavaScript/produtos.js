@@ -119,7 +119,13 @@ class Produto {
     notificarUsuario() {
         if (this.itensDoCarrinho.length > 0) {
             $('#car').text(this.itensDoCarrinho.length).show()
+        } else {
+            this.carrinhoVazio()
         }
+    }
+
+    carrinhoVazio() {
+        $('#car').text('0').css("display", "none")
     }
 
 
@@ -174,7 +180,7 @@ class Produto {
             td_acoes.appendChild(imgDelete);
 
             //atribuir um método para imgDelete através do setAttribute como os parâmetros: ("evento", método)
-            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + ")");
+            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + "), produto.notificarUsuario()");
 
         }
 
