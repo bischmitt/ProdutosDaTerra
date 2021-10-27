@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="../Imagens/arvore.png">
     <link rel="stylesheet" type="text/CSS" href="../CSS/carrinhodecompras.css">
     <link rel="stylesheet" type="text/CSS" href="../CSS/produtos.css">
+    <link rel="stylesheet" href="../CSS/calculadora.css">
 
 
 </head>
@@ -36,7 +37,10 @@
 
         <div class="autenticacao">
             <a href="">Entrar</a>
-            <a href=""><img src="../Imagens/carrinho.svg" alt="Carrinho de compras"></a>
+            <a href="#" id="abrirModal">
+                <img src="../Imagens/carrinho.svg" alt="Carrinho de compras">
+                <span id="car"></span>
+            </a>
         </div>
 
     </nav>
@@ -137,7 +141,7 @@
                 <h4>R$3,00/kg</h4>
                 <label for="pesokg"> Quantidade(kg):</label>
                 <input type="number" min="0.5" step="0.1" class="pesokg" placeholder="quantidade em quilos">
-                <button id="btn9" onclick="produto.enviarParaCarrinho(9)">Adicionar ao carrinho</button> <br />
+                <button id="btn9" onclick="produto.enviarParaCarrinho(9),  produto.notificarUsuario()">Adicionar ao carrinho</button> <br />
 
             </div>
         </div>
@@ -303,15 +307,13 @@
 
 
     <!-- Modal carrinho -->
-    <a id="abrirModal">
-        <img src="../Imagens/carrinho.png" alt="Carrinho de compras">
-        <span id="car"></span></a>
     <div id="modalCarrinho">
-        <div><img id="cesto1" src="../Imagens/cesta fruits-icon.png" alt=""></div>
-        <div><img id="cesto2" src="../Imagens/cesta apples-icon.png" alt=""></div>
         <!-- Cabeçalho para adiconar um título -->
         <header class="headercarrinho">
             <h3>Carrinho de Compras</h3>
+            <img src="../Imagens/cesta fruits-icon.png" alt="">
+            <h3>Carrinho de Compras</h3>
+            <img src="../Imagens/cesta apples-icon.png" alt="">
         </header>
         <!-- Criado uma main com section e divs para criação de uma tabela dentro do modal -->
         <main>
@@ -344,10 +346,66 @@
                 <!-- Botões incluidos no modal com finalidade de facilitar a nevegação do usuário -->
                 <button id="but1">Continuar Comprando</button>
                 <button id="but2">Concluir</button>
+                <div>
+                    <button id="but1" >Continuar Comprando</button>
+                    <button id="but2" >Concluir</button>
+                </div>
+
+                <div id="calculadora">
+                    <div id="calculadora-wrapper">
+                        <div class="opcoes">
+                            <label class="interruptor">
+                                <input type="checkbox">
+                                <span class="deslizante"></span>
+                            </label>
+                            <p>Científica</p>
+                        </div>
+                        <section id="display">
+                            <input type="text" id="input-display" disabled>
+                        </section>
+                        <section id="teclado">
+                            <div class="teclado-linha">
+                                <button id="raiz">&radic;</button>
+                                <button id="quadrado">x&sup2;</button>
+                                <button id="cubo">x&sup3;</button>
+                                <button value="apagar">C</button>
+                            </div>
+                            <div class="teclado-linha">
+                                <button value="7" class="botaoNumero">7</button>
+                                <button value="8" class="botaoNumero">8</button>
+                                <button value="9" class="botaoNumero">9</button>
+                                <button value="/" class="botaoOperadorComum">&divide;</button>
+                            </div>
+                            <div class="teclado-linha">
+                                <button value="4" class="botaoNumero">4</button>
+                                <button value="5" class="botaoNumero">5</button>
+                                <button value="6" class="botaoNumero">6</button>
+                                <button value="*" class="botaoOperadorComum">&times;</button>
+                            </div>
+                            <div class="teclado-linha">
+                                <button value="1" class="botaoNumero">1</button>
+                                <button value="2" class="botaoNumero">2</button>
+                                <button value="3" class="botaoNumero">3</button>
+                                <button value="-" class="botaoOperadorComum">&minus;</button>
+                            </div>
+                            <div class="teclado-linha">
+                                <button value="remover">&#8678</button>
+                                <button value="0" class="botaoNumero">0</button>
+                                <button value="." class="botaoDecimal">.</button>
+                                <button value="+" class="botaoOperadorComum">&plus;</button>
+                            </div>
+                            <div class="teclado-linha">
+                                <button id="calcular">&equals;</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
             </section>
         </main>
     </div>
     <!-- Vamos utilizar Dom -->
+    <script src="../JavaScript/calculadora.js"></script>
     <script src="../JavaScript/produtos.js"></script>
 </body>
 
