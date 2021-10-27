@@ -481,3 +481,8 @@ ul {
 #modal {
     display: none;
 }
+h1, h2{
+    font-size: 18px;
+    font-weight: bold;
+    color:#630050;
+}
