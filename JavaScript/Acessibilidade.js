@@ -14,9 +14,6 @@ function fonte(e) {
 	if (e == 'd'){
 		fonte--;
 	}
-	if (e == 'n'){
-		fonte = fonteNormal;
-	}
 // cetei o css para alterar o fonte size (tamanho) na nossa função fonte
 	elemento.css("fontSize", fonte);
 	
