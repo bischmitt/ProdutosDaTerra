@@ -390,6 +390,7 @@ ul {
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 
 
 #endereço {
@@ -400,4 +401,8 @@ ul {
 }
 #acessibilidade{
     margin-left: 70%;
+=======
+#modal {
+    display: none;
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
 }

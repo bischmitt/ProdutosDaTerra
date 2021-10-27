@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="../Imagens/arvore.png">
     <link rel="stylesheet" type="text/CSS" href="../CSS/formulario2-Mari.css">
     <!-- <link rel="stylesheet" type="text/CSS" href="../CSS/formulario1-Mari.css"> -->
+<<<<<<< HEAD
     <script src="../JavaScript/validarCEP.js"></script>
     <script src="../JavaScript/formulario1.js"></script>
     <script src="../Mari/formulario1.js"></script>
@@ -28,6 +29,23 @@
                     <p class="acessibilidade" id="letrasForm">LOGIN</p>
                     <p>
                         <label class="acessibilidade" for="email">
+=======
+    <!-- <script src="../JavaScript/validarCEP.js"></script> -->
+    <!-- <script src="../JavaScript/formulario1.js"></script> -->
+    
+    <!-- <script src="../JavaScript/Alert email.js"></script> -->
+    <script type="text/Javascript" src="../jquery.js"></script>
+</head>
+
+<body>
+    <article id="formularioLado">
+        <form class="formulario" action="#" method="POST" name="form" onsubmit="return enviarDados1();">
+            <section id="parte1">
+                <div id="login">
+                    <p id="letrasForm">LOGIN</p>
+                    <p>
+                        <label for="email">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                             Email:
                         </label>
                         <input type="email" id="email" name="email" placeholder="digite seu email aqui">
@@ -37,16 +55,24 @@
                     <p>
                         <!--Placeholder não funciona nas datas-->
                         <!--Password - oculta a informação digitada no input-->
+<<<<<<< HEAD
                         <label class="acessibilidade" for="senha">
                             Senha:
                         </label>
                         <input type="password" id="senha" placeholder="digite sua senha aqui">
+=======
+                        <label for="senha">
+                            Senha:
+                        </label>
+                        <input type="password" name="senha" id="senha" placeholder="digite sua senha aqui">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                     </p>
                     <button class="botaoEntrar" type="submit" class="botaoEntrar">Entrar
                     </button>
                 </div>
 
         </form>
+<<<<<<< HEAD
         <p class="acessibilidade" id="endereço">
             <img id="logo" src="../Imagens/logo.svg"></p>
         <p class="acessibilidade" id="endereço">
@@ -67,10 +93,32 @@
             <p class="acessibilidade" id="letrasForm"> CADASTRE- SE AQUI</p>
             <p>
                 <label class="acessibilidade" for="nome">
+=======
+        <p class="endereço">
+            <img id="logo" src="../Imagens/logo.svg">
+        </p>
+        <p class="endereço">
+            Endereço: Rua x, Cidade - Estado, Brasil, CEP 00000-000.</p>
+        <p class="endereço">
+            CNPJ:XX.XXX.XXX/0001-XX</p>
+        <p class="endereço">
+            Caixa Postal: XXXX-XX
+        </p>
+        <iframe id="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14582.292517002776!2d-46.1995978!3d-23.97553045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e2!4m0!4m0!5e0!3m2!1spt-BR!2sbr!4v1633808173653!5m2!1spt-BR!2sbr"></iframe>
+        </div>
+    </article>
+    <article id="formulario">
+        <form id="cadastro" class="formulario" action="" method="POST" name="form1" onsubmit="return enviardados();">
+            <p id="letrasForm"> CADASTRE- SE AQUI</p>
+            <p>
+                <label for="nome">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                     Nome:
                 </label>
                 <input type="text" id="nome" name="nome" placeholder="digite seu nome aqui">
 
+<<<<<<< HEAD
                 <p>
                     <label class="acessibilidade" for="numero">
                         CPF:
@@ -136,11 +184,78 @@
             <button onClick="fonte('d');">A-</button> <!-- Botão - -->
         </section>
 
+=======
+            <p>
+                <label for="numero">
+                    CPF:
+                </label>
+                <input type="number" id="cpf" name="cpf" placeholder="Insira seu CPF" onblur="return validarCPF(this)">
+
+            </p>
+            <p>
+                <label for=" numero">
+                    Telefone:
+                </label>
+                <input type="tel" id="numero" name="numero"  placeholder="digite seu telefone">
+
+            </p>
+
+            <p>
+                <label for="dataNascimento"></label>Data:
+                <input id="date" type="date" id="dataNascimento" name="dataNascimento" min="1889-03-16" max="2021-03-16" required placeholder="Selecione sua data de nascimento" onchange="validarData(event);">
+            </p>
+
+
+            <!--radio é usado para seleção de um único elemento na lista.-->
+            <p class="genero1"> Gênero: </p>
+            <label><input type="radio" class="genero" name="genero">Feminino</label>
+            <label><input type="radio" class="genero" name="genero">Masculino</label><label><input type="radio"
+                    class="genero" name="genero">Não-Binário</label>
+            <br />
+            <br />
+            <br />
+
+            <label for="cep">CEP:</label>
+            <input type="text" maxlength="9" name="cep" id="cep" onblur="consultaCEP();"
+                placeholder="xxxxx-xxx"></input>
+
+
+
+            <label for="uf">Estado:</label>
+            <input type="text" id="uf" name="uf" disabled></input>
+
+
+
+            <label for="localidade">Município:</label>
+            <input type="text" id="localidade" name="localidade"></input>
+
+            <label for="logradouro">Endereço:</label>
+            <input type="text" id="logradouro" name="logradouro" placeholder="Insira o endereço de entrega"></input>
+
+            <label for="endereco">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" placeholder="digite aqui o complemento"></input>
+
+
+            <label>Mensagem: </label></br></br>
+            <textarea name="mensagem" cols="35" rows="8"></textarea><br /></br></br></br></br>
+            <Button type="submit" name="enviar" onclick="alert(); frase()" value="Exibir Alert" >Enviar</Button>
+            <Button type="reset" name="limpar">Limpar</button></br></br></br>
+
+        </form>
+
+        </section>
+    </article>
+
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
     <!-- *****************************************FOOTER*************************************** -->
     <footer>
 
         <!-- ***************************************************COMECEI A SECTION************* -->
+<<<<<<< HEAD
         <section class="acessibilidade" class="sectionFooter">
+=======
+        <section class="sectionFooter">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
             <div id="footer1">
                 <nav class=" classfooter">
                     <ul>
@@ -168,7 +283,12 @@
                                 <div id="div1">
                                     <li class="linha">
                                         <img src="https://img.icons8.com/material-outlined/24/000000/twitter.png"
+<<<<<<< HEAD
                                             alt=" ícone do Twitter" a href="" /></li>
+=======
+                                            alt=" ícone do Twitter" a href="" />
+                                    </li>
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                                     <!--A FALTA DE UMA DIV ALINHA OS ICONES, NÃO CONSEGUI ENTENDER O BUG  -->
                                     <!-- </div> -->
                                     <div id="div2">
@@ -188,12 +308,17 @@
                                             <li><img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png"
                                                     alt="ícone do facebook" /></li>
                                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                     </ul>
                 </nav>
             </div>
             <div id="footer3">
                 <nav class=" classfooter">
                     <ul>
+<<<<<<< HEAD
                         <p class="acessibilidade" id="central"> FALE CONOSCO </p>
                         <li class="acessibilidade"> <img
                                 src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
@@ -207,6 +332,18 @@
                             www.produtosdaterra.com.br </li>
                         <li class="acessibilidade"><img src="https://img.icons8.com/material/24/000000/marker--v1.png"
                                 alt="ícone de mapa" />
+=======
+                        <p id="central"> FALE CONOSCO </p>
+                        <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
+                                alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
+                        <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
+                                alt="ícone de email " />
+                            faleconosco@produtodaterra.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/internet.png"
+                                alt="ícone de servidor " />
+                            www.produtosdaterra.com.br </li>
+                        <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png" alt="ícone de mapa" />
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                             Rua x, Cidade - Estado, Brasil, CEP 00000-000.
                         </li>
                     </ul>
@@ -219,7 +356,11 @@
         <div id="pagamento">
             <div class="pagamento">
 
+<<<<<<< HEAD
                 <li><img src="https://img.icons8.com/fluency/48/000000/mastercard.png"/ alt="ícone do cartão ">
+=======
+                <li><img src="https://img.icons8.com/fluency/48/000000/mastercard.png" / alt="ícone do cartão ">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                 </li>
 
             </div>
@@ -235,6 +376,7 @@
             <div class="pagamento">
                 <li><img src="https://img.icons8.com/color/50/000000/mercado-pago.png" />
                 </li>
+<<<<<<< HEAD
             </div>
             <div class="pagamento">
                 <img src="https://img.icons8.com/color/48/000000/paypal.png" />
@@ -245,22 +387,48 @@
                 </li>
             </div>
             <div class="pagamento">
+=======
+            </div>
+            <div class="pagamento">
+                <img src="https://img.icons8.com/color/48/000000/paypal.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+                <li><img src="https://img.icons8.com/fluency/48/000000/diners-club.png" />
+                </li>
+            </div>
+            <div class="pagamento">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
                 <li><img src="https://img.icons8.com/color/48/000000/american-express-squared.png" />
                 </li>
             </div>
         </div>
         </div>
     </footer>
+<<<<<<< HEAD
     <section class="acessibilidade" id="rodape">
+=======
+    <section id="rodape">
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
         <p>
             Copyright © 2021 Produtos da Terra | Todos os direitos reservados | Políticas de
             Privacidade | Políticas de
             Cookies
         </p>
     </section>
+<<<<<<< HEAD
     <!-- Botões de Acessibilidade -->
     <!-- ***********************************************FINAL DO BODY E HTML************************* -->
     <script src="../JavaScript/index.js"></script>
+=======
+
+    <div id="modal">
+        <p></p>
+    </div>
+    <!-- ***********************************************FINAL DO BODY E HTML************************* -->
+    <script src="../Mari/formulario1.js"></script>
+    
+>>>>>>> 20607e049bf147da82fd01a63f97e8d542c0d753
 
     <!-- *******************************************VLIBRAS****************************** -->
     <div vw class="enabled">
