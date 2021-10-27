@@ -69,13 +69,6 @@ textarea {
     text-align: center;
 }
 
-.endereço {
-    line-height: 20px;
-    text-align: center;
-    margin-top: 20px;
-
-}
-
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus {
@@ -249,19 +242,20 @@ textarea {
 
 #formulario {
     width: 49%;
-    
+
     float: left;
-  
+
 
 
 }
 
 #formularioLado {
     width: 49%;
-    
+
     float: left;
 
 }
+
 .My-Color-Theme-1-hex {
     color: #630050, #FFBAF2, #FFD1FF, #0C2222 #11302E, #29873E, #62771F,
         #BCAC4E, #E8DCBB, #FAE8C7 #E9DC82, #E4C54A, #F0A941, #ff993a,
@@ -302,6 +296,7 @@ ul {
     position: relative;
     text-align: center;
     color: black;
+
 
 }
 
@@ -344,6 +339,7 @@ ul {
     text-align: center;
     color: black;
 
+
 }
 
 /* ----------------------------------------RODAPÉ------------------------------------------ */
@@ -381,6 +377,7 @@ ul {
     text-decoration: none;
     font-size: 15px;
 }
+
 #btnNews {
     text-align: center;
     margin-left: 150px;
@@ -391,4 +388,16 @@ ul {
     border: none;
     background-color: none;
     text-decoration: none;
+}
+
+
+
+#endereço {
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+#acessibilidade{
+    margin-left: 70%;
 }

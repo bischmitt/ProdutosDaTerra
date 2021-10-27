@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/CSS" href="../CSS/quemsomosnos.css">
     <link rel="stylesheet" type="text/CSS" href="../CSS/footer3.css">
     <script src="../JavaScript/quemsomosnos.js"></script>
+     <script src="../JavaScript/Acessibilidade.js"></script>
+    <script src="../jquery.js"></script>
 </head>
 
 <body>
@@ -43,14 +45,20 @@
     <header id="topo">
         <div>
             <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1>Produtos da Terra</h1>
-            <h2>Uma alimentação mais saudável e acessível para você e sua família!</h2>
+            <h1 class="acessibilidade">Produtos da Terra</h1>
+            <p class="acessibilidade">Acessibilidade</p>
+            <h2 class="acessibilidade">Uma alimentação mais saudável e acessível para você e sua família!</h2>
+        </div>
+        <div>
+            <!--tags <h> para o nome da empresa e frase de efeito-->
+            <h1 class="acessibilidade" >Produtos da Terra</h1>
+            <h2 class="acessibilidade" >Uma alimentação mais saudável e acessível para você e sua família!</h2>
         </div>
     </header>
 
     <main>
         <section>
-            <p id="index_texto">Olá, seja bem-vindo! Nós somos Edésio e Maria Lúcia, um casal de agricultores de Antônio
+            <p class="acessibilidade"  id="index_texto">Olá, seja bem-vindo! Nós somos Edésio e Maria Lúcia, um casal de agricultores de Antônio
                 Carlos, cidade
                 proxima a Florianópolis. Trabalhamos com a terra desde muito jovens e há cerca de 15 anos resolver
                 implementar em nossa roça tecnologias que reduzem o uso de agrotóxicos. Há muitas formas de fazer isso.
@@ -66,7 +74,7 @@
             <img src="https://static.ndmais.com.br/2014/08/10-08-2014-14-41-35-agricultores-edesio-schmitt-maria-lucia-schmitt-antonio-carlos-foto.-rosane-lima-04agosto2014-mg-0090.jpg"
                 alt="Casal de agricultores Edésio Schmitt e Maria Lúcia Klein Schmitt em sua roça">
             <!--legenda da foto-->
-            <figcaption id="figcaptionindex">Casal de agricultores Edésio Schmitt e Maria Lúcia Klein Schmitt em sua
+            <figcaption  class="acessibilidade"  id="figcaptionindex">Casal de agricultores Edésio Schmitt e Maria Lúcia Klein Schmitt em sua
                 roça</figcaption>
     </main>
 
@@ -76,7 +84,7 @@
             <iframe src="https://www.youtube.com/embed/ZvY24vv8_90" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-            <a
+            <a class="acessibilidade" 
                 href="https://www.epagri.sc.gov.br/index.php/2019/05/22/pesquisador-de-portugal-conhece-o-spdh-em-antonio-carlos/">Reportagem: Entenda
                 mais sobre o Sistema de Plantio Direto de Hortaliças</a>
 
@@ -88,7 +96,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
 
-            <a
+            <a class="acessibilidade" 
                 href="http://g1.globo.com/economia/agronegocios/noticia/2014/09/agricultores-testam-uso-de-acaro-para-eliminar-praga-no-chuchu-em-sc.html">Reportagem: Entenda
                 mais sobre o controle biológico com ácaros</a>
         </div>
@@ -103,17 +111,17 @@
           <footer>
 
             <!-- ***************************************************COMECEI A SECTION************* -->
-            <section class="sectionFooter">
+            <section class="acessibilidade"  class="sectionFooter">
                 <div id="footer1">
                     <nav class=" classfooter">
                         <ul>
                             <p id="institucional"> INSTITUCIONAL </p>
-                            <li>Quem somos</li>
-                            <li> Como funciona</li>
-                            <li>Fundo do pequeno produtor</a></li>
-                            <li> Famílias produtora</li>
-                            <li> Visitas ao produtor</li>
-                            <li>
+                            <li class="acessibilidade" >Quem somos</li>
+                            <li class="acessibilidade" > Como funciona</li>
+                            <li class="acessibilidade" >Fundo do pequeno produtor</a></li>
+                            <li class="acessibilidade"> Famílias produtora</li>
+                            <li class="acessibilidade"> Visitas ao produtor</li>
+                            
                                 <input id="btnNews" type="button" onclick="mostrarParagrafo()" value="Newsletter" />
                                 <p class="escondido">Deixe seu email aqui e receba ofertas e novidades exclusivas:</a>
                                 </p>
@@ -159,15 +167,15 @@
                     <nav class=" classfooter">
                         <ul>
                             <p id="central"> FALE CONOSCO </p>
-                            <li> <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
+                            <li class="acessibilidade" > <img src="https://img.icons8.com/material-sharp/24/000000/no-phones--v1.png"
                                     alt=" ícone de telefone " /> (XX) XXXX-XXXX</li>
-                            <li><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
+                            <li class="acessibilidade" ><img src="https://img.icons8.com/material-outlined/24/000000/email.png"
                                     alt="ícone de email " />
                                 faleconosco@produtodaterra.com.br </li>
-                            <li><img src="https://img.icons8.com/material/24/000000/internet.png"
+                            <li class="acessibilidade" ><img src="https://img.icons8.com/material/24/000000/internet.png"
                                     alt="ícone de servidor " />
                                 www.produtosdaterra.com.br </li>
-                            <li><img src="https://img.icons8.com/material/24/000000/marker--v1.png"
+                            <li class="acessibilidade" ><img src="https://img.icons8.com/material/24/000000/marker--v1.png"
                                     alt="ícone de mapa" />
                                 Rua x, Cidade - Estado, Brasil, CEP 00000-000.
                             </li>
@@ -177,7 +185,7 @@
             </section>
             <!-- *******************************************************FECHEI A SECTION************* -->
             <!-- ************************************* DIV PARA FORMAS DE PAGAMENTO -->
-            <p id="formaPag"> Formas de pagamento:</p>
+            <p id="formaPag" class="acessibilidade"> Formas de pagamento:</p>
             <div id="pagamento">
                 <div class="pagamento">
 
@@ -213,7 +221,7 @@
             </div>
             </div>
         </footer>
-        <section id="rodape">
+        <section id="rodape" class="acessibilidade" >
             <p>
                 Copyright © 2021 Produtos da Terra | Todos os direitos reservados | Políticas de
                 Privacidade | Políticas de
