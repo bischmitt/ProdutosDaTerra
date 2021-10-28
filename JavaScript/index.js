@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 
 // Lista de imagens a serem exibidas
-let vtBanner = ["../Imagens/banner1_metade.png", "../Imagens/banner2.png", "../Imagens/banner3_metade.png", "../Imagens/banner4.png"];
+let vtBanner = ["Imagens/banner1_metade.png", "Imagens/banner2.png", "Imagens/banner3_metade.png", "Imagens/banner4.png"];
 let max = vtBanner.length - 1;
 let i = 0;
 
