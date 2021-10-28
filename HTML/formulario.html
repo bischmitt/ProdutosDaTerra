@@ -8,7 +8,7 @@
     <title>Produtos da Terra</title>
     <link rel="shortcut icon" href="../Imagens/arvore.png">
     <link rel="stylesheet" type="text/CSS" href="../CSS/formulario.css">
-    <script type="text/Javascript" src="../JavaScript/Acessibilidade.js"></script>
+    
     <script type="text/Javascript" src="../jquery.js"></script>
 </head>
 
@@ -40,15 +40,14 @@
     <header id="topo">
         <div>
             <!--tags <h> para o nome da empresa e frase de efeito-->
-            <h1 class="acessibilidade">Produtos da Terra</h1>
+            <h1>Produtos da Terra</h1>
             <h2 class="acessibilidade">Uma alimentação mais saudável e acessível para você e sua família!</h2>
         </div>
             </header>
-<div>
-    <button onClick="fonte('a');">A+</button> <!-- Botão + -->
-    <button onClick="fonte('n');" title="Normal">A</button> <!-- Botão - -->
-    <button onClick="fonte('d');">A-</button> <!-- Botão - -->
-</div>
+    <div>
+        <button onClick="fonte('a');">A+</button> <!-- Botão + -->
+        <button onClick="fonte('d');">A-</button> <!-- Botão - -->
+    </div>
     <article id="formularioLado">
         <form class="formulario" action="#" method="POST" name="form" onsubmit="return enviarDados1();">
             <section id="parte1">
@@ -75,22 +74,24 @@
                 </div>
 
         </form>
-        <p class="acessibilidade" class="endereço">
-            <img id="logo" src="../Imagens/logo.svg">
-        </p>
-        <p class="acessibilidade" class="endereço">
-            Endereço: Rua x, Cidade - Estado, Brasil, CEP 00000-000.</p>
-        <p class="acessibilidade" class="endereço">
-            CNPJ:XX.XXX.XXX/0001-XX</p>
-        <p class="acessibilidade" class="endereço">
-            Caixa Postal: XXXX-XX
-        </p>
-        <iframe id="mapa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14582.292517002776!2d-46.1995978!3d-23.97553045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e2!4m0!4m0!5e0!3m2!1spt-BR!2sbr!4v1633808173653!5m2!1spt-BR!2sbr"></iframe>
+        <div class="endereço">
+            <p class="acessibilidade" class="endereço">
+                <img id="logo" src="../Imagens/logo.svg">
+            </p>
+            <p class="acessibilidade" class="endereço">
+                Endereço: Rua x, Cidade - Estado, Brasil, CEP 00000-000.</p>
+            <p class="acessibilidade" class="endereço">
+                CNPJ:XX.XXX.XXX/0001-XX</p>
+            <p class="acessibilidade" class="endereço">
+                Caixa Postal: XXXX-XX
+            </p>
+            <iframe id="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14582.292517002776!2d-46.1995978!3d-23.97553045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e2!4m0!4m0!5e0!3m2!1spt-BR!2sbr!4v1633808173653!5m2!1spt-BR!2sbr"></iframe>
+            
         </div>
     </article>
     <article id="formulario">
-        <form id="cadastro" class="formulario" action="" method="POST" name="form1" onsubmit="return enviardados();">
+        <form id="cadastro" class="formulario" action="#" method="POST" name="form1">
             <p  class="acessibilidade" id="letrasForm"> CADASTRE- SE AQUI</p>
             <p>
                 <label class="acessibilidade" for="nome">
@@ -151,8 +152,8 @@
 
             <label class="acessibilidade">Mensagem: </label></br></br>
             <textarea name="mensagem" cols="35" rows="8"></textarea><br /></br></br></br></br>
-            <Button type="submit" name="enviar" onclick="alert(); frase()" value="Exibir Alert" >Enviar</Button>
-            <Button type="reset" name="limpar">Limpar</button></br></br></br>
+            <button type="button" name="enviar" onclick="enviardados()"  value="Exibir Alert" >Enviar</button>
+            <button type="reset" name="limpar">Limpar</button></br></br></br>
 
         </form>
 
@@ -287,32 +288,25 @@
     </section>
 
     <div id="modal">
-        <p></p>
+        <div id="caixaDeMensagem">
+            <p id="mensagemCaixa"></p>
+            <button id="botaoOk" onclick="fecharModal()">Ok</button>
+        </div>
     </div>
 
-</footer>
-<section id="rodape">
-    <p>
-        Copyright © 2021 Produtos da Terra | Todos os direitos reservados | Políticas de
-        Privacidade | Políticas de
-        Cookies
-    </p>
-</section>
+    <script type="text/Javascript" src="../JavaScript/acessibilidade.js"></script>
+    <script type="text/Javascript" src="../JavaScript/formulario.js"></script>
 
-
-<script src="JavaScript/index.js"></script>
-
-<!-- ***************************************************ADICIONANDO O VLIBRAS *********************** -->
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@ $("#but1").click(function () {
 })
 
 $("#but2").click(function () {
-    location.href = "formulario1.html";
+    location.href = "formulario.html";
 });
 
 //Criação de uma Classe Produto e adicionando uma lista de produtos com id, nome, preço e quantidade.
@@ -119,7 +119,13 @@ class Produto {
     notificarUsuario() {
         if (this.itensDoCarrinho.length > 0) {
             $('#car').text(this.itensDoCarrinho.length).show()
+        } else {
+            this.carrinhoVazio()
         }
+    }
+
+    carrinhoVazio() {
+        $('#car').text('0').css("display", "none")
     }
 
 
@@ -174,7 +180,7 @@ class Produto {
             td_acoes.appendChild(imgDelete);
 
             //atribuir um método para imgDelete através do setAttribute como os parâmetros: ("evento", método)
-            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + ")");
+            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + "), produto.notificarUsuario()");
 
         }
 

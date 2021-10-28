@@ -117,7 +117,7 @@ section.buscar{
     width: 40%;
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 3rem;
     justify-content: center;
     border-radius: 15px;
     margin-bottom: 41rem;
@@ -142,7 +142,7 @@ input #txtBusca{
     font-size:20px;
     border:none;
     height:37px;
-    width:430px;
+    width:400px;
 }
   
 #btnBusca{
@@ -175,6 +175,7 @@ main{
 #banner {
     margin: auto;
     width: 90%;
+    height: 44vh;
     border: 2px solid #11302E;
     background-size: 100%;
     background-repeat:no-repeat;
@@ -185,10 +186,9 @@ main{
 }
 
 #botoes {
-    margin-top: 280px;
-    position: relative;
-    bottom: 0px;
-    left: 49%;
+    position: absolute;
+    top: 69rem;
+    left:50%;
 }
 
 /* SECTION TEXTO */
@@ -216,6 +216,12 @@ main{
 #subir img {
     width: 5vw;
     height: 5vh;
+}
+
+@media screen and (max-width:1440px) {
+    .enabled{
+        margin: 0px 0px 0px;
+    }
 }
 /* ----------------------------------MARIANA ----------------------------- */
 /* Escopo de trabalho e desenvolvedores */
@@ -307,13 +313,11 @@ article, aside, footer{
     padding: 1rem;
  }
 
-
  #flex-item1 h2{
      color: #0C2222;
     padding-bottom: 10px;
 }
 
- 
 .img{
     display: block;
     margin-left: auto;
@@ -324,6 +328,7 @@ article, aside, footer{
     text-align: center;
     height: 150px;
 }
+
 .esconder1, .esconder2, .esconder3, .esconder4{
    display: none;
    text-align: justify;
@@ -348,7 +353,6 @@ article, aside, footer{
     font-size: 1rem;
     font-weight: bolder;     
 }
-   
 
 .escondido{
    /* Adicionei display none para não ficar aparecendo a informação após entrar na tela (Mari) */
@@ -359,6 +363,7 @@ article, aside, footer{
    font-size: 12 px;
    font-weight: bold;
 }
+
 
 /* -------------------------------------------------------FOOTER ---------------------------- */
 ul {
@@ -489,8 +494,21 @@ p.redesSociais{
     #btnBusca{
         width:5.2rem;
     }
-}
 
+    #banner {
+        width: 90%;
+        height: 26vh;
+    }
+    
+    #botoes {
+        position: absolute;
+        top: 62rem;
+    }
+
+    .enabled{
+        margin: 0px 90px 0px;
+    }
+}
 
 /*ESTA RESPONSIVIDADE SUPORTA ENTRE 768 E 320px*/
 @media screen and (max-width: 768px) {
@@ -528,7 +546,7 @@ p.redesSociais{
     .logo img{
         position: absolute;
         left: 0;
-        height: 30vh;
+        height: 20vh;
     }
 
 /*SECTION CAMPO DE BUSCA*/
@@ -568,6 +586,16 @@ p.redesSociais{
         float:left;
     }
 
+    #banner {
+        width: 90%;
+        height: 20vh;
+    }
+    
+    #botoes {
+        position: absolute;
+        top: 72.1rem;
+    }
+
     #subir {
         margin-left: 0;
         margin-right: auto;
@@ -577,6 +605,10 @@ p.redesSociais{
     #subir img {
         width: 5vw;
         height: 3vh;
+    }
+
+    .enabled{
+        margin: 0px 0px 0px;
     }
 
     .flex-container {
@@ -608,7 +640,6 @@ p.redesSociais{
         color: #0C2222;
         text-align: center;
         padding-bottom: 8px;
-        
     }
     
     .escopo-wrapper h3 {
@@ -638,7 +669,7 @@ p.redesSociais{
     .parceiros{
         height: 100px;
         border-radius:20px;
-     }
+    }
     
     #flex-item1 {
         display: flex;
@@ -651,12 +682,12 @@ p.redesSociais{
         border-radius: 20px;
         background-color:#BCAC4E;
         padding: 1rem;
-     }
+    }
     
      #flex-item1 h2{
         color:#0C2222;
         padding-bottom: 1rem;
-     }
+    }
     
     .img{
         display: flex;
@@ -682,68 +713,97 @@ p.redesSociais{
         flex-direction: column; 
       }
   
-      #footer1{
+    #footer1{
         width: 100%; 
         border-bottom: solid #F8B500 1px; 
-      }
+    }
   
-      #footer2{
+    #footer2{
         width: 100%; 
-      }
+    }
   
-      #footer2 section div{
+    #footer2 section div{
         display: flex; 
         flex-direction: row; 
-      }
+    }
       
-      #footer2 section div img{
+    #footer2 section div img{
         width: 35px;
         margin: 20px;
-      }
+    }
   
-      #footer3{
+    #footer3{
         width: 100%; 
-      }
+    }
       /* **FIM DO RODAPE** */
   
       /* **INICIANDO O ARTICLE** */
-      .beneficios{
+    .beneficios{
         display: flex; 
         flex-direction: column; 
-      }
+    }
   
-      .beneficios section{
+    .beneficios section{
         width: 100%; 
         border-right: none; 
         border-bottom: solid #F8B500 1px; 
         margin: auto; 
         margin-top: 25px;
-      }
+    }
 
       /* **FIM DO ARTICLE** */
 
       /* **INICIANDO A SECTION** */
-      .section2{
+    .section2{
         width: 90vw;
         height: 270vw;
         margin: 0 20px;
         padding: 10px;
-      }
+    }
   
-      .section2 h1{
+    .section2 h1{
         font-size: 1.5rem;
         text-align: center;
         margin: 20px 0;
-      }
+    }
   
-        .section2 p{
+    .section2 p{
         font-size: 1.2rem;
         margin: 25px 10px;
-      }
+    }
 
-      p#redesSociais, p#central{
-          margin-top: 1.5rem;
-      }
+    p#redesSociais, p#central{
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    #banner {
+        border: none;
+        width: 0;
+        height: 0;
+    }
+    
+    #botoes {
+        display: none;
+    }
+
+    .enabled{
+        margin: 100px 310px 0px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .enabled{
+        margin: 0px 310px 0px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .enabled{
+        margin: 0px 400px 0px;
+    }
 }
 
 /*ESTA RESPONSIVIDADE SERVE PARA CORRIGIR UM PROBLEMA NO 768 px*/

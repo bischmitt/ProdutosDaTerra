@@ -543,6 +543,10 @@ p.redesSociais{
         display: none;
     }
 
+    #qtd {
+        width: 60%;
+    }
+
     .conteudo > div:nth-child(2) {
         width: 80%;
         display: flex;
