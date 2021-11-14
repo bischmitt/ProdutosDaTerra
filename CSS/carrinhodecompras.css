@@ -2,48 +2,59 @@
 #modalCarrinho{
     display: none;
     position: absolute;
-    top: 11%;
+    top: 40%;
     left: 10%;
     right: 10%;
     width: 80vw;
-    background-color:darkorange;
+    background-color:#E4C54A;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 8px 8px 8px 8px black;
+    padding: 0;
 
 }
+/* Cabeçalho do Modal Carrinho */
 .headercarrinho{
     width: 100%;
     text-align: center;
     font-size: 25pt;
-    color:  rgba(99, 0, 80, 1);
-    
+    color:   #0C2222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 
+.headercarrinho img {
+    margin-bottom: 20px; 
+}
+/* Tamanho e borda da Tabela dentro do modal */
 table {
     border-collapse: collapse;
     border         : 3px solid rgba(232, 220, 167, 0.8);
     width          : 100%;
 }
-
+/* Cor das colunas dentro da tabela */
 table th {
     background-color: rgb(214, 214, 214);
 }
-
+/* Alinhamento de colunas e linhas em relação a tabela e alinhamento do texto a esquerda dentro da tabela */
 table th,
 td {
     padding   : 1px 5px;
     text-align: left;
 
 }
-
+/* Tamanho da imagem lixeira dentro da tabela e a utilização do cursor pointer para alterar o ponteiro do mouse quando passar pela lixeira */
 table td img {
     cursor: pointer;
     width : 22px;
 }
-
+/* Alinhamento do button continuar comprando dentro do modal */
 #but1 {
     float   : left;
     margin-top: 20px;
 }
-
+/* Alinhamento do button concluir dentro do modal */
 #but2 {
     float: right;
     margin-top: 20px;
@@ -54,6 +65,7 @@ table td img {
     opacity: 1;
     transition: .3s;
 }
+
 /* #car{
     font-size: 20pt;
     background-color: rgba(232, 220, 167, 0.8);
@@ -62,3 +74,5 @@ table td img {
     font-size: 15pt;
     background-color: rgba(232, 220, 167, 0.8);
 } */
+
+

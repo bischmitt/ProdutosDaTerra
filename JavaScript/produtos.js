@@ -1,3 +1,4 @@
+//Criação de uma classe Modal. Aplicação do CSS utilizando display para esconder o modal. 
 class Modal {
     abrirModal() {
         $("#modalCarrinho").css("display", "block");
@@ -7,7 +8,7 @@ class Modal {
     }
 
 }
-
+// Criação de uma variável local e atribuindo funções click para abrir e fechar o modal como também mudar de página.
 let modal = new Modal()
 
 $("#abrirModal").click(function () {
@@ -19,10 +20,10 @@ $("#but1").click(function () {
 })
 
 $("#but2").click(function () {
-    location.href = "formulario1.html";
+    location.href = "formulario.html";
 });
 
-
+//Criação de uma Classe Produto e adicionando uma lista de produtos com id, nome, preço e quantidade.
 class Produto {
     constructor() {
         this.todosOsProdutos = [
@@ -91,7 +92,9 @@ class Produto {
             },
         ]
         this.itensDoCarrinho = new Array()
+        console.log(this.itensDoCarrinho)
     }
+    //Método Criado para validar os produtos e inclui-los na tabela toda vez que clicar no botão adicionar
     enviarParaCarrinho(idEscolhido) {
         let idDoProdutoEscolhido = idEscolhido;
 
@@ -109,18 +112,24 @@ class Produto {
             $(".item" + idEscolhido + " .pesokg").val("")
         }
 
-      
-        
-    }
 
+
+    }
+    //Metodo criado para mostrar ao usuário todo vez que um item é adicinado ao carrinho
     notificarUsuario() {
         if (this.itensDoCarrinho.length > 0) {
             $('#car').text(this.itensDoCarrinho.length).show()
-        } 
+        } else {
+            this.carrinhoVazio()
+        }
     }
-   
-       
 
+    carrinhoVazio() {
+        $('#car').text('0').css("display", "none")
+    }
+
+
+    //Método criado para validar o produto através do if e else e adicioná-lo uma única vez no carrinho
     validarCarrinho(idProduto) {
         if (this.itensDoCarrinho.length == 0) {
             return true
@@ -131,7 +140,7 @@ class Produto {
         }
 
     }
-
+    //Método criado para adicionar os produtos no modal carrinho através de uma tabela com linhas e colunas
     enviarParaTabela(idEscolhido) {
         // declaração de uma variável para referenciar o tbody da tabela
         let tbody = document.getElementById("tbody");
@@ -171,25 +180,20 @@ class Produto {
             td_acoes.appendChild(imgDelete);
 
             //atribuir um método para imgDelete através do setAttribute como os parâmetros: ("evento", método)
-            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + ")");
+            imgDelete.setAttribute("onclick", "produto.deletar(" + this.itensDoCarrinho[i].id + "), produto.notificarUsuario()");
 
         }
-        
+
 
     }
-
+    //Método criado para realizar o cálculo do produto e mostrar no carrinho para o usuário
     calcularPrecoTotal(preco, quantidade) {
         let resultado = Number(preco) * Number(quantidade)
         return (resultado).toFixed(2)
     }
 
-    // mudarPrecoTotal(e) {
-    //     $("#qtd").html()
-    //     console.log(e.target.value)
-    // }
 
-
-
+    //Método criado para que o usuário possa deletar qualquer item no carrinho.
     deletar(id) {
         if (confirm("Deseja realmente deletar o produto de id " + id)) {
             for (let i = 0; i < this.itensDoCarrinho.length; i++) {
@@ -201,12 +205,25 @@ class Produto {
         }
     }
 
+    // mudarPrecoTotal() {
+    //     let mudarQtd = document.getElementsById("pesokg");
+    //     let valorUnitario = document.getElementsByClassName("preco");
+    //     let valorNovo = Number(mudarQtd) * Number(valorUnitario);
+    //     return (valorNovo);
+    //     // console.log(valorNovo)
+    //     // console.log(mudarValor)
+    //     // console.log(valorUnitario)
+        
+        
+    // }
+
+
+
+
 }
 let produto = new Produto()
 
-$("#qtd").change(() => {
 
-})
 
 
 
