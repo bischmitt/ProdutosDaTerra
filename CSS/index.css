@@ -114,20 +114,22 @@ nav.menu>a:first-child{
 
 /*SECTION CAMPO DE BUSCA*/
 section.buscar{
-    width: 40%;
-    display: flex;
+    width: 50%;
     margin: auto;
     margin-top: 3rem;
-    justify-content: center;
+    /* justify-content: center; */
     border-radius: 15px;
     margin-bottom: 41rem;
 }
 
 input #txtBusca{
     border: none;
+    align-self: flex-start;
 }
 
 #divBusca{
+    display: flex;
+    justify-content: space-between;
     background-color:#E8DCBB;
     border:solid 1px #11302E;
     border-radius:10px;
@@ -136,30 +138,28 @@ input #txtBusca{
 }
   
 #txtBusca{
-    float:left;
     background-color:transparent;
     padding-left:5px;
     font-size:20px;
     border:none;
     height:37px;
-    width:400px;
+    width:85%;
 }
   
 #btnBusca{
     border:none;
-    float:right;
     height:2.4rem;
+    align-self: flex-end;
     border-radius:0 7px 7px 0;
-    width:75px;
+    width:90px;
     font-weight:bold;
     background:#11302E;
-    color:#E8DCBB
+    color:#E8DCBB;
 }
   
 #divBusca img{
     padding: 2px;
     padding-left: 5px;
-    float:left;
 }
 
 /* MAIN */
@@ -220,11 +220,6 @@ main{
     height: 5vh;
 }
 
-@media screen and (max-width:1440px) {
-    .enabled{
-        margin: 0px 0px 0px;
-    }
-}
 /* ----------------------------------MARIANA ----------------------------- */
 /* Escopo de trabalho e desenvolvedores */
 article, aside, footer{
@@ -489,14 +484,6 @@ p.redesSociais{
 
 /*ESTA RESPONSIVIDADE SUPORTA 1024*/
 @media screen and (max-width: 1024px) {
-    #txtBusca{
-        width:15rem;
-    }
-      
-    #btnBusca{
-        width:5.2rem;
-    }
-
     #banner {
         width: 90%;
         height: 26vh;
@@ -504,10 +491,6 @@ p.redesSociais{
     
     #botoes {
         margin: 0;
-    }
-
-    .enabled{
-        margin: 0px 90px 0px;
     }
 }
 
@@ -552,9 +535,7 @@ p.redesSociais{
 
 /*SECTION CAMPO DE BUSCA*/
     section.buscar{
-        width: 90%;
-        display: flex;
-        margin: auto;
+        width: 60%;
         margin-top: 20rem;
         margin-bottom: 35rem;
     }
@@ -565,26 +546,13 @@ p.redesSociais{
     }
   
     #txtBusca{
-        float:left;
+        height:3rem;
         
-        padding-left:5px;
-        font-size:16px;
-        border:none;
-        height:48px;
-        width:60%;
     }
   
     #btnBusca{
+        align-self: flex-end;
         height:2.9rem;
-        width:4.5rem;
-        font-weight:bold;
-        background:#11302E;
-        color:#E8DCBB
-    }
-  
-    #divBusca img{
-        margin-top: 4px;
-        float:left;
     }
 
     #banner {
@@ -605,10 +573,6 @@ p.redesSociais{
     #subir img {
         width: 5vw;
         height: 3vh;
-    }
-
-    .enabled{
-        margin: 0px 0px 0px;
     }
 
     .flex-container {
@@ -789,20 +753,20 @@ p.redesSociais{
         display: none;
     }
 
-    .enabled{
-        margin: 100px 310px 0px;
+    section.buscar{
+        width: 90%;
     }
 }
 
 @media screen and (max-width:375px) {
-    .enabled{
-        margin: 0px 310px 0px;
+    #txtBusca{
+        font-size:20px;
     }
 }
 
 @media screen and (max-width:320px) {
-    .enabled{
-        margin: 0px 400px 0px;
+    #txtBusca{
+        font-size:16px;
     }
 }
 
